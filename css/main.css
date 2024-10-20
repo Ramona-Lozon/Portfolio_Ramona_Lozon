@@ -1,0 +1,42 @@
+.hidden {
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.menu-icon {
+    display: flex;
+    cursor: pointer;
+    margin-left:auto;
+}
+
+#intro-message {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+
+    .menu-icon {
+        display: none;
+    }
+
+    .desktop-shown {
+        display:block;
+    }
+
+    .desktop-sticky {
+        position: sticky;
+        top: 50px;
+    }
+        }
+
+

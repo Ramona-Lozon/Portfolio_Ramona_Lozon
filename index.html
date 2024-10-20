@@ -5,21 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramona's Design</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
 <body>
-    <header>
-        <nav>
 
+    <section class="g-con">
+    <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
+
+        <section class="desktop-sticky">
+        <div>
+            <h3>Ramona Lozon</h3>
+        Designer and Developer
+    </div>
+
+    <div id="intro-message"><span>I design brands, and build websites</span>
+        <div class="menu-icon" id="menuIcon">&#9776;</div>
+    </div>
+
+    <nav class="desktop-shown desktop-sticky hidden" id="navLinks">
+            <ul class="nav-links">
+                <li><a href="#top">Work/Top</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="https://www.instagram.com/lozonramona/">instagram</a></li>
+                    <li><a href="https://github.com/Ramona-Lozon">github</a></li>
+                    <li><a href="#contact">linkedin</a></li>
+                </ul>
+            </div>
         </nav>
+
+    </section>
     </header>
 
-    <main>
-        <div id="video-player">
-            <video controls preload="metadata">
-                <source src="video.mp4" type="video/mp4">
-            </video>
+    <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
+            
+        <!-- case files -->
+            <div id=" case-file-1">
+                <video controls preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div id="case-file-2">
+                <video controls preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div id="case-file-3">
+                <video controls preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!--About-->
+            <div>
+                <h3>About</h3>
+            </div>
+
+            <div>
+                <img src="selfie.jpg" alt="a picture of me">
+            </div>
+
+            <!-- skills -->
+            <div>
+                skills
+            </div>
+
+            <div>
+                <span>logo and brand design</span>
+            </div>
+
+            <div>
+                <span>coding</span>
+            </div>
+
+            <div>
+                <span>web design</span>
+            </div>
+
+            <div>
+                <span>video editing</span>
+            </div>
+
+            <!-- contact -->
+            <article id="menu" class="col-span-full">
+                <h3>Contact</h3>
+            <!--Buttons-->
+            <form method="post" action="#">
+                <input type="text" name="name" id="name"><br><br>
+                <input type="text" name="organization" id="organization"><br><br>
+                <input type="text" name="email" id="email"><br><br>
+                <textarea name="message" id="message">Message</textarea><br><br>
+                <input id="send-button" type="submit" value="Submit"><br><br><br><br>
+            </form>   
+            </article>
     </main>
+</section>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
+<script src="js/main.js"></script>
 </body>
+</html>
