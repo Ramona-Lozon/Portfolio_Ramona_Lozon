@@ -1,11 +1,11 @@
 .g-con {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-column-gap: 16px;
+    grid-column-gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .c-start-1 {grid-column-start: 1;}
@@ -48,9 +48,9 @@
     .g-con{
         display:grid;
         grid-template-columns: repeat(8, minmax(0,1fr));
-        grid-column-gap: 16px;
-        padding-right: 20px;
-        padding-left: 20px;
+        grid-column-gap: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .m-c-start-1 {grid-column-start: 1;}
@@ -134,9 +134,9 @@
     .g-con{
         display:grid;
         grid-template-columns: repeat(12, minmax(0,1fr));
-        grid-column-gap: 20px;
-        padding-right: 20px;
-        padding-left: 20px;
+        grid-column-gap: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .l-c-start-1 {grid-column-start: 1;}
@@ -225,103 +225,3 @@
     .l-r-end-12	{grid-row-end: 12;}
     .l-r-end-13	{grid-row-end: 13;}
 }
-
-
-
-@media screen and (min-width: 1920px) {
-
-    .g-con{
-        display:grid;
-        grid-template-columns: repeat(12, minmax(0,1fr));
-       grid-column-gap: 34px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    .xl-c-start-1 {grid-column-start: 1;}
-    .xl-c-start-2 {grid-column-start: 2;}
-    .xl-c-start-3 {grid-column-start: 3;}
-    .xl-c-start-4 {grid-column-start: 4;}
-    .xl-c-start-5 {grid-column-start: 5;}
-    .xl-c-start-6 {grid-column-start: 6;}
-    .xl-c-start-7 {grid-column-start: 7;}
-    .xl-c-start-8 {grid-column-start: 8;}
-    .xl-c-start-9 {grid-column-start: 9;}
-    .xl-c-start-10 {grid-column-start: 10;}
-    .xl-c-start-11 {grid-column-start: 11;}
-    .xl-c-start-12 {grid-column-start: 12;}
-    .xl-c-start-13 {grid-column-start: 13;}
-
-    .xl-c-span-1 {grid-column: span 1 ;}
-    .xl-c-span-2 {grid-column: span 2 ;}
-    .xl-c-span-3 {grid-column: span 3 ;}
-    .xl-c-span-4 {grid-column: span 4 ;}
-    .xl-c-span-5 {grid-column: span 5 ;}
-    .xl-c-span-6 {grid-column: span 6 ;}
-    .xl-c-span-7 {grid-column: span 7 ;}
-    .xl-c-span-8 {grid-column: span 8 ;}
-    .xl-c-span-9 {grid-column: span 9 ;}
-    .xl-c-span-10 {grid-column: span 10 ;}
-    .xl-c-span-11 {grid-column: span 11 ;}
-    .xl-c-span-12 {grid-column: span 12 ;}
-    .xl-c-span-full {grid-column: 1 / -1;}
-
-
-    .xl-c-end-1	{grid-column-end: 1;}
-    .xl-c-end-2	{grid-column-end: 2;}
-    .xl-c-end-3	{grid-column-end: 3;}
-    .xl-c-end-4	{grid-column-end: 4;}
-    .xl-c-end-5	{grid-column-end: 5;}
-    .xl-c-end-6	{grid-column-end: 6;}
-    .xl-c-end-7	{grid-column-end: 7;}
-    .xl-c-end-8	{grid-column-end: 8;}
-    .xl-c-end-9	{grid-column-end: 9;}
-    .xl-c-end-10	{grid-column-end: 10;}
-    .xl-c-end-11	{grid-column-end: 11;}
-    .xl-c-end-12	{grid-column-end: 12;}
-    .xl-c-end-13	{grid-column-end: 13;}
-
-
-
-}
-    .xl-r-start-1 {grid-row-start: 1;}
-    .xl-r-start-2 {grid-row-start: 2;}
-    .xl-r-start-3 {grid-row-start: 3;}
-    .xl-r-start-4 {grid-row-start: 4;}
-    .xl-r-start-5 {grid-row-start: 5;}
-    .xl-r-start-6 {grid-row-start: 6;}
-    .xl-r-start-7 {grid-row-start: 7;}
-    .xl-r-start-8 {grid-row-start: 8;}
-    .xl-r-start-9 {grid-row-start: 9;}
-    .xl-r-start-10 {grid-row-start: 10;}
-    .xl-r-start-12 {grid-row-start: 12;}
-    .xl-r-start-13 {grid-row-start: 13;}
-
-    .xl-r-span-1 {grid-row: span 1 ;}
-    .xl-r-span-2 {grid-row: span 2 ;}
-    .xl-r-span-3 {grid-row: span 3 ;}
-    .xl-r-span-4 {grid-row: span 4 ;}
-    .xl-r-span-5 {grid-row: span 5 ;}
-    .xl-r-span-6 {grid-row: span 6 ;}
-    .xl-r-span-7 {grid-row: span 7 ;}
-    .xl-r-span-8 {grid-row: span 8 ;}
-    .xl-r-span-9 {grid-row: span 9 ;}
-    .xl-r-span-10 {grid-row: span 10 ;}
-    .xl-r-span-11 {grid-row: span 11 ;}
-    .xl-r-span-12 {grid-row: span 12 ;}
-    .xl-r-span-full {grid-row: 1 / -1;}
-
-
-    .xl-r-end-1	{grid-row-end: 1;}
-    .xl-r-end-2	{grid-row-end: 2;}
-    .xl-r-end-3	{grid-row-end: 3;}
-    .xl-r-end-4	{grid-row-end: 4;}
-    .xl-r-end-5	{grid-row-end: 5;}
-    .xl-r-end-6	{grid-row-end: 6;}
-    .xl-r-end-7	{grid-row-end: 7;}
-    .xl-r-end-8	{grid-row-end: 8;}
-    .xl-r-end-9	{grid-row-end: 9;}
-    .xl-r-end-10	{grid-row-end: 10;}
-    .xl-r-end-11	{grid-row-end: 11;}
-    .xl-r-end-12	{grid-row-end: 12;}
-    .xl-r-end-13	{grid-row-end: 13;}
