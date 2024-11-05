@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<?php
+
+$connect = new mysqli('localhost','root','','portfolio_case_file');
+//connect to the running database server and the specific database
+require_once('includes/connect.php');
+
+//create a query to run in SQL
+$query = 'SELECT case_file.id;
+
+
+//run the query to get back the content
+$results = mysqli_query($connect,$query);
+
+//print_r($results);
+
+?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramona's Design</title>
+    <link rel="stylesheet" href="css/main.css.map">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+</head>
+<body>
+
+<main>
+
+<div id="project">Earbuds</div>
+
+<div id="proposition"><p>this is a project i did while enrolled at fanshawe in my interactive media design program, where we set out to design a pair of earbuds with a case</p></div>
+
+<div id="deliverables"><p>for this project, we needed to take our designs, 3-d model them, and build a website with an interactive interface where users could see</p></div>
+
+<div id="media_1"><img src="assets/earbuds_sketches-01.jpg" width="300px"></div>
+
+<div id="media_1_notes"><p>we started in the conceptual stage, designing the look of the earbuds and the case. here are some concepts that i took into Cinema 4d</p></div>
+
+<div id="media_2"><img src="assets/Earbuds-Retro-poster1.jpg" width="300px"></div>
+
+<div id="media_2_notes"><p>after modeling the earbuds in C4d, we made promotional images, set up hot spots and prepared to create an x-ray view of the internal components</p></div>
+
+<div id="media_3"><video src="assets/Earbuds-Retro-test1.mp4" width="300px"></div>
+
+<div id="media_3_notes"><p>the final product is a website that was built using SASS, Javascript, and Greensock, for functionality</p></div>
+
+<div id="outcome">by the end of the project we had a working website that acted as an advertising page for the earbuds, displaying their features using a 3d model viewer and showing their internal workings using a slider created with SASS and Greensock.</div>
+
+
+</main>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
+<script src="js/main.js"></script>
+
+</body>
+</html>
