@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 {"version":3,"sources":[],"names":[],"mappings":"","file":"main.css"}
+=======
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAKA,QACI,YAAA,CAGJ,UACI,iBAAA,CAGJ,WACI,YAAA,CACA,cAAA,CACA,gBAAA,CAGJ,eACI,YAAA,CACA,kBAAA,CASJ,sCAEI,WACI,YAAA,CAGJ,eACI,aAAA,CAGJ,gBACI,eAAA,CACA,QAAA,CAAA","file":"main.css"}
+>>>>>>> Stashed changes
