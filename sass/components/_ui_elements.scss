@@ -1,0 +1,10 @@
+@use "../abstracts" as a;
+
+.button {
+    width: 100px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: a.$primary-color;
+}
