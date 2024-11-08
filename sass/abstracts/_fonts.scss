@@ -3,3 +3,14 @@
 
 //use @include to use a mixin, use the namespace then the mixin name
 //
+.inclusive-sans-regular {
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .inclusive-sans-regular-italic {
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }  
