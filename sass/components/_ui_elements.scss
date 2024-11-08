@@ -1,17 +1,14 @@
 @use "../abstracts" as a;
 
+
+// basic and mobile styles
+
 body {
     background-color: a.$primary-color;
 }
 
 h2 {
     display: none;
-}
-
-header {
-    border-right-style: solid;
-    border-color: a.$secondary-color;
-    border-width: 5px;
 }
 
 .text {
@@ -73,25 +70,43 @@ li {
     list-style: none;
 }
 
+#greeting-section {
+    border-bottom-style: solid;
+    border-color: a.$secondary-color;
+    border-width: 5px; 
+    margin-bottom: 50px;
+}
 #case-files-section {
     margin-bottom: 150px;
 }
 
 #about-section {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 150px;
+    div {
+            span {
+            text-align: center;
+            margin: 10px 50px 10px 50px;
+            }
+    }
 }
+
+#info-and-resume {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 
 #selfie {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     img{
-    width: 300px;
+    width: 400px;
     border-radius: 150px;
-    }
-    span {
-        text-align: left;
-        margin: 10px;
+    margin: 10px auto auto auto;
     }
 }
 
@@ -101,3 +116,34 @@ li {
     align-items: center;
     margin-bottom: 150px;
 }
+
+
+//tablet styles
+@media (min-width:768px) {
+    
+}
+
+//desktop styles
+@media (min-width:1200px) {
+    
+    #greeting-section {
+        border-bottom-style: none;
+    }
+
+    header {
+    border-right-style: solid;
+    border-color: a.$secondary-color;
+    border-width: 5px;
+    }   
+
+    #about-section {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 150px;
+        span {
+            text-align: left;
+            margin: auto 10px auto 10px;
+        }
+    }
+
+    }
