@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramona's Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- link to grid first -->
     <link rel="stylesheet" href="css/grid.css">
     <!-- then load our own rules, need to link to main.css, map is for dev tools -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
 <body>
@@ -17,20 +20,20 @@
 
         <section class="desktop-sticky">
         <div>
-            <h3>Ramona Lozon</h3>
-        Designer and Developer
+            <h3 class="text">Ramona Lozon</h3>
+        <span class="text subheader">Designer and Developer</span>
     </div>
 
-    <div id="intro-message"><span>I design brands, and build websites</span>
+    <div class="text subheader" id="intro-message"><span>I design brands, and build websites</span>
         <div class="menu-icon" id="menuIcon">&#9776;</div>
     </div>
 
     <nav class="desktop-shown desktop-sticky hidden" id="navLinks">
             <ul class="nav-links">
-                <li><a href="#top">Work/Top</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Skills">skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="button"><a href="#top">Work/Top</a></li>
+                <li class="button"><a href="#About">About</a></li>
+                <li class="button"><a href="#Skills">skills</a></li>
+                <li class="button"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -49,7 +52,9 @@
     <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
             
         <!-- case files -->
-            <div id=" case-file-1">
+         <section id="case-files-section">
+            <h2>My Work</h2>
+            <div id="case-file-1">
                 <video controls preload="metadata">
                     <source src="video.mp4" type="video/mp4">
                 </video>
@@ -66,40 +71,44 @@
                     <source src="video.mp4" type="video/mp4">
                 </video>
             </div>
+        </section>
 
             <!--About-->
-            <div>
-                <h3>About</h3>
-            </div>
+            <section id="about-section">
+                <h3 class="text info_text underline" id="about">About</h3>
 
-            <div>
-                <img src="selfie.jpg" alt="a picture of me">
+            <div id="selfie">
+                <img src="images/ramona_selfie.jpg" alt="a picture of me">
+                <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eader to make a splash in the industry and build connections.</span>
             </div>
+            </section>
 
             <!-- skills -->
+             <section id="skills-section">
             <div>
-                skills
+                <h3 class="text info_text underline" id="skills">skills</h3>
             </div>
 
             <div>
-                <span>logo and brand design</span>
+                <span class="button">logo and brand design</span>
             </div>
 
             <div>
-                <span>coding</span>
+                <span class="button">coding</span>
             </div>
 
             <div>
-                <span>web design</span>
+                <span class="button">web design</span>
             </div>
 
             <div>
-                <span>video editing</span>
+                <span class="button">video editing</span>
             </div>
+        </section>
 
             <!-- contact -->
             <article id="menu" class="col-span-full">
-                <h3>Contact</h3>
+                <h3 class="text underline">Contact</h3>
             <!--Buttons-->
             <form method="post" action="#">
                 <input type="text" name="name" id="name"><br><br>
