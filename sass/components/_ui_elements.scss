@@ -1,6 +1,29 @@
 @use "../abstracts" as a;
 
 
+#insta-icon:hover #insta-fill {
+    fill: a.$secondary-color;
+  }
+
+  #insta-icon:hover .insta-line {
+    stroke: a.$primary-color;
+  }
+
+  #git-icon:hover #git-fill {
+    fill: a.$secondary-color;
+  }
+
+  #git-icon:hover #git-line {
+    stroke: a.$primary-color;
+  }
+
+  #link-icon:hover .link-fill {
+    fill: a.$secondary-color;
+  }
+
+  #link-icon:hover #link-line {
+    fill: a.$primary-color;
+  }
 // basic and mobile styles
 
 body {
@@ -84,6 +107,7 @@ li {
 
 .icon {
     width: 50px;
+    height: 50px;
     margin:5px;
 }
 
@@ -153,6 +177,12 @@ li {
     flex-direction: column;
     align-items: left;
     margin-bottom: 150px;
+}
+
+.box {
+	height: 100px;
+	width: 100px;
+    background-color: pink;
 }
 
 // contact list stlyes for mobile/basic
