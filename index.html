@@ -19,18 +19,14 @@
     <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
 
         <section class="desktop-sticky" id="greeting-section">
-        <div>
-            <div>
+            <div id="greeting-title">
                 <img src="images/rl-design-logo.svg"><h3 class="text">Ramona Lozon</h3>
-            </div>
-            <span class="text subheader">Designer and Developer</span>
-        </div>
 
-    <div class="text subheader" id="intro-message">
-        <span>I design brands, and build websites</span>
-        <div class="menu-icon" id="menuIcon">
-            &#9776;
-        </div>
+            </div>
+
+            <div class="text subheader" id="intro-message">
+                <span>Designer and Developer<br>I design brands, and build websites</span>
+                <div class="menu-icon" id="menuIcon">&#9776;</div>
     </div>
 
     <nav class="desktop-shown desktop-sticky hidden" id="navLinks">
@@ -44,9 +40,10 @@
 
             <div>
                 <ul class="icon-list">
-                    <li class="icon"><a href="https://www.instagram.com/lozonramona/"><img src="images/insta_icon.svg"></a></li>
-                    <li class="icon"><a href="https://github.com/Ramona-Lozon"><img src="images/github_icon.svg"></a></li>
-                    <li class="icon"><a href="#contact">linkedin</a></li>
+                    <li class="icon"><a href="https://www.instagram.com/lozonramona/"><img src="images/insta_icon.svg" alt="instagram logo"></a></li>
+                    <li class="icon"><a href="https://github.com/Ramona-Lozon"><img src="images/github_icon.svg" alt="github logo"></a></li>
+                    <li class="icon"><a href="#contact"><img src="images/linkedin_icon.svg" alt="Linkedin Logo"></a></li>
+                    <div class="hidden"><a  target="_blank" href="https://icons8.com/icon/447/linkedin">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
                 </ul>
             </div>
         </nav>
@@ -74,7 +71,7 @@
 
             <!--About-->
             <section id="about-section">
-                <h3 class="text info_text underline main_title" id="about">About</h3>
+                <h3 class="text info_text underline main-title" id="about">About</h3>
 
                 <div id="info-and-resume">
                     <img src="images/ramona_selfie.jpg" alt="a picture of me">
@@ -88,7 +85,7 @@
             <!-- skills -->
              <section id="skills-section">
             <div>
-                <h3 class="text info_text underline" id="skills">skills</h3>
+                <h3 class="text info_text underline main-title" id="skills">skills</h3>
             </div>
 
             <div>
@@ -110,18 +107,19 @@
 
             <!-- contact -->
             <article id="menu" class="col-span-full">
-                <h3 class="text underline">Contact</h3>
+                <h3 class="text underline main-title">Contact</h3>
             <!--Buttons-->
-            <form method="post" action="#">
-                <input type="text" name="name" id="name"><br><br>
-                <input type="text" name="organization" id="organization"><br><br>
-                <input type="text" name="email" id="email"><br><br>
-                <textarea name="message" id="message">Message</textarea><br><br>
-                <input id="send-button" type="submit" value="Submit"><br><br><br><br>
+            <form class="input-form" method="post" action="#">
+                <input class="form-box" type="text" name="name" id="name" placeholder="name"><br><br>
+                <input class="form-box" type="text" name="organization" id="organization" placeholder="organization"><br><br>
+                <input class="form-box" type="text" name="email" id="email" placeholder="email"><br><br>
+                <textarea class="form-box" name="message" id="message" placeholder="message"></textarea><br><br>
+                <input class="button" id="send-button" type="submit" value="Submit"><br><br><br><br>
             </form>   
             </article>
     </main>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
 <script src="js/main.js"></script>
 </body>

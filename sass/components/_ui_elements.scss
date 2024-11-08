@@ -22,7 +22,7 @@ h2 {
 }
 
 h3 {
-    font-size: 32pt;
+    font-size: 31pt;
 }
 
 .subheader {
@@ -31,6 +31,13 @@ h3 {
 
 .info_text {
     font-size: 24pt;
+}
+.nav-links {
+    padding: 0px;
+}
+
+.icon-list {
+    padding: 0px;
 }
 
 .button {
@@ -85,14 +92,22 @@ li {
     border-color: a.$secondary-color;
     border-width: 5px; 
     margin-bottom: 50px;
-    div div {
-        display: flex;
-        flex-direction: row;
-        img {
-            width:50px;
-        }
+}
+
+#greeting-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 50px;
     }
 }
+
+#meniIcon {
+    position: sticky;
+}
+
 #case-files-section {
     margin-bottom: 150px;
 }
@@ -140,6 +155,25 @@ li {
     margin-bottom: 150px;
 }
 
+// contact list stlyes for mobile/basic
+
+.input-form {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.form-box {
+    background-color: a.$primary-color;
+    border-color: a.$secondary-color;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
 
 //tablet styles
 @media (min-width:768px) {
@@ -163,15 +197,15 @@ li {
     border-width: 5px;
     }   
 
-    .main_title {
+    .main-title {
         text-align: left;
-        margin-left: 150px;
+        margin: 50px 0px 50px 200px;
     }
 
     #about-section {
         display: flex;
         flex-direction: column;
-        margin-bottom: 150px;
+        margin-bottom: 10px;
 
     }
 
