@@ -1,17 +1,14 @@
 @use "../abstracts" as a;
 
+
+// basic and mobile styles
+
 body {
     background-color: a.$primary-color;
 }
 
 h2 {
     display: none;
-}
-
-header {
-    border-right-style: solid;
-    border-color: a.$secondary-color;
-    border-width: 5px;
 }
 
 .text {
@@ -73,31 +70,129 @@ li {
     list-style: none;
 }
 
+.icon-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    width: 50px;
+    margin:5px;
+}
+
+#greeting-section {
+    border-bottom-style: solid;
+    border-color: a.$secondary-color;
+    border-width: 5px; 
+    margin-bottom: 50px;
+    div div {
+        display: flex;
+        flex-direction: row;
+        img {
+            width:50px;
+        }
+    }
+}
 #case-files-section {
     margin-bottom: 150px;
 }
 
 #about-section {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 150px;
+    div {
+            span {
+            text-align: center;
+            margin: 10px 50px 10px 50px;
+            }
+    }
 }
+
+#info-and-resume {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 400px;
+        border-radius: 150px;
+        margin: 10px auto auto auto;
+        }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+}
+
 
 #selfie {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    img{
-    width: 300px;
-    border-radius: 150px;
-    }
-    span {
-        text-align: left;
-        margin: 10px;
-    }
+
 }
 
 #skills-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     margin-bottom: 150px;
 }
+
+
+//tablet styles
+@media (min-width:768px) {
+    
+}
+
+//desktop styles
+@media (min-width:1200px) {
+    
+    #menuIcon {
+        display: hidden;
+    }
+
+    #greeting-section {
+        border-bottom-style: none;
+    }
+
+    header {
+    border-right-style: solid;
+    border-color: a.$secondary-color;
+    border-width: 5px;
+    }   
+
+    .main_title {
+        text-align: left;
+        margin-left: 150px;
+    }
+
+    #about-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 150px;
+
+    }
+
+    #info-and-resume {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 400px;
+            border-radius: 150px;
+            margin: 10px auto auto auto;
+            }
+        span {
+            align-items: left;
+            text-align: left;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+    }
+
+    }
