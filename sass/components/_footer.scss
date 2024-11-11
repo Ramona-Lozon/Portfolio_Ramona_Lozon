@@ -1,1 +1,5 @@
 @use '../abstracts' as a;
+
+#example-mixin-class {
+    @include a.blue;
+}

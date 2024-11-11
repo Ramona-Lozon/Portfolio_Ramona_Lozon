@@ -28,6 +28,7 @@ menuIcon.addEventListener('click', toggleMenu);
         link.addEventListener("click", scrollLink);
     });
   
+//greensock animation    
     gsap.to("#box3", 1, {scrollTrigger: "box3", x:"85vw", ease:Bounce.easeOut})
 
 gsap.to("#box3", 3,
@@ -35,6 +36,8 @@ gsap.to("#box3", 3,
         scrollTrigger:{
             trigger: "#box3",
             //onEnter onLeave onEnterBack onLeaveBack
+
+            //to make it disapear mess with these
             toggleActions: "restart pause reverse none",
             markers: true, 
             //animation box start, scroller start
@@ -42,7 +45,7 @@ gsap.to("#box3", 3,
             //animation box end, scroller end
             end: "bottom center"
         },
-        x:300, ease:Bounce.easeOut
+        x:300, autoAlpha:1, ease:Bounce.easeOut
     }
 )
 
