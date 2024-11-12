@@ -12,23 +12,28 @@ menuIcon.addEventListener('click', toggleMenu);
 //greensock scrollto
 (() => {
 
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollToPlugin)
+  
+    const navLinks = document.querySelectorAll("#navLinks ul li a")
 
-    const navLinks = document.querySelectorAll("#navLinks nav ul li");
+    console.log(navLinks);
 
-    function scrollLink(e) {    
-            e.preventDefault(); 
-            console.log(e.currentTarget.hash);
-            let selectedLink = e.currentTarget.hash;
-            gsap.to(window, {duration: 1, scrollTo:{y:`${selectedLink}`, offsetY:100 }});
-    }
+function scrollLink(e){
+    console.log(e.currentTarget.hash);
+    //prevent this default behaviour/jumping
+    e.preventDefault();
+    let selectedLink = e.currentTarget.hash;
+    gsap.to(window, {duration: 1, scrollTo:{y: `${selectedLink}`, offsetY: 100}});
+}
 
     navLinks.forEach((link) => {
         link.addEventListener("click", scrollLink);
-    });
-  
+    })
+})();
+
 //greensock animation    
+
+(() => {
     gsap.to("#box3", 1, {scrollTrigger: "box3", x:"85vw", ease:Bounce.easeOut})
 
 gsap.to("#box3", 3,
