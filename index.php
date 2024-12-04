@@ -13,6 +13,22 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
+
+<?php
+
+//connect to the running database server and the specific database
+require_once('includes/connect.php');
+
+//create a query to run in SQL
+$query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
+//$query = 'SELECT employees.id AS employees, fname, lname, image, thumb, job_id FROM employees';
+
+
+//run the query to get back the content
+$results = mysqli_query($connect,$query);
+
+?>
+
 <body>
 
     <section class="g-con">
@@ -138,16 +154,20 @@
             
         <!-- case files -->
          <section id="case-files-section">
-            <h2>My Work</h2>
-            <a href="case_file.html"><div class="case-file-object" id="case-file-1"></div>
+
+            <?php while($row = mysqli_fetch_array($results)){echo '<a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a>';}
+            //                                              {echo '<a href="details.php?id='.$row['employees'].'"'.$row['job_id'].'"><img src="images/'.$row['thumb'].'" alt="thumbnail">'.$row['fname'].'<br>'.$row['lname'].'<br></a>';}
+            ?>
+            </section>
+            <!-- <h2>My Work</h2>
+            <a href="case_file.php"><div class="case-file-object" id="case-file-1"></div>
             </a>
             
             <div class="case-file-object" id="case-file-2">
             </div>
 
             <div class="case-file-object" id="case-file-3">
-            </div>
-        </section>
+            </div> -->
 
             <!--About-->
             <section id="about-section">
