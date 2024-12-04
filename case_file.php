@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sass/main.css">
+
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
@@ -171,6 +172,7 @@ $row = mysqli_fetch_assoc($results);
 <!-- closing tags -->
 </main>
 </section>
+
 <script src="js/main.js"></script>
 </body>
 </html>

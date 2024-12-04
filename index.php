@@ -148,7 +148,7 @@ $results = mysqli_query($connect,$query);?>
             <?php while($row = mysqli_fetch_array($results)){echo '<a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a>';}
             //                                              {echo '<a href="details.php?id='.$row['employees'].'"'.$row['job_id'].'"><img src="images/'.$row['thumb'].'" alt="thumbnail">'.$row['fname'].'<br>'.$row['lname'].'<br></a>';}
             ?>
-            </section>
+      </section>
 
             <!--About-->
             <section id="about-section">
