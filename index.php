@@ -10,9 +10,15 @@
     <!-- link to grid first -->
     <link rel="stylesheet" href="css/grid.css">
     <!-- then load our own rules, need to link to main.css, map is for dev tools -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
+
+<?php require_once('includes/connect.php');
+$query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
+//run the query to get back the content
+$results = mysqli_query($connect,$query);?>
+
 <body>
 
     <section class="g-con">
@@ -137,17 +143,12 @@
     <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
             
         <!-- case files -->
-         <section id="case-files-section">
-            <h2>My Work</h2>
-            <a href="case_file.html"><div class="case-file-object" id="case-file-1"></div>
-            </a>
-            
-            <div class="case-file-object" id="case-file-2">
-            </div>
+         <section id="case-files-section"><h2>My Work</h2>
 
-            <div class="case-file-object" id="case-file-3">
-            </div>
-        </section>
+            <?php while($row = mysqli_fetch_array($results)){echo '<a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a>';}
+            //                                              {echo '<a href="details.php?id='.$row['employees'].'"'.$row['job_id'].'"><img src="images/'.$row['thumb'].'" alt="thumbnail">'.$row['fname'].'<br>'.$row['lname'].'<br></a>';}
+            ?>
+            </section>
 
             <!--About-->
             <section id="about-section">
