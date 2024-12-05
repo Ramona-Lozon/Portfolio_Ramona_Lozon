@@ -188,13 +188,22 @@ li {
   margin-bottom: 150px;
 }
 
-.logo_box {
-  display: none;
-  flex-direction: column;
+.icon-box {
+  display: flex;
+  flex-direction: row;
 }
 
-#HTML5_logo {
-  max-width: 100px;
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  align-items: center;
+}
+.icon-card img {
+  height: 100px;
+}
+.icon-card span {
+  color: #FFA55B;
 }
 
 .box {

@@ -35,18 +35,17 @@ function scrollLink(e){
 
 (() => {
 
-gsap.to("#HTML5_logo", 3,
+gsap.to("#codingSkills", 3,
     {
         scrollTrigger:{
-            trigger: "#HTML5_logo",
+            trigger: "#codingSkills",
             toggleActions: "play reverse play reset",
-            markers: false, 
+            markers: true, 
             start: "top 80%",
             end: "bottom 30%"
         },
         autoAlpha:1,
         duration: 0.02 
-    }
-)
+    });
 
 })();

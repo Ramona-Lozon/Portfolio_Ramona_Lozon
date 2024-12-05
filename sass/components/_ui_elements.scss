@@ -30,39 +30,6 @@ body {
     background-color: a.$primary-color;
 }
 
-h2 {
-    display: none;
-}
-
-.text {
-    color: a.$secondary-color;
-    font-family: "inclusive-sans", "Montserrat";
-    margin: 5px;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-h3 {
-    font-size: 31pt;
-}
-
-.subheader {
-    font-size: 20pt;
-}
-
-.info_text {
-    font-size: 24pt;
-}
-.nav-links {
-    padding: 0px;
-}
-
-.icon-list {
-    padding: 0px;
-}
-
 .button {
     width: fit-content;
     min-width: 150px;
@@ -94,10 +61,6 @@ h3 {
     a{
         color: a.$primary-color;
     }
-}
-
-li {
-    list-style: none;
 }
 
 .icon-list {
@@ -179,14 +142,28 @@ li {
     margin-bottom: 150px;
 }
 
-.logo_box {
-    display: none;
-    flex-direction: column;
-  }
+.icon-box {
+    display: flex;
+    flex-direction: row;
+}
 
-#HTML5_logo {
-    max-width: 100px;
+#codingSkills {
+    visibility: hidden;
+    background-color: blue;
+}
+
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    align-items: center;
+    img {
+        height: 100px;
     }
+    span {
+        color: a.$secondary-color;
+    }
+  }
 
 .box {
 	height: 100px;
