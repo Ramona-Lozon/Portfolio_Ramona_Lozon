@@ -1,0 +1,28 @@
+@use "../abstracts" as a;
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: a.$primary-color;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .lightbox {
+    p {
+    text-decoration: none;
+    color: a.$secondary-color;
+    margin: 20px 0px 20px 0px;
+    font-size: 32px;
+  }
+}
+
+.close-btn {
+    cursor: pointer;
+    color: a.$secondary-color;
+}
