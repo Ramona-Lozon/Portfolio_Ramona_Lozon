@@ -7,11 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<<<<<<< Updated upstream
     <!-- link to grid first -->
     <link rel="stylesheet" href="css/grid.css">
     <!-- then load our own rules, need to link to main.css, map is for dev tools -->
     <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+=======
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="sass/main.css">
+>>>>>>> Stashed changes
 </head>
 
 <?php require_once('includes/connect.php');
@@ -148,7 +153,11 @@ $results = mysqli_query($connect,$query);?>
             <?php while($row = mysqli_fetch_array($results)){echo '<a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a>';}
             //                                              {echo '<a href="details.php?id='.$row['employees'].'"'.$row['job_id'].'"><img src="images/'.$row['thumb'].'" alt="thumbnail">'.$row['fname'].'<br>'.$row['lname'].'<br></a>';}
             ?>
+<<<<<<< Updated upstream
       </section>
+=======
+            </section>
+>>>>>>> Stashed changes
 
             <!--About-->
             <section id="about-section">
@@ -171,13 +180,23 @@ $results = mysqli_query($connect,$query);?>
 
             <div>
                 <span class="button" id="brand-design">logo and brand design</span>
+<<<<<<< Updated upstream
 
                 <div class="box" id="box3">it worked</div>
 
+=======
+>>>>>>> Stashed changes
             </div>
 
             <div>
                 <span class="button">coding</span>
+<<<<<<< Updated upstream
+=======
+                <div class="logo_box">
+                    <img src="images/html5.png" width="100px" id="HTML5_logo">
+                    <span>HTML5</span>
+                </div>
+>>>>>>> Stashed changes
             </div>
 
             <div>
@@ -207,7 +226,11 @@ $results = mysqli_query($connect,$query);?>
     <!-- main library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- ScrollTrigger plugin -->
+<<<<<<< Updated upstream
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+=======
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+>>>>>>> Stashed changes
     <!-- ScrollTo plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
