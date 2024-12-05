@@ -40,7 +40,8 @@ if(empty($errors)) {
     //insert these values as a new row in the contacts table
 
     $query = "INSERT INTO contacts (name, organization, email, comments) VALUES('.$name.','.$organization.','.$email.','.$message.')";
-
+//create table with names
+//should inset these values into database
     if(mysqli_query($connect, $query)) {
 
 //format and send these values in an email
@@ -57,7 +58,8 @@ $message .= "Message" .$message;
 
 mail($to,$subject,$message);
 
-header('Location: thank_you.php');
+header('Location: index.php');
+//this sends the user to index
 
 }else{
     for($i=0; $i < count($errors); $i++) {
