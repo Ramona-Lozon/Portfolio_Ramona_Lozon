@@ -155,11 +155,18 @@ $results = mysqli_query($connect,$query);?>
                     <img src="images/ramona_selfie.jpg" alt="a picture of me">
                     <div>
                         <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eaer to make a splash in the industry and build connections.</span>
-                        <div class="button">Learn More</div>
+                        <span class="button" id="learnMore">Learn More</span>
                         <div class="button">Resume</div>
                     </div>
                 </div>
             </section>
+
+                  <!-- About lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span id="close-button" class="close-btn">&times;</span>
+    <h3 class="text main-title">About Me</h3>
+    <p>Here is the long version</p>
+  </div>
 
             <!-- skills -->
              <section id="skills-section">

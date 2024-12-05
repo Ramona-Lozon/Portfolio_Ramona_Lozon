@@ -1,13 +1,27 @@
 const menuIcon = document.querySelector('#menuIcon');
 const navLinks = document.querySelector('#navLinks');
+const lightBox = document.querySelector("#lightbox");
+const lightBoxTrigger = document.querySelector("#learnMore");
+const closeBtn = document.querySelectorAll('#close-button');
 
 function toggleMenu() {
     console.log("drop-down menu clicked");
     navLinks.classList.toggle('hidden');
 }
-
+function openLightbox() {
+    console.log('open lightbox')
+    lightBox.style.display = 'flex';
+  }
+  
+  function closeLightbox() {
+    console.log('close lightbox')
+    lightBox.style.display = 'none';
+  }
 menuIcon.addEventListener('click', toggleMenu);
-
+lightBoxTrigger.addEventListener('click', openLightbox);
+closeBtn.forEach(Btn => {
+Btn.addEventListener('click', closeLightbox);
+});
 
 //greensock scrollto
 (() => {
