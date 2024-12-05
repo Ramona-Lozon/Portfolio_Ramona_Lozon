@@ -243,8 +243,7 @@ body {
     border-width: 5px;
   }
   .main-title {
-    text-align: left;
-    margin: 50px 0px 50px 200px;
+    margin: 50px auto 50px auto;
   }
   #case-file-1 {
     background: url("../images/placeholder-images-01.jpg");

@@ -81,3 +81,18 @@ gsap.to("#codingSkills", 3,
     
     })();
 
+    (() => {
+
+        gsap.to("#videoEditingSkills", 3,
+            {
+                scrollTrigger:{
+                    trigger: "#videoEditingSkills",
+                    toggleActions: "play reverse play reverse",
+                    markers: false, 
+                    start: "top 80%",
+                    end: "bottom 30%"
+                },
+                autoAlpha:1, 
+            });
+        
+        })();
