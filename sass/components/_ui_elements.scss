@@ -179,6 +179,15 @@ li {
     margin-bottom: 150px;
 }
 
+.logo_box {
+    display: none;
+    flex-direction: column;
+  }
+
+#HTML5_logo {
+    max-width: 100px;
+    }
+
 .box {
 	height: 100px;
 	width: 100px;

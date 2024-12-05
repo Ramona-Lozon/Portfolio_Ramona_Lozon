@@ -34,23 +34,18 @@ function scrollLink(e){
 //greensock animation    
 
 (() => {
-    gsap.to("#box3", 1, {scrollTrigger: "box3", x:"85vw", ease:Bounce.easeOut})
 
-gsap.to("#box3", 3,
+gsap.to("#HTML5_logo", 3,
     {
         scrollTrigger:{
-            trigger: "#box3",
-            //onEnter onLeave onEnterBack onLeaveBack
-
-            //to make it disapear mess with these
-            toggleActions: "restart pause reverse none",
-            markers: true, 
-            //animation box start, scroller start
-            start: "top center",
-            //animation box end, scroller end
-            end: "bottom center"
+            trigger: "#HTML5_logo",
+            toggleActions: "play reverse play reset",
+            markers: false, 
+            start: "top 80%",
+            end: "bottom 30%"
         },
-        x:300, autoAlpha:1, ease:Bounce.easeOut
+        autoAlpha:1,
+        duration: 0.02 
     }
 )
 
