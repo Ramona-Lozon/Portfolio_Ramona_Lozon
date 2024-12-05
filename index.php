@@ -7,16 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<<<<<<< Updated upstream
-    <!-- link to grid first -->
-    <link rel="stylesheet" href="css/grid.css">
-    <!-- then load our own rules, need to link to main.css, map is for dev tools -->
-    <link rel="stylesheet" href="sass/main.css">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-=======
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="sass/main.css">
->>>>>>> Stashed changes
 </head>
 
 <?php require_once('includes/connect.php');
@@ -153,11 +145,7 @@ $results = mysqli_query($connect,$query);?>
             <?php while($row = mysqli_fetch_array($results)){echo '<a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a>';}
             //                                              {echo '<a href="details.php?id='.$row['employees'].'"'.$row['job_id'].'"><img src="images/'.$row['thumb'].'" alt="thumbnail">'.$row['fname'].'<br>'.$row['lname'].'<br></a>';}
             ?>
-<<<<<<< Updated upstream
-      </section>
-=======
             </section>
->>>>>>> Stashed changes
 
             <!--About-->
             <section id="about-section">
@@ -178,34 +166,104 @@ $results = mysqli_query($connect,$query);?>
                 <h3 class="text info_text underline main-title" id="skills">skills</h3>
             </div>
 
-            <div>
-                <span class="button" id="brand-design">logo and brand design</span>
-<<<<<<< Updated upstream
+            <!-- logo and branding section -->
+            <h3 class="text info_text" id="brand-design">logo and brand design</h3>
+            <article class="skills-box">
+                <div class="icon-box" id="brandingSkills">
+                    <div class="icon-card">
+                        <img src="images/adobe-illustrator-logo.png" id="illustratorLogo" alt="Adobe illustrator Logo">
+                        <span class="text">Adobe Illustrator</span>
+                    </div>
+                    
+                    <div class="icon-card">
+                        <img src="images/adobe_photoshop_logo.png" id="photoshopLogo" alt="Adobe Photoshop Logo">
+                        <span class="text">Adobe Photoshop</span>
+                    </div>
 
-                <div class="box" id="box3">it worked</div>
+                    <div class="icon-card">
+                        <img src="images/Adobe_After_Effects_logo.png" id="afterEffectsLogo" alt="Adobe After Effects Logo">
+                        <span class="text">Adobe After Effects</span>
+                    </div>
 
-=======
->>>>>>> Stashed changes
-            </div>
+                    <div class="icon-card">
+                        <img src="images/Cinema-4D-Logo.png" id="cinema4dLogo" alt="Cinema4d Logo">
+                        <span class="text">Cinema 4D</span>
+                    </div>
 
-            <div>
-                <span class="button">coding</span>
-<<<<<<< Updated upstream
-=======
-                <div class="logo_box">
-                    <img src="images/html5.png" width="100px" id="HTML5_logo">
-                    <span>HTML5</span>
+                    </div>
+            </article>
+
+            <!-- coding section -->
+            <h3 class="text info_text">coding</h3>
+            <article class="skills-box">
+
+                <div class="icon-box" id="codingSkills">
+                    <div class="icon-card">
+                        <img src="images/html5.png" id="HTML5_logo" alt="HTML5 Logo">
+                        <span class="text">HTML5</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/css-3.svg" id="CSS3_logo" alt="CSS3 Logo">
+                        <span class="text">CSS</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/JavaScript-Logo.png" id="JS_logo" alt="Javascript logo">
+                        <span class="text">Javascript</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/PHP-logo.png" id="PHP_logo" alt="PHP logo">
+                        <span class="text">PHP</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/github-logo.png" id="GIT_logo" alt="Github logo">
+                        <span class="text">Github</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/Sass_Logo_Color.svg" id="SASS_logo" alt="SASS logo">
+                        <span class="text">SASS</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/greensock-logo.png" id="Greensock_logo" alt="Greensock logo">
+                        <span class="text">Greensock</span>
+                    </div>
                 </div>
->>>>>>> Stashed changes
-            </div>
+            </article>
 
-            <div>
-                <span class="button">web design</span>
-            </div>
+            <!-- web design section -->
+            <h3 class="text info_text">Web Design</h3>
+            <section class="skills-box">
+                <div class="icon-box" id="webDesignSkills">
+                    <div class="icon-card">
+                        <img src="images/Adobe_XD_Logo.png" id="xdLogo" alt="Adobe XD Logo">
+                        <span class="text">Adobe XD</span>
+                    </div>
 
-            <div>
-                <span class="button">video editing</span>
-            </div>
+                    <div class="icon-card">
+                        <img src="images/Figma-logo.png" id="figmaLogo" alt="Figma Logo">
+                        <span class="text">Figma</span>
+                    </div>
+            </section>
+
+            <!-- video editing -->
+            <h3 class="text info_text">Video Editing</h3>
+            <section class="skills-box">
+                <div class="icon-box" id="webDesignSkills">
+                    <div class="icon-card">
+                        <img src="images/Adobe_XD_Logo.png" id="premierLogo" alt="Adobe Premier Logo">
+                        <span class="text">Adobe Premier</span>
+                    </div>
+
+                    <div class="icon-card">
+                        <img src="images/after-effects.svg" id="afterEffectsLogo2" alt="After Effects Logo">
+                        <span class="text">Adobe After Effects</span>
+                    </div>
+            </section>
         </section>
 
             <!-- contact -->
@@ -226,11 +284,7 @@ $results = mysqli_query($connect,$query);?>
     <!-- main library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- ScrollTrigger plugin -->
-<<<<<<< Updated upstream
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-=======
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
->>>>>>> Stashed changes
     <!-- ScrollTo plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
