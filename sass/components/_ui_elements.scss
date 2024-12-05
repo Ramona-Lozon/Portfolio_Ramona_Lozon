@@ -135,43 +135,6 @@ body {
 
 }
 
-#skills-section {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-bottom: 150px;
-}
-
-.icon-box {
-    display: flex;
-    flex-direction: row;
-}
-
-#codingSkills {
-    visibility: hidden;
-    background-color: blue;
-}
-
-.icon-card {
-    display: flex;
-    flex-direction: column;
-    width: 120px;
-    align-items: center;
-    img {
-        height: 100px;
-    }
-    span {
-        color: a.$secondary-color;
-    }
-  }
-
-.box {
-	height: 100px;
-	width: 100px;
-    background-color: pink;
-    visibility: hidden;
-}
-
 #case-file-1 {
     background: url("../images/placeholder-images-03.jpg");
 }

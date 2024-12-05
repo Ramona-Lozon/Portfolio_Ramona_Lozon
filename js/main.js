@@ -31,7 +31,23 @@ function scrollLink(e){
     })
 })();
 
-//greensock animation    
+//greensock animations for fade in elements   
+
+(() => {
+
+    gsap.to("#brandingSkills", 3,
+        {
+            scrollTrigger:{
+                trigger: "#brandingSkills",
+                toggleActions: "play reverse play reverse",
+                markers: false, 
+                start: "top 80%",
+                end: "bottom 30%"
+            },
+            autoAlpha:1, 
+        });
+    
+    })();
 
 (() => {
 
@@ -39,13 +55,29 @@ gsap.to("#codingSkills", 3,
     {
         scrollTrigger:{
             trigger: "#codingSkills",
-            toggleActions: "play reverse play reset",
-            markers: true, 
+            toggleActions: "play reverse play reverse",
+            markers: false, 
             start: "top 80%",
             end: "bottom 30%"
         },
-        autoAlpha:1,
-        duration: 0.02 
+        autoAlpha:1, 
     });
 
 })();
+
+(() => {
+
+    gsap.to("#webDesignSkills", 3,
+        {
+            scrollTrigger:{
+                trigger: "#webDesignSkills",
+                toggleActions: "play reverse play reverse",
+                markers: false, 
+                start: "top 80%",
+                end: "bottom 30%"
+            },
+            autoAlpha:1, 
+        });
+    
+    })();
+

@@ -10,38 +10,6 @@
   font-style: italic;
 }
 
-#example-mixin-class {
-  background-color: blue;
-}
-
-#insta-icon:hover #insta-fill {
-  fill: #FFA55B;
-}
-
-#insta-icon:hover .insta-line {
-  stroke: #002530;
-}
-
-#git-icon:hover #git-fill {
-  fill: #FFA55B;
-}
-
-#git-icon:hover #git-line {
-  stroke: #002530;
-}
-
-#link-icon:hover .link-fill {
-  fill: #FFA55B;
-}
-
-#link-icon:hover #link-line {
-  fill: #002530;
-}
-
-body {
-  background-color: #002530;
-}
-
 h2 {
   display: none;
 }
@@ -76,6 +44,38 @@ h3 {
   padding: 0px;
 }
 
+li {
+  list-style: none;
+}
+
+#insta-icon:hover #insta-fill {
+  fill: #FFA55B;
+}
+
+#insta-icon:hover .insta-line {
+  stroke: #002530;
+}
+
+#git-icon:hover #git-fill {
+  fill: #FFA55B;
+}
+
+#git-icon:hover #git-line {
+  stroke: #002530;
+}
+
+#link-icon:hover .link-fill {
+  fill: #FFA55B;
+}
+
+#link-icon:hover #link-line {
+  fill: #002530;
+}
+
+body {
+  background-color: #002530;
+}
+
 .button {
   width: fit-content;
   min-width: 150px;
@@ -107,10 +107,6 @@ h3 {
 }
 .button:hover a {
   color: #002530;
-}
-
-li {
-  list-style: none;
 }
 
 .icon-list {
@@ -179,38 +175,6 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#skills-section {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  margin-bottom: 150px;
-}
-
-.icon-box {
-  display: flex;
-  flex-direction: row;
-}
-
-.icon-card {
-  display: flex;
-  flex-direction: column;
-  width: 120px;
-  align-items: center;
-}
-.icon-card img {
-  height: 100px;
-}
-.icon-card span {
-  color: #FFA55B;
-}
-
-.box {
-  height: 100px;
-  width: 100px;
-  background-color: pink;
-  visibility: hidden;
 }
 
 #case-file-1 {
@@ -314,6 +278,55 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+#skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.skills-box {
+  margin: 5px auto 5px auto;
+}
+
+.icon-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10px;
+  visibility: hidden;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 150px;
+  margin: 0px auto 0px auto;
+  align-items: center;
+  justify-content: center;
+}
+.icon-card img {
+  max-height: 100px;
+  max-width: 100px;
+  margin: auto;
+}
+.icon-card span {
+  color: #FFA55B;
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .icon-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .icon-box {
+    display: flex;
+    grid-template-columns: row;
   }
 }
 .hidden {

@@ -1,0 +1,52 @@
+@use "../abstracts" as a;
+
+#skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.skills-box {
+    margin: 5px auto 5px auto;
+}
+
+.icon-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    visibility: hidden;
+}
+
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 150px;
+    margin: 0px auto 0px auto;
+    align-items: center;
+    justify-content: center;
+    img {
+        max-height: 100px;
+        max-width: 100px;
+        margin: auto;
+    }
+    span {
+        color: a.$secondary-color;
+        margin-top: auto;
+    }
+  }
+
+  @media (min-width:768px) {
+    .icon-box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  @media (min-width:1200px) {
+    .icon-box {
+        display: flex;
+        grid-template-columns: row;
+    }
+  }
