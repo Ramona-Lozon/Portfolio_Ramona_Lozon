@@ -155,6 +155,7 @@ $results = mysqli_query($connect,$query);?>
                     <img src="images/ramona_selfie.jpg" alt="a picture of me">
                     <div>
                         <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eaer to make a splash in the industry and build connections.</span>
+                        <div class="button">Learn More</div>
                         <div class="button">Resume</div>
                     </div>
                 </div>
@@ -253,7 +254,7 @@ $results = mysqli_query($connect,$query);?>
             <!-- video editing -->
             <h3 class="text info_text">Video Editing</h3>
             <section class="skills-box">
-                <div class="icon-box" id="webDesignSkills">
+                <div class="icon-box" id="videoEditingSkills">
                     <div class="icon-card">
                         <img src="images/Adobe_XD_Logo.png" id="premierLogo" alt="Adobe Premier Logo">
                         <span class="text">Adobe Premier</span>
