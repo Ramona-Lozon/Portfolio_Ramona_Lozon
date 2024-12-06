@@ -103,17 +103,20 @@ gsap.to("#codingSkills", 3,
         lightBox.classList.remove('active')
       }
     
-    lightBoxTrigger.addEventListener('click', openLightbox);
-    closeBtn.forEach(Btn => {
+    if (lightBoxTrigger) {lightBoxTrigger.addEventListener('click', openLightbox);}
+    if (closeBtn){closeBtn.forEach(Btn => {
     Btn.addEventListener('click', closeLightbox);
     });
+  }
     })();
+
 
     //toggle menu
 (() => {
 const menuIcon = document.querySelector('#menuIcon');
 const navLinks = document.querySelector('#navLinks');
 const hamburger = document.querySelector('.hamburger-menu');
+const pageLinks = document.querySelectorAll('.page-link')
 
 function toggleMenu() {
     console.log("drop-down menu clicked");
@@ -130,8 +133,14 @@ function toggleMenu() {
       }, 10); 
     }
     hamburger.classList.toggle('active');
-  }
+  } 
 
+  function closeMenu() {
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  }
   function handleResize() {
     if (window.innerWidth > 1200) {
       navLinks.classList.add('active');
@@ -147,16 +156,7 @@ function toggleMenu() {
   window.addEventListener('resize', handleResize);
   handleResize();
   menuIcon.addEventListener('click', toggleMenu);
+  pageLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 })();
-
-//Message box styling wip
-// const messageBox = document.querySelector("#message")
-
-// function autoGrow() {
-//     this.style.height = "auto"; // Reset height to calculate new height
-//     this.style.height = this.scrollHeight + "px"; // Set height to match scrollHeight
-
-// messageBox.addEventListener("input", autoGrow) 
-// };
-
-
