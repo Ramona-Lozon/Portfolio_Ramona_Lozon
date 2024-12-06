@@ -52,6 +52,10 @@ li {
   background-color: blue;
 }
 
+* {
+  margin: 0;
+}
+
 .hidden {
   display: none;
 }
@@ -202,11 +206,6 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  header {
-    border-right-style: solid;
-    border-color: #FFA55B;
-    border-width: 5px;
-  }
   .main-title {
     margin: 50px auto 50px auto;
   }
@@ -409,6 +408,17 @@ body {
 }
 
 @media (min-width: 1200px) {
+  header {
+    border-right-style: solid;
+    border-color: #FFA55B;
+    border-width: 5px;
+    height: 100vh;
+    margin: 0;
+    padding: 0px;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+  }
   .hamburger-menu {
     display: none;
   }
@@ -417,10 +427,6 @@ body {
   }
   #greeting-section {
     border-bottom-style: none;
-  }
-  .desktop-sticky {
-    position: sticky;
-    top: 50px;
   }
   .navMenu {
     visibility: visible;

@@ -83,7 +83,20 @@
 }
 
 @media (min-width:1200px) {
+
+  header {
+    border-right-style: solid;
+    border-color: a.$secondary-color;
+    border-width: 5px;
+    height: 100vh;
+    margin: 0;
+    padding: 0px;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
     
+    }  
+
     .hamburger-menu {
         display: none;
     }
@@ -94,10 +107,6 @@
 
     #greeting-section {
         border-bottom-style: none;
-    }
-    .desktop-sticky {
-        position: sticky;
-        top: 50px;
     }
 
     .navMenu {

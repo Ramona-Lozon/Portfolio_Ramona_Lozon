@@ -1,24 +1,26 @@
-//greensock scrollto
 (() => {
+  gsap.registerPlugin(ScrollToPlugin);
 
-    gsap.registerPlugin(ScrollToPlugin)
-  
-    const navLinks = document.querySelectorAll("#navLinks ul li a")
+  const navLinks = document.querySelectorAll(".page-link");
 
-    console.log(navLinks);
+  function scrollLink(e) {
+      e.preventDefault();  // Prevent the default anchor jump behavior
 
-function scrollLink(e){
-    console.log(e.currentTarget.hash);
-    //prevent this default behaviour/jumping
-    e.preventDefault();
-    let selectedLink = e.currentTarget.hash;
-    gsap.to(window, {duration: 1, scrollTo:{y: `${selectedLink}`, offsetY: 100}});
-}
+      let selectedLink = e.currentTarget.querySelector("a").getAttribute("href");
+      console.log(selectedLink); // Logs the selected anchor (e.g., "#case-files-section")
 
-    navLinks.forEach((link) => {
-        link.addEventListener("click", scrollLink);
-    })
+      // Use GSAP to scroll to the selected section
+      gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: selectedLink, offsetY: 100 }  // Scroll to the section, with offset
+      });
+  }
+
+  navLinks.forEach((link) => {
+      link.addEventListener("click", scrollLink);
+  });
 })();
+
 
 //greensock animations for fade in elements   
 
@@ -103,33 +105,51 @@ gsap.to("#codingSkills", 3,
         lightBox.classList.remove('active')
       }
     
-    lightBoxTrigger.addEventListener('click', openLightbox);
-    closeBtn.forEach(Btn => {
+    if (lightBoxTrigger) {lightBoxTrigger.addEventListener('click', openLightbox);}
+    if (closeBtn){closeBtn.forEach(Btn => {
     Btn.addEventListener('click', closeLightbox);
     });
+  }
     })();
 
-    //toggle menu
-(() => {
-const menuIcon = document.querySelector('#menuIcon');
-const navLinks = document.querySelector('#navLinks');
-const hamburger = document.querySelector('.hamburger-menu');
 
-function toggleMenu() {
+//togglemenu
+(() => {
+  const menuIcon = document.querySelector('#menuIcon');
+  const navLinks = document.querySelector('#navLinks');
+  const hamburger = document.querySelector('.hamburger-menu');
+  const pageLinks = document.querySelectorAll('.page-link');
+
+  function toggleMenu() {
     console.log("drop-down menu clicked");
-  
+
+    if (window.innerWidth > 1200) {
+      return;
+    }
+
     if (navLinks.classList.contains('active')) {
       navLinks.classList.remove('active');
       setTimeout(() => {
-        navLinks.style.display = 'none'; 
-      }, 300); 
+        navLinks.style.display = 'none';
+      }, 300);
     } else {
-      navLinks.style.display = 'flex'; 
+      navLinks.style.display = 'flex';
       setTimeout(() => {
-        navLinks.classList.add('active'); 
-      }, 10); 
+        navLinks.classList.add('active');
+      }, 10);
     }
     hamburger.classList.toggle('active');
+  }
+
+  function closeMenu() {
+    if (window.innerWidth > 1200) {
+      return;
+    }
+
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
   }
 
   function handleResize() {
@@ -143,20 +163,11 @@ function toggleMenu() {
       navLinks.classList.remove('active');
     }
   }
-  
+
   window.addEventListener('resize', handleResize);
   handleResize();
   menuIcon.addEventListener('click', toggleMenu);
+  pageLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 })();
-
-//Message box styling wip
-// const messageBox = document.querySelector("#message")
-
-// function autoGrow() {
-//     this.style.height = "auto"; // Reset height to calculate new height
-//     this.style.height = this.scrollHeight + "px"; // Set height to match scrollHeight
-
-// messageBox.addEventListener("input", autoGrow) 
-// };
-
-

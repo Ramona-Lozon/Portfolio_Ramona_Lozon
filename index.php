@@ -38,10 +38,10 @@ $results = mysqli_query($connect,$query);?>
 
             <nav class="navMenu" id="navLinks">
             <ul class="nav-links">
-                <li><a class="button" href="#case-files-section">Work/Top</a></li>
-                <li><a class="button" href="#about-section">About</a></li>
-                <li><a class="button" href="#skills-section">skills</a></li>
-                <li><a class="button" href="#contact-section">Contact</a></li>
+                <li class="page-link"><a class="button" href="#case-files-section">Work/Top</a></li>
+                <li class="page-link"><a class="button" href="#about-section">About</a></li>
+                <li class="page-link"><a class="button" href="#skills-section">skills</a></li>
+                <li class="page-link"><a class="button" href="#contact-section">Contact</a></li>
                 </ul>
             </div>
 
@@ -302,7 +302,6 @@ $results = mysqli_query($connect,$query);?>
     <!-- ScrollTo plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
-<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
 <script src="js/main.js"></script>
 </body>
 </html>
