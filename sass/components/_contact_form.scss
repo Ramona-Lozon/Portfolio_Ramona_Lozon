@@ -1,0 +1,22 @@
+@use "../abstracts" as a;
+
+// contact list stlyes for mobile/basic
+
+.input-form {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.form-box {
+    background-color: a.$primary-color;
+    border-color: a.$secondary-color;
+    color: a.$secondary-color;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 10px;
+    height:auto;
+    overflow: hidden;
+}
