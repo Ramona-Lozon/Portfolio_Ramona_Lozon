@@ -1,5 +1,12 @@
 @use "../abstracts" as a;
 
+.hidden {
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
 
 #insta-icon:hover #insta-fill {
     fill: a.$secondary-color;
@@ -74,27 +81,6 @@ body {
     margin:5px;
 }
 
-#greeting-section {
-    border-bottom-style: solid;
-    border-color: a.$secondary-color;
-    border-width: 5px; 
-    margin-bottom: 50px;
-}
-
-#greeting-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    img {
-        height: 50px;
-    }
-}
-
-#meniIcon {
-    position: sticky;
-}
-
 #case-files-section {
     margin-bottom: 150px;
 }
@@ -152,24 +138,7 @@ body {
     margin: 5px auto 5px auto;
 }
 
-// contact list stlyes for mobile/basic
 
-.input-form {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-
-}
-.form-box {
-    background-color: a.$primary-color;
-    border-color: a.$secondary-color;
-    border-style: solid;
-    border-radius: 4px;
-    padding: 10px;
-
-}
 
 
 //tablet styles
@@ -194,14 +163,6 @@ body {
 
 //desktop styles
 @media (min-width:1200px) {
-    
-    #menuIcon {
-        display: hidden;
-    }
-
-    #greeting-section {
-        border-bottom-style: none;
-    }
 
     header {
     border-right-style: solid;

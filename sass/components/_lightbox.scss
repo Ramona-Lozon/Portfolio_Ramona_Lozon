@@ -13,6 +13,11 @@
     align-items: center;
     z-index: 1000;
   }
+
+  .lightbox.active {
+    display: flex;
+  }
+
   .lightbox {
     p {
     text-decoration: none;

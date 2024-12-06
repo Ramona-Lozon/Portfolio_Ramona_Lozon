@@ -29,10 +29,14 @@ $results = mysqli_query($connect,$query);?>
 
             <div class="text subheader" id="intro-message">
                 <span>Designer and Developer<br>I design brands, and build websites</span>
-                <div class="menu-icon" id="menuIcon">&#9776;</div>
-    </div>
+                <div class="hamburger-menu" id="menuIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+            </div>
 
-    <nav class="desktop-shown desktop-sticky hidden" id="navLinks">
+            <nav class="navMenu" id="navLinks">
             <ul class="nav-links">
                 <li><a class="button" href="#case-files-section">Work/Top</a></li>
                 <li><a class="button" href="#about-section">About</a></li>
@@ -137,6 +141,8 @@ $results = mysqli_query($connect,$query);?>
     </section>
     </header>
 
+      
+</div>
     <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
             
         <!-- case files -->
@@ -154,7 +160,7 @@ $results = mysqli_query($connect,$query);?>
                 <div id="info-and-resume">
                     <img src="images/ramona_selfie.jpg" alt="a picture of me">
                     <div>
-                        <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eaer to make a splash in the industry and build connections.</span>
+                        <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eager to make a splash in the industry and build connections.</span>
                         <span class="button" id="learnMore">Learn More</span>
                         <div class="button">Resume</div>
                     </div>
@@ -263,7 +269,7 @@ $results = mysqli_query($connect,$query);?>
             <section class="skills-box">
                 <div class="icon-box" id="videoEditingSkills">
                     <div class="icon-card">
-                        <img src="images/Adobe_XD_Logo.png" id="premierLogo" alt="Adobe Premier Logo">
+                        <img src="images/Adobe_Premiere_logo.png" id="premierLogo" alt="Adobe Premier Logo">
                         <span class="text">Adobe Premier</span>
                     </div>
 
@@ -282,7 +288,7 @@ $results = mysqli_query($connect,$query);?>
                 <input class="form-box" type="text" name="name" id="name" placeholder="name"><br><br>
                 <input class="form-box" type="text" name="organization" id="organization" placeholder="organization"><br><br>
                 <input class="form-box" type="text" name="email" id="email" placeholder="email"><br><br>
-                <textarea class="form-box" name="message" id="message" placeholder="message"></textarea><br><br>
+                <textarea class="form-box" name="message" style="height:auto;" id="message" placeholder="message"></textarea><br><br>
                 <input class="button" id="send-button" type="submit" value="Submit"><br><br><br><br>
             </form>   
             </article>
