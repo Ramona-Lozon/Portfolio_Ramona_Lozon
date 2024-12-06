@@ -1,32 +1,32 @@
 <?php
 
-require_once('connect.php');
+require_once('includes/connect.php');
 
 ///gather the form content
 $name = $_POST['name'];
-$org = $_POST['organization'];
+$org = $_POST['org'];
 $email = $_POST['email'];
-$msg = $_POST['message'];
+$msg = $_POST['msg'];
 
 $errors = [];
 
 //validate and clean these values
 
 $name = trim($name);
-$organization = trim($organization);
+$org = trim($org);
 $email = trim($email);
-$message = trim($message);
+$msg = trim($msg);
 
-if(empty($lname)) {
+if(empty($name)) {
     $errors['name'] = 'field cant be empty';
 }
 
-if(empty($organization)) {
+if(empty($org)) {
     $errors['org'] = 'field cant be empty';
 }
 
-if(empty($message)) {
-    $errors['comments'] = 'field cant be empty';
+if(empty($msg)) {
+    $errors['msg'] = 'field cant be empty';
 }
 
 if(empty($email)) {
@@ -39,7 +39,7 @@ if(empty($errors)) {
 
     //insert these values as a new row in the contacts table
 
-    $query = "INSERT INTO contacts (name, organization, email, comments) VALUES('.$name.','.$organization.','.$email.','.$message.')";
+    $query = "INSERT INTO contacts (name, org, email, msg) VALUES('.$name.','.$org.','.$email.','.$msg.')";
 //create table with names
 //should inset these values into database
     if(mysqli_query($connect, $query)) {
@@ -51,9 +51,10 @@ $subject = 'Message from your Portfolio site!';
 
 $message = "You have received a new contact form submission:\n\n";
 $message .= "Name: ".$name."\n";
-$message .= "Organization: ".$organization."\n";
+$message .= "Org: ".$org."\n";
 $message .= "Email: ".$email."\n\n";
-$message .= "Message" .$message;
+$message .= "Message" .$msg;
+
 //build out rest of message body...
 
 mail($to,$subject,$message);
