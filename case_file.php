@@ -48,7 +48,12 @@ $row = mysqli_fetch_assoc($results);
 
             <nav class="navMenu" id="navLinks">
             <ul class="nav-links">
-                <li><a class="button" href="C:\Users\Ramona\Documents\GitHub\Portfolio_Ramona_Lozon\index.html">Home</a></li>
+                
+                <!-- html link -->
+            <li><a class="button" href="C:\Users\Ramona\Documents\GitHub\Portfolio_Ramona_Lozon\index.html">Home</a></li>
+
+                <!-- localhost php link -->
+            <!-- <li><a class="button" href="http://localhost/Portfolio_Ramona_Lozon/index.php">Home</a></li> -->
                 </ul>
             </div>
     
