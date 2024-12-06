@@ -284,11 +284,11 @@ $results = mysqli_query($connect,$query);?>
             <article id="contact-section" class="col-span-full">
                 <h3 class="text underline main-title">Contact</h3>
             <!--Buttons-->
-            <form class="input-form" method="post" action="#">
-                <input class="form-box" type="text" name="name" id="name" placeholder="name"><br><br>
-                <input class="form-box" type="text" name="organization" id="organization" placeholder="organization"><br><br>
-                <input class="form-box" type="text" name="email" id="email" placeholder="email"><br><br>
-                <textarea class="form-box" name="message" style="height:auto;" id="message" placeholder="message"></textarea><br><br>
+            <form class="input-form" method="post" action="sendmail.php">
+                <input class="form-box" type="text" name="name" id="name" placeholder="name" action="sendmail.php"><br><br>
+                <input class="form-box" type="text" name="org" id="org" placeholder="organization" action="sendmail.php"><br><br>
+                <input class="form-box" type="email" name="email" id="email" placeholder="email" action="sendmail.php"><br><br>
+                <textarea class="form-box" name="msg" style="height:auto;" id="msgd" placeholder="message" action="sendmail.php"></textarea><br><br>
                 <input class="button" id="send-button" type="submit" value="Submit"><br><br><br><br>
             </form>   
             </article>
