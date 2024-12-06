@@ -48,10 +48,7 @@ $row = mysqli_fetch_assoc($results);
 
             <nav class="navMenu" id="navLinks">
             <ul class="nav-links">
-                <li class="page-link"><a class="button" href="#case-files-section">Work/Top</a></li>
-                <li class="page-link"><a class="button" href="#about-section">About</a></li>
-                <li class="page-link"><a class="button" href="#skills-section">skills</a></li>
-                <li class="page-link"><a class="button" href="#contact-section">Contact</a></li>
+                <li><a class="button" href="C:\Users\Ramona\Documents\GitHub\Portfolio_Ramona_Lozon\index.html">Home</a></li>
                 </ul>
             </div>
     

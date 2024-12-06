@@ -1,5 +1,9 @@
 @use "../abstracts" as a;
 
+* {
+    margin: 0;
+}
+
 .hidden {
     display: none;
 }
@@ -164,11 +168,7 @@ body {
 //desktop styles
 @media (min-width:1200px) {
 
-    header {
-    border-right-style: solid;
-    border-color: a.$secondary-color;
-    border-width: 5px;
-    }   
+ 
 
     .main-title {
         margin: 50px auto 50px auto;
