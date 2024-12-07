@@ -91,27 +91,23 @@ gsap.to("#codingSkills", 3,
 // about me lightbox
 (() => {
 
-    const lightBox = document.querySelector("#lightbox");
-    const lightBoxTrigger = document.querySelector("#learnMore");
-    const closeBtn = document.querySelectorAll('#close-button');
+  const lightBox = document.querySelector("#lightbox");
+  const lightBoxTrigger = document.querySelector("#learnMore");
+  
+  function openLightbox() {
+      console.log('open lightbox')
+      lightBox.classList.add('active')
+    }
     
-    function openLightbox() {
-        console.log('open lightbox')
-        lightBox.classList.add('active')
-      }
-      
-      function closeLightbox() {
-        console.log('close lightbox')
-        lightBox.classList.remove('active')
-      }
-    
-    if (lightBoxTrigger) {lightBoxTrigger.addEventListener('click', openLightbox);}
-    if (closeBtn){closeBtn.forEach(Btn => {
-    Btn.addEventListener('click', closeLightbox);
-    });
-  }
-    })();
+    function closeLightbox() {
+      console.log('close lightbox')
+      lightBox.classList.remove('active')
+    }
 
+    
+  lightBoxTrigger.addEventListener('click', openLightbox)
+    lightBox.addEventListener('click', closeLightbox)
+  })();
 
 //togglemenu
 (() => {
