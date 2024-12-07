@@ -105,8 +105,8 @@ gsap.to("#codingSkills", 3,
     }
 
     
-  lightBoxTrigger.addEventListener('click', openLightbox)
-    lightBox.addEventListener('click', closeLightbox)
+  if (lightBoxTrigger) {lightBoxTrigger.addEventListener('click', openLightbox);}
+  if (lightBox) {lightBox.addEventListener('click', closeLightbox);}
   })();
 
 //togglemenu

@@ -14,7 +14,6 @@
 
 <?php require_once('includes/connect.php');
 $query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
-//run the query to get back the content
 $results = mysqli_query($connect,$query);?>
 
 <body>
@@ -24,7 +23,7 @@ $results = mysqli_query($connect,$query);?>
 
         <section class="desktop-sticky" id="greeting-section">
             <div id="greeting-title">
-                <img src="images/rl-design-logo.svg"><h3 class="text">Ramona Lozon</h3>
+                <img src="images/logo-small.png"><h3 class="text">Ramona Lozon</h3>
 
             </div>
 
