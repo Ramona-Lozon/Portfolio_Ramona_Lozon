@@ -147,7 +147,7 @@
 </header>
 
 <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
-<?php echo '<div><h3 class="main-title">'.$row['project'].'</h3></div>';?>
+<?php echo '<div><h3 class="text main-title">'.$row['project'].'</h3></div>';?>
 <?php echo '<div><p class="case-file-text">'.$row['proposition'].'</p></div>';?> 
 <?php echo '<div class="case-file-image"><img src="images/'.$row['prop_ex'].'" alt="Proposition image"></div>'?>
 <?php echo '<div><p class="case-file-text">'.$row['prop_caption'].'</p></div>';?>

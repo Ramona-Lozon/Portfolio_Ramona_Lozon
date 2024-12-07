@@ -405,7 +405,7 @@ $results = mysqli_query($connect,$query);?>
         </ul>
     </div>
     <div class="top-button">
-        <span class="page-link"><a class="button" href="#top">Top &uArr;</a></span>
+        <span class="page-link"><a class="top-link" href="#top">Top &uArr;</a></span>
     </div>
 </footer>
 
