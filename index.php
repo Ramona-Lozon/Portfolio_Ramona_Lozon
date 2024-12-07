@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramona's Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -147,10 +148,29 @@ $results = mysqli_query($connect,$query);?>
             
         <!-- case files -->
          <section id="case-files-section"><h2>My Work</h2>
+            
+            <?php while($row = mysqli_fetch_array($results)){echo '<div class="case-file-hero"><a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a></div>';}?>
+           
+            <!-- <div class="case-file-hero"><a href="#"><img src="images/Earbuds-Retro-poster1.png"></a></div>
+            <div class="case-file-hero"><a href="#"><img src="images/Earbuds-Retro-poster1.png"></a></div>
+            <div class="case-file-hero"><a href="#"><img src="images/Earbuds-Retro-poster1.png"></a></div> -->
+        </section>
 
-            <?php while($row = mysqli_fetch_array($results)){echo '<a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a>';}
-            //                                              {echo '<a href="details.php?id='.$row['employees'].'"'.$row['job_id'].'"><img src="images/'.$row['thumb'].'" alt="thumbnail">'.$row['fname'].'<br>'.$row['lname'].'<br></a>';}
-            ?>
+            <section id="player-container" class="col-span-ful">
+                <div><h3 class="text info_text underline main-title">Motion Design Demo Reel</h3></div>
+                <video class="video-player" controls preload="metadata" poster="images/placeholder.jpg">
+                    <source src="video/lozon_ramona_demo_reel.mp4" type="video/mp4">
+                    <source src="video/lozon_ramona_demo_reel.webm" type="video/webm">
+                <p>Your browser does not support the video tag.</p>
+                </video>
+                <div class="video-controls hidden" id="video-controls">
+                    <button id="play-button" class="play-button"><i class="fa fa-play-circle-o video-button"></i></button>
+                    <button id="pause-button" class="pause-button"><i class="fa fa-pause-circle-o video-button"></i></button>
+                    <button id="stop-button" class="stop-button"><i class="fa fa-stop-circle-o video-button"></i></button>
+                    <i class="fa fa-volume-up"></i>
+                    <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+                    <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
+                </div>
             </section>
 
             <!--About-->
@@ -301,7 +321,7 @@ $results = mysqli_query($connect,$query);?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- ScrollTo plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-
+    <script src="js/thirdparty.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

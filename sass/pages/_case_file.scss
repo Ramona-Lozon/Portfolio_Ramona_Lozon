@@ -1,0 +1,10 @@
+@use "../abstracts" as a;
+
+.case-file-image {
+        margin: 10px 0px 10px 0px;
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+        }
+}

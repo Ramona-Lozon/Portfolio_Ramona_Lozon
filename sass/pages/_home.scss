@@ -1,0 +1,103 @@
+@use "../abstracts" as a;
+
+case-files-section {
+    margin-bottom: 150px;
+}
+
+.case-file-hero {
+    margin: 10px 0px 10px 0px;
+
+    a {
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+    }
+}
+}
+#about-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    div {
+            span {
+            text-align: center;
+            margin: 10px 50px 10px 50px;
+            }
+    }
+}
+
+#info-and-resume {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 400px;
+        border-radius: 150px;
+        margin: 10px auto auto auto;
+        }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+}
+
+
+#selfie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.case-file-object {
+    width: 300px;
+    height: 300px;
+    margin: 5px auto 5px auto;
+}
+
+//tablet styles
+@media (min-width:768px) {
+
+    .case-file-object {
+        width: 700px;
+        height: 340px;
+    }
+}
+
+//desktop styles
+@media (min-width:1200px) {
+
+    .case-file-object {
+        width: 700px;
+        height: 340px;
+    }
+
+    #about-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+    }
+
+    #info-and-resume {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 400px;
+            border-radius: 150px;
+            margin: 10px auto auto auto;
+            }
+        span {
+            align-items: left;
+            text-align: left;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+    }
+    }
