@@ -8,3 +8,23 @@
                 border-radius: 15px;
         }
 }
+
+.case-file-link {
+        margin: 10px auto 10px auto;
+}
+
+.case-file-text {
+        color: a.$secondary-color;
+        font-family: "inclusive-sans", "Montserrat";
+        margin: 10px 15px 10px auto;
+        font-size: 16px;
+    }
+
+@media (min-width:768px) {
+    }
+
+@media (min-width:1200px) {
+        .case-file-text {
+                text-align: left;
+            }
+    }

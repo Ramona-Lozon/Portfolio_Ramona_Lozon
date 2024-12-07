@@ -1,7 +1,5 @@
 @use "../abstracts" as a;
 
-
-
 .video-player {
     border-radius: 15px;
     aspect-ratio: 16/9;
@@ -33,16 +31,12 @@
     pointer-events: none;
   }
 
-  .play-button {
-    color: a.$secondary-color;
-    cursor: pointer;
-    }
-
   button {
     padding: 0;
     border: 0;
     background-color: transparent;
     color: a.$secondary-color;
+    cursor: pointer;
   }
 
   .fa, .fa-solid {
@@ -58,12 +52,6 @@
   .fa-volume-up {
     margin-left: auto;
   }
-
-  /* range inputs are a pain to style
-  
-  https://range-input-css.netlify.app/
-  
-  */
 
   /*********** Baseline, reset styles ***********/
 input[type="range"] {
