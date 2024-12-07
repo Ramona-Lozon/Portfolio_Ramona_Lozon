@@ -1,0 +1,126 @@
+@use "../abstracts" as a;
+
+
+
+.video-player {
+    border-radius: 15px;
+    aspect-ratio: 16/9;
+}
+#player-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-controls.hidden {
+  display: none;
+}
+
+.video-controls {
+    right: 0;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0px;
+    transition: all 0.2s ease;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    display: flex;
+    border-radius: 15px;
+  }
+  
+  .video-controls.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .play-button {
+    color: a.$secondary-color;
+    cursor: pointer;
+    }
+
+  button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: a.$secondary-color;
+  }
+
+  .fa, .fa-solid {
+    color: a.$secondary-color;
+    font-size: 28px;
+    margin-left: 20px;
+  } 
+
+  .fa-stop-circle-o {
+    margin-right: 20px;
+  }
+
+  .fa-volume-up {
+    margin-left: auto;
+  }
+
+  /* range inputs are a pain to style
+  
+  https://range-input-css.netlify.app/
+  
+  */
+
+  /*********** Baseline, reset styles ***********/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+  }
+  
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: a.$secondary-color;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #808080;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #808080;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[type="range"]::-moz-range-track {
+    background-color: a.$secondary-color;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-moz-range-thumb {
+    background-color: #808080;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #808080;
+    outline-offset: 0.125rem;
+  }
