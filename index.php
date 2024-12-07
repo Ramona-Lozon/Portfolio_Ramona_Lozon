@@ -186,11 +186,16 @@ $results = mysqli_query($connect,$query);?>
 
                   <!-- About lightbox -->
   <div id="lightbox" class="lightbox">
-    <span id="close-button" class="close-btn">&times;</span>
-    <h3 class="text main-title">About Me</h3>
-    <p>Here is the long version</p>
+    <div class="lightbox-content">
+        <h3 class="text main-title">More About Me</h3>
+            <p class="text info_text lightbox-text">
+                Hi there! I'm a creative and passionate individual who loves all things nerdy, from Dungeons & Dragons and tabletop role-playing games to sci-fi, fantasy, and post-apocalyptic fiction. My dedication to art and design drives me to explore creativity in every medium, whether it's graphic design or hands-on projects.
+                I support LGBTQ rights and volunteer as a graphic designer for a local group, Queer Intersections. With years of professional experience across various roles, I bring punctuality, professionalism, and a strong work ethic to everything I do.
+            </p>
+            <h3 class="text main-title">Education</h3>
+            <p class="text lightbox-text">Certificate of Design,<br>Fanshawe College<br><br>Interactive Media Design Program<br>Fanshawe College (Currently Enrolled)</P>
   </div>
-
+</div>
             <!-- skills -->
              <section id="skills-section">
             <div>

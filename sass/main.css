@@ -251,8 +251,8 @@ footer .top-button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #002530;
   display: none;
   flex-direction: column;
@@ -265,18 +265,27 @@ footer .top-button {
   display: flex;
 }
 
-.lightbox p {
-  text-decoration: none;
-  color: #FFA55B;
-  margin: 20px 0px 20px 0px;
-  font-size: 32px;
+.lightbox-content {
+  width: 80vw;
 }
 
-.close-btn {
-  cursor: pointer;
-  color: #FFA55B;
+.lightbox-text {
+  font-size: 14px;
+  line-height: 20px;
 }
 
+@media (min-width: 768px) {
+  .lightbox-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .lightbox-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 .navMenu {
   visibility: hidden;
   max-height: 0;
