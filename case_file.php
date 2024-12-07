@@ -13,18 +13,10 @@
 </head>
 
 <?php
-//connect to the running database server and the specific database
-require_once('includes/connect.php');
-
-//create a query to run in SQL
-$query = 'SELECT * FROM case_file,media WHERE media.id = case_file.id AND media.id ='.$_GET['id'];
-//$query = 'SELECT * FROM employees,jobs WHERE job_id = jobs.id AND employees.id ='.$_GET['id'];
-
-//run the query to get back the content
-$results = mysqli_query($connect,$query);
-$row = mysqli_fetch_assoc($results);
-//print_r($results);
-
+    require_once('includes/connect.php');
+    $query = 'SELECT * FROM case_file,media WHERE media.id = case_file.id AND media.id ='.$_GET['id'];
+    $results = mysqli_query($connect,$query);
+    $row = mysqli_fetch_assoc($results);
 ?>
 
 <body>
@@ -157,80 +149,58 @@ $row = mysqli_fetch_assoc($results);
 <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
 
         <!-- Project -->
-<!-- <?php echo '<div><h3 class="text info_text underline main-title">'.$row['project'].'</h3></div>';?> -->
 <?php echo '<div><h3 class="text info_text underline main-title">'.$row['project'].'</h3></div>';?>
-<!-- <div><h3 class="text info_text underline main-title">8Track Earbuds</h3></div> -->
 
     <!-- proposition -->
-<!-- <?php echo '<div><p class="text info_text">'.$row['proposition'].'</p></div>';?>  -->
 <?php echo '<div><p class="text info_text">'.$row['proposition'].'</p></div>';?> 
-<!-- <div><p class="text info_text">This was a school project done at Fanshawe where the goal was to make a website promoting a brand of earbuds that we design.</p></div> -->
- 
+
     <!-- Proposition Caption -->
-<!-- <?php echo '<div><img src="images/'.$row['prop_ex'].'"></div>';?>  -->
-<div class="case-file-image"><img src="images/'.$row['prop_ex'].'" alt="Proposition image"></div>
-<!-- <div class="case-file-image"><img src="images/earbuds-sketches.png" alt="Proposition image"></div> -->
+<?php echo '<div class="case-file-image">
+    <img src="images/'.$row['prop_ex'].'" alt="Proposition image">
+    </div>'?>
 
     <!-- proposition Media Caption -->
-<!-- <?php echo '<div><span class="text info_text">'.$row['prop_caption'].'</span></div>';?>  -->
 <?php echo '<div><p class="text info_text">'.$row['prop_caption'].'</p></div>';?>
-<!-- <div><p class="text info_text">The first part of the design process was sketching out the earbuds and designing a logo and some branding options.</p></div> -->
 
     <!-- deliverables -->
-<!-- <?php echo '<div><span class="text info_text">'.$row['deliverables'].'</span></div>';?>  -->
 <?php echo '<div><p class="text info_text">'.$row['deliverables'].'</p></div>';?>
-<!-- <div><p class="text info_text">we had to design and build the headphones ourselves, create all the branding and design the website. we used Cinema4D to make the headphones, and the adobe suite to make the advertising materials. The site was built using HTML/CSS+SASS and Javascript. the model viewer framework and Greensock library to animate the different features on the site. </p></div> -->
 
-<!-- <?php echo '<div><img src="images/'.$row['work_ex'].'"></div>';?>  -->
+    <!-- work media -->
 <?php echo '<div class="case-file-image"><img src="images/'.$row['work_ex'].'" alt="work image"></div>';?>
-<!-- <div class="case-file-image"><img src="images/Earbuds-Retro-Poster2.png" alt="work image"></div> -->
 
     <!-- work media caption -->
-<!-- <?php echo '<div><span class="text info_text">'.$row['work_caption'].'</span></div>';?>  -->
 <?php echo '<div><p class="text info_text">'.$row['work_caption'].'</p></div>';?>
-<!-- <div><p class="text info_text">after the earbuds were modeled we were tasked with creating branding and promotional images for our product.</p></div> -->
 
-    <!-- Product Media  -->
-<!-- <?php echo '<div><img src="images/'.$row['product_ex'].'"></div>';?>  -->
-<?php echo '<section id="player-container">
-    <video class="video-player" controls preload="metadata" poster="images/placeholder.jpg">
-        <source src="'.$row['product_ex'].'" type="video/mp4">
-        <!-- <source src="video/lozon_ramona_demo_reel.webm" type="video/webm"> -->
-    <p>Your browser does not support the video tag.</p>
-    </video>
-    <div class="video-controls hidden" id="video-controls">
-        <button id="play-button" class="play-button"><i class="fa fa-play-circle-o video-button"></i></button>
-        <button id="pause-button" class="pause-button"><i class="fa fa-pause-circle-o video-button"></i></button>
-        <button id="stop-button" class="stop-button"><i class="fa fa-stop-circle-o video-button"></i></button>
-        <i class="fa fa-volume-up"></i>
-        <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
-        <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
-    </div>
-</section>';?> 
-<!-- <section id="player-container">
-    <video class="video-player" controls preload="metadata" poster="images/placeholder.jpg">
-        <source src="video/Lozon_ramona_earbuds_ad.mp4" type="video/mp4">
-    <p>Your browser does not support the video tag.</p>
-    </video>
-    <div class="video-controls hidden" id="video-controls">
-        <button id="play-button" class="play-button"><i class="fa fa-play-circle-o video-button"></i></button>
-        <button id="pause-button" class="pause-button"><i class="fa fa-pause-circle-o video-button"></i></button>
-        <button id="stop-button" class="stop-button"><i class="fa fa-stop-circle-o video-button"></i></button>
-        <i class="fa fa-volume-up"></i>
-        <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
-        <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
-    </div>
-</section> -->
+<?php 
+if ($row['id'] == 1 || $row['id'] == 2) {
+    // Show video for row ID 1 and 2
+    echo '<section id="player-container">
+        <video class="video-player" controls preload="metadata" poster="images/placeholder.jpg">
+            <source src="video/'.$row['product_ex'].'" type="video/mp4">
+            <p>Your browser does not support the video tag.</p>
+        </video>
+        <div class="video-controls hidden" id="video-controls">
+            <button id="play-button" class="play-button"><i class="fa fa-play-circle-o video-button"></i></button>
+            <button id="pause-button" class="pause-button"><i class="fa fa-pause-circle-o video-button"></i></button>
+            <button id="stop-button" class="stop-button"><i class="fa fa-stop-circle-o video-button"></i></button>
+            <i class="fa fa-volume-up"></i>
+            <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+            <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
+        </div>
+    </section>';
+} else if ($row['id'] == 3) {
+    // Show image for row ID 3
+    echo '<div class="case-file-image">
+        <img src="images/'.$row['product_ex'].'" alt="Media Image" class="responsive-image">
+    </div>';
+}
+?>
 
     <!-- proposition media cpation -->
-<!-- <?php echo '<div><span class="text info_text">' .$row['product_caption'].'</span></div>'; ?>  -->
 <?php echo '<div><p class="text info_text">' .$row['product_caption'].'</p></div>'; ?>
-<!-- <div><p class="text info_text">This is a small video ad I made, the original animation was made into a scrolling based animation on the website.</p></div> -->
 
     <!-- outcome -->
-<!-- <?php echo '<div><span class="text info_text">' .$row['outcome'].'</span></div>'; ?>  -->
 <?php echo '<div><p class="text info_text">' .$row['outcome'].'</p></div>'; ?>
-<!-- <div><p class="text info_text">the site itself turned out great, the features all function quite well and give the site appeal. find it here: https://github.com/Ramona-Lozon/Earbuds_site_ramona_lozon</p></div> -->
 
 <!-- closing tags -->
 </main>
