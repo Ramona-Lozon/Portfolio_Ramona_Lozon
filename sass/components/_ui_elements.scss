@@ -36,7 +36,6 @@
   #link-icon:hover #link-line {
     fill: a.$primary-color;
   }
-// basic and mobile styles
 
 body {
     background-color: a.$primary-color;
@@ -109,7 +108,6 @@ body {
 
 .top-link:hover {
   opacity: 1;
-  //color: a.$secondary-color;
   background-color: a.$primary-color;
   border-color: a.$secondary-color;
 }

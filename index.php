@@ -23,12 +23,12 @@ $results = mysqli_query($connect,$query);?>
 
         <section class="desktop-sticky" id="greeting-section">
             <div id="greeting-title">
-                <img src="images/logo-small.png"><h3 class="text">Ramona Lozon</h3>
+                <img src="images/logo-small.png"><h3 class="text ramona-title">Ramona Lozon</h3>
 
             </div>
 
             <div class="text subheader" id="intro-message">
-                <span>Designer and Developer<br>I design brands, and build websites</span>
+                <span>Designer and Developer<br><br>I design brands, and build websites</span>
                 <div class="hamburger-menu" id="menuIcon">
                     <span></span>
                     <span></span>
@@ -178,7 +178,7 @@ $results = mysqli_query($connect,$query);?>
                     <div>
                         <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eager to make a splash in the industry and build connections.</span>
                         <span class="button" id="learnMore">Learn More</span>
-                        <div class="button">Resume</div>
+                        <div class="button">Resume &dArr;</div>
                     </div>
                 </div>
             </section>

@@ -26,12 +26,10 @@
 
         <section class="desktop-sticky" id="greeting-section">
             <div id="greeting-title">
-                <img src="images/rl-design-logo.svg"><h3 class="text">Ramona Lozon</h3>
+            <img src="images/logo-small.png"><h3 class="text ramona-title">Ramona Lozon</h3></div>
 
-            </div>
-
-            <div class="text subheader" id="intro-message">
-                <span>Designer and Developer<br>I design brands, and build websites</span>
+<div class="text subheader" id="intro-message">
+    <span>Designer and Developer<br><br>I design brands, and build websites</span>
                 <div class="hamburger-menu" id="menuIcon">
                     <span></span>
                     <span></span>

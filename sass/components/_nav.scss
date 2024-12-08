@@ -1,5 +1,12 @@
 @use "../abstracts" as a;
 
+.ramona-title {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-image: linear-gradient(90deg, a.$secondary-color, a.$primary-color);
+  border-image-slice: 1;
+}
+
 .navMenu {
     visibility: hidden;
     max-height: 0;
@@ -68,7 +75,7 @@
     border-bottom-style: solid;
     border-color: a.$secondary-color;
     border-width: 5px; 
-    margin-bottom: 50px;
+    margin: 50px 0px 50px 0px;
     overflow: auto;
 }
 
@@ -78,7 +85,7 @@
     justify-content: center;
     align-items: center;
     img {
-        height: 50px;
+        height: 55px;
     }
 }
 

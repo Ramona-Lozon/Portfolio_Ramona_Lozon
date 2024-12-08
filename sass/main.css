@@ -286,6 +286,13 @@ footer .top-button {
     line-height: 26px;
   }
 }
+.ramona-title {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-image: linear-gradient(90deg, #FFA55B, #002530);
+  border-image-slice: 1;
+}
+
 .navMenu {
   visibility: hidden;
   max-height: 0;
@@ -353,7 +360,7 @@ footer .top-button {
   border-bottom-style: solid;
   border-color: #FFA55B;
   border-width: 5px;
-  margin-bottom: 50px;
+  margin: 50px 0px 50px 0px;
   overflow: auto;
 }
 
@@ -364,7 +371,7 @@ footer .top-button {
   align-items: center;
 }
 #greeting-title img {
-  height: 50px;
+  height: 55px;
 }
 
 @media (min-width: 1200px) {
