@@ -13,27 +13,27 @@
     text-align: center;
 }
 
-#insta-icon:hover #insta-fill {
+.insta-icon:hover .insta-fill {
     fill: a.$secondary-color;
   }
 
-  #insta-icon:hover .insta-line {
+  .insta-icon:hover .insta-line {
     stroke: a.$primary-color;
   }
 
-  #git-icon:hover #git-fill {
+  .git-icon:hover .git-fill {
     fill: a.$secondary-color;
   }
 
-  #git-icon:hover #git-line {
+  .git-icon:hover .git-line {
     stroke: a.$primary-color;
   }
 
-  #link-icon:hover .link-fill {
+  .link-icon:hover .link-fill {
     fill: a.$secondary-color;
   }
 
-  #link-icon:hover #link-line {
+  .link-icon:hover .link-line {
     fill: a.$primary-color;
   }
 

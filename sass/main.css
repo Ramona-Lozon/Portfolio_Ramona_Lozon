@@ -71,27 +71,27 @@ li {
   text-align: center;
 }
 
-#insta-icon:hover #insta-fill {
+.insta-icon:hover .insta-fill {
   fill: #FFA55B;
 }
 
-#insta-icon:hover .insta-line {
+.insta-icon:hover .insta-line {
   stroke: #002530;
 }
 
-#git-icon:hover #git-fill {
+.git-icon:hover .git-fill {
   fill: #FFA55B;
 }
 
-#git-icon:hover #git-line {
+.git-icon:hover .git-line {
   stroke: #002530;
 }
 
-#link-icon:hover .link-fill {
+.link-icon:hover .link-fill {
   fill: #FFA55B;
 }
 
-#link-icon:hover #link-line {
+.link-icon:hover .link-line {
   fill: #002530;
 }
 
