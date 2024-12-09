@@ -1,7 +1,11 @@
 @use "../abstracts" as a;
 
-case-files-section {
-    margin-bottom: 150px;
+#case-files-section {
+    margin-bottom: 30px;
+}
+
+#demo-reel-title {
+    margin: 10px 0px 30px 0px;
 }
 
 .case-file-hero {
@@ -19,7 +23,7 @@ case-files-section {
 #about-section {
     display: flex;
     flex-direction: column;
-    margin-bottom: 150px;
+    margin: 100px 0px 100px 0px;
     div {
             span {
             text-align: center;
@@ -78,7 +82,6 @@ case-files-section {
     #about-section {
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
 
     }
 
