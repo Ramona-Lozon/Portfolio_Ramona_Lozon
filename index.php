@@ -143,12 +143,12 @@ $results = mysqli_query($connect,$query);?>
     <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
             
         <!-- case files -->
-         <section id="case-files-section"><h2>My Work</h2>
+         <section class="invisible-still" id="case-files-section"><h2>My Work</h2>
             
             <?php while($row = mysqli_fetch_array($results)){echo '<div class="case-file-hero"><a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a></div>';}?>
            
         </section>
-
+        <section class="invisible" id="demoReel">
             <section id="player-container" class="col-span-ful">
                 <div><h3 class="text underline main-title">Motion Design Demo Reel</h3></div>
                 <video class="video-player" controls preload="metadata" poster="images/logo-small.png">
@@ -165,12 +165,12 @@ $results = mysqli_query($connect,$query);?>
                     <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
                 </div>
             </section>
-
+            </section>
             <!--About-->
             <section id="about-section">
-                <h3 class="text underline main-title" id="about">About</h3>
+                <h3 class="text underline main-title invisible" id="about">About</h3>
 
-                <div id="info-and-resume">
+                <div class="invisible"id="info-and-resume">
                     <img src="images/ramona_selfie.jpg" alt="a picture of me">
                     <div>
                         <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eager to make a splash in the industry and build connections.</span>
@@ -195,14 +195,14 @@ $results = mysqli_query($connect,$query);?>
             <!-- skills -->
              <section id="skills-section">
             <div>
-                <h3 class="text underline main-title" id="skills">skills</h3>
+                <h3 class="text underline main-title invisible" id="skills">skills</h3>
             </div>
 
             <!-- logo and branding section -->
-            <h3 class="text info_text" id="brand-design">logo and brand design</h3>
+            <h3 class="text info_text invisible" id="brand-design">logo and brand design</h3>
             <article class="skills-box">
             <h2>logo and branding skills</h2>
-                <div class="icon-box" id="brandingSkills">
+                <div class="icon-box invisible" id="brandingSkills">
                     <div class="icon-card">
                         <img src="images/adobe-illustrator-logo.png" id="illustratorLogo" alt="Adobe illustrator Logo">
                         <span class="text">Adobe Illustrator</span>
@@ -227,10 +227,10 @@ $results = mysqli_query($connect,$query);?>
             </article>
 
             <!-- coding section -->
-            <h3 class="text info_text">coding</h3>
+            <h3 class="text info_text invisible" id="codingSkillsTitle">coding</h3>
             <article class="skills-box">
             <h2>coding skills</h2>
-                <div class="icon-box" id="codingSkills">
+                <div class="icon-box invisible" id="codingSkills">
                     <div class="icon-card">
                         <img src="images/html5.png" id="HTML5_logo" alt="HTML5 Logo">
                         <span class="text">HTML5</span>
@@ -269,9 +269,9 @@ $results = mysqli_query($connect,$query);?>
             </article>
 
             <!-- web design section -->
-            <h3 class="text info_text">Web Design</h3>
+            <h3 class="text info_text invisible" id="webDesignTitle">Web Design</h3>
             <article class="skills-box">
-                <div class="icon-box" id="webDesignSkills">
+                <div class="icon-box invisible" id="webDesignSkills">
             <h2>web design skills</h2>
 
                     <div class="icon-card">
@@ -287,10 +287,10 @@ $results = mysqli_query($connect,$query);?>
             </article>
 
             <!-- video editing -->
-            <h3 class="text info_text">Video Editing</h3>
+            <h3 class="text info_text invisible" id="videoEditingTitle">Video Editing</h3>
             <article class="skills-box">
             <h2>Video Editing skills</h2>
-                <div class="icon-box" id="videoEditingSkills">
+                <div class="icon-box invisible" id="videoEditingSkills">
                     <div class="icon-card">
                         <img src="images/Adobe_Premiere_logo.png" id="premierLogo" alt="Adobe Premier Logo">
                         <span class="text">Adobe Premier</span>
@@ -306,14 +306,14 @@ $results = mysqli_query($connect,$query);?>
 
             <!-- contact -->
             <article id="contact-section" class="col-span-full">
-                <h3 class="text underline main-title">Contact</h3>
+                <h3 class="text underline main-title invisible" id="contactTitle">Contact</h3>
             <!--Buttons-->
             <form class="input-form" method="post" action="sendmail.php">
-                <input class="form-box" type="text" name="name" id="name" placeholder="name" action="sendmail.php"><br><br>
-                <input class="form-box" type="text" name="org" id="org" placeholder="organization" action="sendmail.php"><br><br>
-                <input class="form-box" type="email" name="email" id="email" placeholder="email" action="sendmail.php"><br><br>
-                <textarea class="form-box" name="msg" style="height:auto;" id="msgd" placeholder="message" action="sendmail.php"></textarea><br><br>
-                <input class="button" id="send-button" type="submit" value="Submit"><br><br><br><br>
+                <input class="form-box invisible" type="text" name="name" id="name" placeholder="name" action="sendmail.php"><br><br>
+                <input class="form-box invisible" type="text" name="org" id="org" placeholder="organization" action="sendmail.php"><br><br>
+                <input class="form-box invisible" type="email" name="email" id="email" placeholder="email" action="sendmail.php"><br><br>
+                <textarea class="form-box invisible" name="msg" style="height:auto;" id="msg" placeholder="message" action="sendmail.php"></textarea><br><br>
+                <input class="button invisible" id="send-button" type="submit" value="Submit"><br><br><br><br>
             </form>   
             </article>
     </main>

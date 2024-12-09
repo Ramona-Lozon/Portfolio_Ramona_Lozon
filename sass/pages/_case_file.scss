@@ -1,5 +1,10 @@
 @use "../abstracts" as a;
 
+
+#cf-main-title {
+        margin-top: 100px;
+}
+
 .case-file-image {
         margin: 10px 0px 10px 0px;
             img {
@@ -16,7 +21,7 @@
 .case-file-text {
         color: a.$secondary-color;
         font-family: "inclusive-sans", "Montserrat";
-        margin: 10px 15px 10px auto;
+        margin: 10px 15px 10px 15px;
         font-size: 16px;
     }
 

@@ -9,6 +9,14 @@
     display: none;
 }
 
+.invisible {
+  visibility: hidden;
+  transform: translateX(-25px);
+}
+
+.invisible-still {
+  visibility: hidden;
+}
 .centered {
     text-align: center;
 }
