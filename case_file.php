@@ -44,7 +44,7 @@
     
                 <div>
                     <ul class="icon-list">
-                        <li class="icon" id="insta-icon">
+                        <li class="icon insta-icon">
                             <a href="https://www.instagram.com/lozonramona/">
                             <?xml version="1.0" encoding="UTF-8"?>
                                 <svg id="Layer_7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -82,7 +82,7 @@
                                 </a>
                             </li>
     
-                        <li class="icon" id="git-icon">
+                        <li class="icon git-icon">
                             <a href="https://github.com/Ramona-Lozon">
                                 <?xml version="1.0" encoding="UTF-8"?>
                                     <svg id="Layer_8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -104,7 +104,7 @@
                             </a>
                         </li>
     
-                        <li class="icon" id="link-icon">
+                        <li class="icon link-icon">
                             <a href="#contact">
                                 <?xml version="1.0" encoding="UTF-8"?>
                                     <svg id="Layer_9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -178,7 +178,7 @@ if ($row['id'] == 1 || $row['id'] == 2) {
 <footer>
     <div class="footer-icons">
         <ul class="icon-list">
-            <li class="icon" id="insta-icon">
+            <li class="icon insta-icon">
                 <a href="https://www.instagram.com/lozonramona/">
                 <?xml version="1.0" encoding="UTF-8"?>
                     <svg id="Layer_10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -216,7 +216,7 @@ if ($row['id'] == 1 || $row['id'] == 2) {
                     </a>
                 </li>
 
-            <li class="icon" id="git-icon">
+            <li class="icon git-icon">
                 <a href="https://github.com/Ramona-Lozon">
                     <?xml version="1.0" encoding="UTF-8"?>
                         <svg id="Layer_11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -238,7 +238,7 @@ if ($row['id'] == 1 || $row['id'] == 2) {
                 </a>
             </li>
 
-            <li class="icon" id="link-icon">
+            <li class="icon link-icon">
                 <a href="#contact">
                     <?xml version="1.0" encoding="UTF-8"?>
                         <svg id="Layer_12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
