@@ -139,16 +139,16 @@
 </header>
 
 <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
-<?php echo '<div><h3 class="text main-title">'.$row['project'].'</h3></div>';?>
-<?php echo '<div><p class="case-file-text">'.$row['proposition'].'</p></div>';?> 
-<?php echo '<div class="case-file-image"><img src="images/'.$row['prop_ex'].'" alt="Proposition image"></div>'?>
-<?php echo '<div><p class="case-file-text">'.$row['prop_caption'].'</p></div>';?>
-<?php echo '<div><p class="case-file-text">'.$row['deliverables'].'</p></div>';?>
-<?php echo '<div class="case-file-image"><img src="images/'.$row['work_ex'].'" alt="work image"></div>';?>
-<?php echo '<div><p class="case-file-text">'.$row['work_caption'].'</p></div>';?>
+<?php echo '<div><h3 class="text main-title invisible" id="cf-main-title">'.$row['project'].'</h3></div>';?>
+<?php echo '<div><p class="case-file-text invisible" id="cf-prop">'.$row['proposition'].'</p></div>';?> 
+<?php echo '<div class="case-file-image invisible" id="cf-prop-ex"><img src="images/'.$row['prop_ex'].'" alt="Proposition image"></div>'?>
+<?php echo '<div><p class="case-file-text invisible" id="cf-prop-caption">'.$row['prop_caption'].'</p></div>';?>
+<?php echo '<div><p class="case-file-text invisible" id="cf-deliverables">'.$row['deliverables'].'</p></div>';?>
+<?php echo '<div class="case-file-image invisible" id="cf-work-ex"><img src="images/'.$row['work_ex'].'" alt="work image"></div>';?>
+<?php echo '<div><p class="case-file-text invisible" id="cf-work-caption">'.$row['work_caption'].'</p></div>';?>
 <?php 
 if ($row['id'] == 1 || $row['id'] == 2) {
-    echo '<section id="player-container">
+    echo '<section class="invisible" id="cf-media-3"><div id="player-container">
         <video class="video-player" controls preload="metadata" poster="images/logo-small.png">
             <source src="video/'.$row['product_ex'].'" type="video/mp4">
             <p>Your browser does not support the video tag.</p>
@@ -161,13 +161,13 @@ if ($row['id'] == 1 || $row['id'] == 2) {
             <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
             <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
         </div>
-    </section>';
+    </div></section>';
 } else if ($row['id'] == 3) {
-    echo '<div class="case-file-image">
+    echo '<div class="case-file-image invisible" id="cf-media-image">
         <img src="images/'.$row['product_ex'].'" alt="Media Image" class="responsive-image">
     </div>';}?>
-<?php echo '<div><p class="case-file-text">' .$row['product_caption'].'</p></div>'; ?>
-<?php echo '<div><p class="case-file-text">' .$row['outcome'].'</p></div>'; ?>
+<?php echo '<div><p class="case-file-text invisible" id="cf-prod-caption">' .$row['product_caption'].'</p></div>'; ?>
+<?php echo '<div><p class="case-file-text invisible" id="cf-outcome">' .$row['outcome'].'</p></div>'; ?>
 
     <div>
         <span class="page-link desk-top-button"><a class="top-link" href="#top">Top &uArr;</a></span>

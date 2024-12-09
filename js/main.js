@@ -26,71 +26,514 @@
 
 (() => {
 
-    gsap.to("#brandingSkills", 3,
+  gsap.to("#case-files-section", .6,
+      {
+          scrollTrigger:{
+              trigger: "#case-files-section",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+              start: "top 80%",
+              end: "bottom 20%"
+          },
+          autoAlpha:1,
+      });
+  
+  })(); 
+
+(() => {
+
+  gsap.to("#demoReel", .6,
+      {
+          scrollTrigger:{
+              trigger: "#demoReel",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+              start: "top 80%",
+              end: "bottom 20%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+(() => {
+
+  gsap.to("#about", .6,
+      {
+          scrollTrigger:{
+              trigger: "#about",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+              start: "top 80%",
+              end: "bottom 20%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#info-and-resume", .6,
         {
             scrollTrigger:{
-                trigger: "#brandingSkills",
+                trigger: "#info-and-resume",
                 toggleActions: "play reverse play reverse",
                 markers: false, 
                 start: "top 80%",
                 end: "bottom 30%"
             },
-            autoAlpha:1, 
-        });
-    
-    })();
-
-(() => {
-
-gsap.to("#codingSkills", 3,
-    {
-        scrollTrigger:{
-            trigger: "#codingSkills",
-            toggleActions: "play reverse play reverse",
-            markers: false, 
-            start: "top 80%",
-            end: "bottom 30%"
-        },
-        autoAlpha:1, 
-    });
-
-})();
-
-(() => {
-
-    gsap.to("#webDesignSkills", 3,
-        {
-            scrollTrigger:{
-                trigger: "#webDesignSkills",
-                toggleActions: "play reverse play reverse",
-                markers: false, 
-                start: "top 80%",
-                end: "bottom 30%"
-            },
-            autoAlpha:1, 
+            autoAlpha:1,
+            x: 25 
         });
     
     })();
 
     (() => {
 
-        gsap.to("#videoEditingSkills", 3,
+      gsap.to("#skills", .6,
+          {
+              scrollTrigger:{
+                  trigger: "#skills",
+                  toggleActions: "play reverse play reverse",
+                  markers: false, 
+                  start: "top 80%",
+                  end: "bottom 20%"
+              },
+              autoAlpha:1,
+              x: 25 
+          });
+      
+      })();
+
+(() => {
+
+  gsap.to("#brand-design", .6,
+      {
+          scrollTrigger:{
+              trigger: "#brand-design",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+              start: "top 80%",
+              end: "bottom 20%"
+          },
+          autoAlpha:1,
+          x: 25  
+      });
+  
+  })();  
+
+(() => {
+
+    gsap.to("#brandingSkills", .6,
+        {
+            scrollTrigger:{
+                trigger: "#brandingSkills",
+                toggleActions: "play reverse play reverse",
+                markers: false, 
+                start: "top 95%",
+                end: "bottom 15%"
+            },
+            autoAlpha:1,
+            x: 25  
+        });
+    
+    })();
+
+(() => {
+
+  gsap.to("#codingSkillsTitle", .6,
+    {
+        scrollTrigger:{
+            trigger: "#codingSkillsTitle",
+            toggleActions: "play reverse play reverse",
+            markers: false, 
+                start: "top 95%",
+                end: "bottom 15%"
+        },
+        autoAlpha:1,
+        x: 25  
+    });
+
+})();
+
+(() => {
+
+gsap.to("#codingSkills", .6,
+    {
+        scrollTrigger:{
+            trigger: "#codingSkills",
+            toggleActions: "play reverse play reverse",
+            markers: false, 
+                start: "top 95%",
+                end: "bottom 15%"
+        },
+        autoAlpha:1,
+        x: 25  
+    });
+
+})();
+
+(() => {
+
+  gsap.to("#webDesignTitle", .6,
+    {
+        scrollTrigger:{
+            trigger: "#webDesignTitle",
+            toggleActions: "play reverse play reverse",
+            markers: false, 
+                start: "top 95%",
+                end: "bottom 15%"
+        },
+        autoAlpha:1,
+        x: 25 
+    });
+
+})();
+
+(() => {
+
+    gsap.to("#webDesignSkills", .6,
+        {
+            scrollTrigger:{
+                trigger: "#webDesignSkills",
+                toggleActions: "play reverse play reverse",
+                markers: false, 
+                start: "top 95%",
+                end: "bottom 15%"
+            },
+            autoAlpha:1, 
+            x: 25 
+        });
+    
+    })();
+
+    (() => {
+
+      gsap.to("#videoEditingTitle", .6,
+          {
+              scrollTrigger:{
+                  trigger: "#videoEditingTitle",
+                  toggleActions: "play reverse play reverse",
+                  markers: false, 
+                start: "top 95%",
+                end: "bottom 15%"
+              },
+              autoAlpha:1,
+              x: 25 
+          });
+      
+      })(); 
+
+    (() => {
+
+        gsap.to("#videoEditingSkills", .6,
             {
                 scrollTrigger:{
                     trigger: "#videoEditingSkills",
                     toggleActions: "play reverse play reverse",
                     markers: false, 
-                    start: "top 80%",
-                    end: "bottom 30%"
+                start: "top 95%",
+                end: "bottom 15%"
                 },
-                autoAlpha:1, 
+                autoAlpha:1,
+                x: 25 
             });
         
-        })();
+        })();    
 
-// about me lightbox
-(() => {
+        (() => {
 
+          gsap.to("#contactTitle", .6,
+              {
+                  scrollTrigger:{
+                      trigger: "#contactTitle",
+                      toggleActions: "play reverse play reverse",
+                      markers: false, 
+                  start: "top 95%",
+                  end: "bottom 15%"
+                  },
+                  autoAlpha:1,
+                  x: 25 
+              });
+          
+          })();   
+
+          (() => {
+
+            gsap.to("#name", .6,
+                {
+                    scrollTrigger:{
+                        trigger: "#name",
+                        toggleActions: "play reverse play reverse",
+                        markers: false, 
+                    start: "top 95%",
+                    end: "bottom 15%"
+                    },
+                    autoAlpha:1,
+                    x: 25 
+                });
+            
+            })(); 
+
+            (() => {
+
+              gsap.to("#org", .6,
+                  {
+                      scrollTrigger:{
+                          trigger: "#org",
+                          toggleActions: "play reverse play reverse",
+                          markers: false, 
+                      start: "top 95%",
+                      end: "bottom 15%"
+                      },
+                      autoAlpha:1,
+                      x: 25 
+                  });
+              
+              })(); 
+
+              (() => {
+
+                gsap.to("#email", .6,
+                    {
+                        scrollTrigger:{
+                            trigger: "#email",
+                            toggleActions: "play reverse play reverse",
+                            markers: false, 
+                        start: "top 95%",
+                        end: "bottom 15%"
+                        },
+                        autoAlpha:1,
+                        x: 25 
+                    });
+                
+                })(); 
+
+                (() => {
+
+                gsap.to("#msg", .6,
+                  {
+                      scrollTrigger:{
+                          trigger: "#msg",
+                          toggleActions: "play reverse play reverse",
+                          markers: false, 
+                      start: "top 95%",
+                      end: "bottom 15%"
+                      },
+                      autoAlpha:1,
+                      x: 25 
+                  });
+              
+              })(); 
+
+              (() => {
+
+              gsap.to("#send-button", .6,
+                {
+                    scrollTrigger:{
+                        trigger: "#send-button",
+                        toggleActions: "play reverse play reverse",
+                        markers: false, 
+                    start: "top 95%",
+                    end: "bottom 15%"
+                    },
+                    autoAlpha:1,
+                    x: 25 
+                });
+            
+            })(); 
+
+  (() => {
+
+    gsap.to("#cf-main-title", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-main-title",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 1%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })();
+
+  (() => {
+
+    gsap.to("#cf-prop", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-prop",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })();  
+
+  (() => {
+
+    gsap.to("#cf-prop-ex", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-prop-ex",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-prop-caption", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-prop-caption",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-deliverables", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-deliverables",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-work-ex", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-work-ex",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-work-caption", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-work-caption",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-media-3", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-media-3",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-media-image", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-media-image",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-prod-caption", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-product-caption",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
+
+    gsap.to("#cf-outcome", .6,
+      {
+          scrollTrigger:{
+              trigger: "#cf-outcome",
+              toggleActions: "play reverse play reverse",
+              markers: false, 
+          start: "top 95%",
+          end: "bottom 15%"
+          },
+          autoAlpha:1,
+          x: 25 
+      });
+  
+  })(); 
+
+  (() => {
   const lightBox = document.querySelector("#lightbox");
   const lightBoxTrigger = document.querySelector("#learnMore");
   
@@ -109,7 +552,6 @@ gsap.to("#codingSkills", 3,
   if (lightBox) {lightBox.addEventListener('click', closeLightbox);}
   })();
 
-//togglemenu
 (() => {
   const menuIcon = document.querySelector('#menuIcon');
   const navLinks = document.querySelector('#navLinks');
@@ -170,7 +612,6 @@ gsap.to("#codingSkills", 3,
 
 (() => {
 
-  // Select elements here
   const playerCon = document.querySelector('#player-container');
   const player = document.querySelector('video');
   const videoControls = document.querySelector('#video-controls');
@@ -180,12 +621,9 @@ gsap.to("#codingSkills", 3,
   const volumeSlider = document.querySelector("#change-vol");
   const fullScreen = document.querySelector("#full-screen");
   
-  // if JS is loaded then, remove default video controls and show custom controls
   player.controls = false;
   videoControls.classList.remove('hidden');
-  
-  
-  // Basic Video controls, similar to what we have done with audio
+
   function playVideo() {
       player.play();
   }
@@ -203,25 +641,18 @@ gsap.to("#codingSkills", 3,
       player.volume = volumeSlider.value;
   }
   
-  // toggleFullScreen toggles the full screen state of the video
-  // If the browser is currently in fullscreen mode,
-  // then it should exit and vice versa.
   function toggleFullScreen() {
       if (document.fullscreenElement) {
         document.exitFullscreen();
       } else if (document.webkitFullscreenElement) {
-        // Need this to support Safari
         document.webkitExitFullscreen();
       } else if (playerCon.webkitRequestFullscreen) {
-        // Need this to support Safari
           playerCon.webkitRequestFullscreen();
       } else {
           playerCon.requestFullscreen();
       }
   }
   
-  // hideControls hides the video controls when not in use
-  // if the video is paused, the controls must remain visible
   function hideControls() {
       if (player.paused) {
         return;
@@ -229,7 +660,6 @@ gsap.to("#codingSkills", 3,
       videoControls.classList.add('hide');
     }
     
-    // showControls displays the video controls
     function showControls() {
       videoControls.classList.remove('hide');
     }

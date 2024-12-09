@@ -67,6 +67,15 @@ li {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+  transform: translateX(-25px);
+}
+
+.invisible-still {
+  visibility: hidden;
+}
+
 .centered {
   text-align: center;
 }
@@ -213,7 +222,6 @@ footer .top-button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 10px;
-  visibility: hidden;
 }
 
 .icon-card {
@@ -621,6 +629,10 @@ case-files-section {
     align-items: center;
   }
 }
+#cf-main-title {
+  margin-top: 100px;
+}
+
 .case-file-image {
   margin: 10px 0px 10px 0px;
 }
@@ -637,7 +649,7 @@ case-files-section {
 .case-file-text {
   color: #FFA55B;
   font-family: "inclusive-sans", "Montserrat";
-  margin: 10px 15px 10px auto;
+  margin: 10px 15px 10px 15px;
   font-size: 16px;
 }
 
