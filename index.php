@@ -150,7 +150,7 @@ $results = mysqli_query($connect,$query);?>
         </section>
         <section class="invisible" id="demoReel">
             <section id="player-container" class="col-span-ful">
-                <div><h3 class="text underline main-title">Motion Design Demo Reel</h3></div>
+                <div><h3 class="text underline main-title" id="demo-reel-title">Motion Design Demo Reel</h3></div>
                 <video class="video-player" controls preload="metadata" poster="images/logo-small.png">
                     <source src="video/lozon_ramona_demo_reel.mp4" type="video/mp4">
                     <source src="video/lozon_ramona_demo_reel.webm" type="video/webm">
