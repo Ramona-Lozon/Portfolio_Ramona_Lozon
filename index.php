@@ -19,13 +19,18 @@ $results = mysqli_query($connect,$query);?>
 <body>
     <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
 
-        <section class="desktop-sticky" id="greeting-section">
-            <div id="greeting-title">
-                <img src="images/logo-small.png" alt="logo"><h3 class="text ramona-title">Ramona Lozon</h3>
+        <section id="navbar">
+
+            <div id="nav-logo">
+                <img src="images/logo-small.png" alt="logo">
             </div>
 
-            <div class="text subheader" id="intro-message">
-                    <div class="hamburger-menu" id="menuIcon">
+            <div id="nav-name">
+                <h3 class="text ramona-title">Ramona Lozon</h3>
+            </div>
+
+            <div id="burger-con">
+                    <div class="hamburger-menu" id="hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
