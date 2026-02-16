@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramona's Design</title>
+    <title>Ramona Lozon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <?php require_once('includes/connect.php');
@@ -17,7 +18,7 @@ $query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
 $results = mysqli_query($connect,$query);?>
 
 <body>
-    <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
+    <header>
 
         <section id="navbar">
 
@@ -38,14 +39,15 @@ $results = mysqli_query($connect,$query);?>
             </div>
 
             <nav class="navMenu" id="navLinks">
-            <ul class="nav-links">
-                <li class="page-link"><a class="button" href="#case-files-section">Work/Top</a></li>
-                <li class="page-link"><a class="button" href="#about-section">About</a></li>
-                <li class="page-link"><a class="button" href="#skills-section">skills</a></li>
-                <li class="page-link"><a class="button" href="#contact-section">Contact</a></li>
-                </ul>
+                <div class="nav-links">
+                    <div class="page-link"><a class="button" href="#case-files-section">Work/Top</a></div>
+                    <div class="page-link"><a class="button" href="#about-section">About</a></div>
+                    <div class="page-link"><a class="button" href="#skills-section">skills</a></div>
+                    <div class="page-link"><a class="button" href="#contact-section">Contact</a></div>
+                </div>
+            </nav>
 
-            <div>
+            <!-- <div>
                 <ul class="icon-list">
                     <li class="icon insta-icon">
                         <a href="https://www.instagram.com/lozonramona/">
@@ -136,7 +138,7 @@ $results = mysqli_query($connect,$query);?>
                     <div class="hidden"><a target="_blank" href="https://icons8.com/icon/447/linkedin">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
 
     </section>
     </header>
@@ -416,11 +418,5 @@ $results = mysqli_query($connect,$query);?>
         <span class="page-link"><a class="top-link" href="#top">Top &uArr;</a></span>
     </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
