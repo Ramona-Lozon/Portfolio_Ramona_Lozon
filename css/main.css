@@ -294,6 +294,77 @@ footer .top-button {
     line-height: 26px;
   }
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#navbar {
+  display: flex;
+  width: 100vw;
+  background-color: #293241;
+}
+#navbar #nav-logo {
+  display: flex;
+  height: 60px;
+  width: auto;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+#navbar #nav-logo img {
+  display: flex;
+  height: 100%;
+  width: auto;
+}
+#navbar #nav-name {
+  display: none;
+  align-items: center;
+}
+#navbar #burger-con {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px 10px auto;
+}
+#navbar #burger-con #hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+#navbar #burger-con #hamburger span {
+  display: block;
+  background-color: #ee6c4d;
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+}
+#navbar nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #navbar #nav-name {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  #navbar #burger-con {
+    display: none;
+  }
+  #navbar nav {
+    display: flex;
+    margin: 10px 10px 10px auto;
+  }
+  #navbar nav .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
 #contactTitle {
   margin: 0px 0px 20px 0px;
 }
