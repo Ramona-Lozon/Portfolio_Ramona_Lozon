@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <?php require_once('includes/connect.php');
@@ -17,23 +17,19 @@ $query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
 $results = mysqli_query($connect,$query);?>
 
 <body>
-
-    <section class="g-con">
     <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
 
         <section class="desktop-sticky" id="greeting-section">
             <div id="greeting-title">
                 <img src="images/logo-small.png" alt="logo"><h3 class="text ramona-title">Ramona Lozon</h3>
-
             </div>
 
             <div class="text subheader" id="intro-message">
-                <span>Designer and Developer<br><br>I design brands, and build websites</span>
-                <div class="hamburger-menu" id="menuIcon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+                    <div class="hamburger-menu" id="menuIcon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
             </div>
 
             <nav class="navMenu" id="navLinks">
