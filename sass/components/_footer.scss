@@ -3,3 +3,20 @@
 #example-mixin-class {
     @include a.blue;
 }
+
+footer {
+  height: 150px;
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  padding: 0px;
+  background-image: linear-gradient(to bottom, a.$primary-color, rgba(0, 0, 0, 0.5));;
+  flex-direction: row;
+  width: 100%;
+  .footer-icons{
+    margin-left: 15px;
+  }
+  .top-button {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+}

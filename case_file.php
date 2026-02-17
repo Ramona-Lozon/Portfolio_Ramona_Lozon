@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramona's Design</title>
+    <title>Ramona Lozon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <?php
@@ -19,10 +20,20 @@
     $row = mysqli_fetch_assoc($results);
 ?>
 
-<body>
+<body data-page="caseFile">
+
+<header>
+    <nav>
+        <div id="logo"><img src="images/logo-small.png" alt="logo"></div>
+        
+        <div id="home-button">
+            <a class="button" href="http://localhost/Portfolio_Ramona_Lozon/index.php">Home</a>
+        </div>
+    </nav>
+</header>
 
     <section class="g-con">
-    <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
+    <!-- <header class="c-span-full 1-c-start-1 l-c-span-4 m-c-span-full c-span-full">
 
         <section class="desktop-sticky" id="greeting-section">
             <div id="greeting-title">
@@ -136,19 +147,19 @@
             </nav>
 
         </section>
-</header>
+</header> -->
 
 <main class="centered l-c-start-5 l-c-end-13 m-c-span-full c-span-full">
-<?php echo '<div><h3 class="text main-title invisible" id="cf-main-title">'.$row['project'].'</h3></div>';?>
-<?php echo '<div><p class="case-file-text invisible" id="cf-prop">'.$row['proposition'].'</p></div>';?> 
-<?php echo '<div class="case-file-image invisible" id="cf-prop-ex"><img src="images/'.$row['prop_ex'].'" alt="Proposition image"></div>'?>
-<?php echo '<div><p class="case-file-text invisible" id="cf-prop-caption">'.$row['prop_caption'].'</p></div>';?>
-<?php echo '<div><p class="case-file-text invisible" id="cf-deliverables">'.$row['deliverables'].'</p></div>';?>
-<?php echo '<div class="case-file-image invisible" id="cf-work-ex"><img src="images/'.$row['work_ex'].'" alt="work image"></div>';?>
-<?php echo '<div><p class="case-file-text invisible" id="cf-work-caption">'.$row['work_caption'].'</p></div>';?>
+<?php echo '<div><h3 class="text main-title" id="cf-main-title">'.$row['project'].'</h3></div>';?>
+<?php echo '<div><p class="case-file-text" id="cf-prop">'.$row['proposition'].'</p></div>';?> 
+<?php echo '<div class="case-file-image" id="cf-prop-ex"><img src="images/'.$row['prop_ex'].'" alt="Proposition image"></div>'?>
+<?php echo '<div><p class="case-file-text" id="cf-prop-caption">'.$row['prop_caption'].'</p></div>';?>
+<?php echo '<div><p class="case-file-text" id="cf-deliverables">'.$row['deliverables'].'</p></div>';?>
+<?php echo '<div class="case-file-image" id="cf-work-ex"><img src="images/'.$row['work_ex'].'" alt="work image"></div>';?>
+<?php echo '<div><p class="case-file-text" id="cf-work-caption">'.$row['work_caption'].'</p></div>';?>
 <?php 
 if ($row['id'] == 1 || $row['id'] == 2) {
-    echo '<section class="invisible" id="cf-media-3"><div id="player-container">
+    echo '<section class="" id="cf-media-3"><div id="player-container">
         <video class="video-player" controls preload="metadata" poster="images/logo-small.png">
             <source src="video/'.$row['product_ex'].'" type="video/mp4">
             <p>Your browser does not support the video tag.</p>
@@ -163,11 +174,11 @@ if ($row['id'] == 1 || $row['id'] == 2) {
         </div>
     </div></section>';
 } else if ($row['id'] == 3) {
-    echo '<div class="case-file-image invisible" id="cf-media-image">
+    echo '<div class="case-file-image " id="cf-media-image">
         <img src="images/'.$row['product_ex'].'" alt="Media Image" class="responsive-image">
     </div>';}?>
-<?php echo '<div><p class="case-file-text invisible" id="cf-prod-caption">' .$row['product_caption'].'</p></div>'; ?>
-<?php echo '<div><p class="case-file-text invisible" id="cf-outcome">' .$row['outcome'].'</p></div>'; ?>
+<?php echo '<div><p class="case-file-text" id="cf-prod-caption">' .$row['product_caption'].'</p></div>'; ?>
+<?php echo '<div><p class="case-file-text" id="cf-outcome">' .$row['outcome'].'</p></div>'; ?>
 
     <div>
         <span class="page-link desk-top-button"><a class="top-link" href="#top">Top &uArr;</a></span>
@@ -276,6 +287,5 @@ if ($row['id'] == 1 || $row['id'] == 2) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>

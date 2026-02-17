@@ -1,5 +1,13 @@
 @use "../abstracts" as a;
 
+a {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
 #case-files-section {
     margin-bottom: 30px;
 }
