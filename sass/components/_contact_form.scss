@@ -7,20 +7,37 @@
 }
 
 .input-form {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
 }
+
 .form-box {
     background-color: a.$primary-color;
     border-color: a.$secondary-color;
     color: a.$secondary-color;
-    border-style: solid;
-    border-radius: 4px;
     padding: 10px;
-    height:auto;
+    field-sizing: content;
+    height: auto;
+    max-width: 500px;
     overflow: hidden;
+    width: 80vw;
+    margin: 10px 10px 10px 10px
+}
+
+@media (min-width: 768px) {
+
+    .input-form {
+    align-items:baseline;
+}
+
+.form-box {
+    margin: 10px auto 10px 10vw
+}
+
+#send-button {
+        margin: 10px auto 10px 10vw
+}
+
 }

@@ -1,70 +1,52 @@
 <?php
 
+ini_set('display_errors', 0);
+error_reporting(E_ALL);     
+header('Content-Type: application/json');
+
+
 require_once('includes/connect.php');
 
-///gather the form content
-$name = $_POST['name'];
-$org = $_POST['org'];
-$email = $_POST['email'];
-$msg = $_POST['msg'];
+$name  = trim($_POST['name']);
+$org   = trim($_POST['org']);
+$email = trim($_POST['email']);
+$msg   = trim($_POST['msg']);
 
 $errors = [];
 
-//validate and clean these values
-
-$name = trim($name);
-$org = trim($org);
-$email = trim($email);
-$msg = trim($msg);
-
-if(empty($name)) {
-    $errors['name'] = 'field cant be empty';
-}
-
-if(empty($org)) {
-    $errors['org'] = 'field cant be empty';
-}
-
-if(empty($msg)) {
-    $errors['msg'] = 'field cant be empty';
-}
+if(empty($name))  $errors['name']  = 'Name field cannot be empty';
+if(empty($org))   $errors['org']   = 'Organization field cannot be empty';
+if(empty($msg))   $errors['msg']   = 'Message field cannot be empty';
 
 if(empty($email)) {
     $errors['email'] = 'You must provide an email';
 } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors['legit_email'] = 'You must provide a REAL email';
+    $errors['email'] = 'You must provide a valid email';
 }
 
 if(empty($errors)) {
+    // Use prepared statements for safety
+    $stmt = $connect->prepare("INSERT INTO contacts (name, org, email, msg) VALUES(?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $org, $email, $msg);
 
-    //insert these values as a new row in the contacts table
+    if($stmt->execute()) {
+        // Send email
+        $to = 'lozonramona@gmail.com';
+        $subject = 'Message from your Portfolio site!';
+        $message = "You have received a new contact form submission:\n\n";
+        $message .= "Name: " . $name . "\n";
+        $message .= "Org: " . $org . "\n";
+        $message .= "Email: " . $email . "\n\n";
+        $message .= "Message: " . $msg;
 
-    $query = "INSERT INTO contacts (name, org, email, msg) VALUES('.$name.','.$org.','.$email.','.$msg.')";
-//create table with names
-//should inset these values into database
-    if(mysqli_query($connect, $query)) {
+        mail($to, $subject, $message);
 
-//format and send these values in an email
-
-$to = 'lozonramona@gmail.com';
-$subject = 'Message from your Portfolio site!';
-
-$message = "You have received a new contact form submission:\n\n";
-$message .= "Name: ".$name."\n";
-$message .= "Org: ".$org."\n";
-$message .= "Email: ".$email."\n\n";
-$message .= "Message" .$msg;
-
-//build out rest of message body...
-
-mail($to,$subject,$message);
-
-header('Location: index.php');
-//this sends the user to index
-
-}else{
-    for($i=0; $i < count($errors); $i++) {
-        echo $errors[$i].'<br>';
+        echo json_encode(['status' => 'success', 'message' => 'Message sent successfully!']);
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'Database error, please try again']);
     }
+} else {
+    // Return errors as JSON
+    echo json_encode(['status' => 'error', 'message' => implode(', ', $errors)]);
 }
-}?>
+?>

@@ -24,6 +24,7 @@ function closeMenu() {
     }
 
     function toggleMenu(e) {
+        console.log('menu toggled');
         e.stopPropagation();
         
         if (menu.classList.contains('open')) {
@@ -39,5 +40,6 @@ function closeMenu() {
     }
 }
     hamburger.addEventListener('click', toggleMenu);
-
+    hamburger.addEventListener('click', function() {
+        console.log('menu clicked')});
 }

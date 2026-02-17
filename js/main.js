@@ -1,6 +1,13 @@
 import { navMenu } from "./modules/nav.js"; 
+import { contactForm } from "./modules/contactForm.js"; 
 
-
+if(document.body.dataset.page === "home") {
+    navMenu();
+    contactForm();
+console.log('welcome home');
+}else if(document.body.dataset.page === "caseFile") {
+console.log('i hope you like it!');
+}
 
 // (() => {
 //   gsap.registerPlugin(ScrollToPlugin);
