@@ -1,1 +1,71 @@
 @use '../abstracts' as a;
+
+#about-section {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0px 100px 0px;
+    
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div {
+            span {
+            text-align: center;
+            margin: 10px 50px 10px 50px;
+            }
+    }
+}
+
+#info-and-resume {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 400px;
+        margin: 10px auto auto auto;
+        }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+}
+
+
+#selfie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (min-width:1200px) {
+
+    #about-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+        #info-and-resume {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 400px;
+            margin: 10px auto auto 150px;
+            }
+        span {
+            align-items: left;
+            text-align: left;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+    }
+}

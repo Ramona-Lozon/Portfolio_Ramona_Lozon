@@ -15,7 +15,7 @@ h2 {
 }
 
 .text {
-  color: #dd2d4a;
+  color: #cbeef3;
   font-family: "inclusive-sans", "Montserrat";
   margin: 5px;
 }
@@ -127,9 +127,8 @@ body {
 
 .button {
   width: fit-content;
-  width: 150px;
+  width: 100px;
   height: 30px;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
   color: white;
   text-decoration: none;
   display: flex;
@@ -304,20 +303,6 @@ nav {
   margin: 10px 10px 10px auto;
 }
 
-.deskNavItem {
-  display: none;
-  position: relative;
-  top: -40px;
-}
-.deskNavItem a {
-  text-decoration: none;
-  padding: 10px;
-}
-
-nav:hover .deskNavItem {
-  top: 0;
-}
-
 nav:hover #logo img {
   opacity: 1;
 }
@@ -326,6 +311,7 @@ nav:hover #logo img {
   padding: 10px;
   height: 150px;
   margin-right: auto;
+  z-index: 500;
 }
 #logo img {
   height: 100%;
@@ -333,43 +319,23 @@ nav:hover #logo img {
   opacity: 0.2;
 }
 
-#sign-in {
-  margin-left: auto;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  margin: 0 20px 0 auto;
-  position: relative;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #dd2d4a;
-  border-radius: 2px;
-}
-
 .hamburger-dropdown {
   display: none;
+  flex-direction: row;
   position: absolute;
   background-color: #880d1e, 0.5;
   padding: 10px;
   top: 60px;
-  right: -100%;
+  left: -100%;
   width: inherit;
+  z-index: -2;
 }
 .hamburger-dropdown a {
   text-decoration: none;
 }
 
 .open {
-  display: block;
+  display: flex;
 }
 
 .slide-out {
@@ -382,45 +348,18 @@ nav:hover #logo img {
 
 @keyframes slide-out {
   0% {
-    right: -100%;
+    left: -100%;
   }
   100% {
-    right: 0%;
+    left: 150px;
   }
 }
 @keyframes slide-back {
   0% {
-    right: 0%;
+    left: 150px;
   }
   100% {
-    right: -100%;
-  }
-}
-.hamburger.X span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 10px;
-  position: absolute;
-}
-
-.hamburger.X span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.X span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 10px;
-  position: absolute;
-}
-
-@media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
-  .deskNavItem {
-    display: block;
-  }
-  .hamburger-dropdown {
-    display: none;
+    left: -100%;
   }
 }
 #contactTitle {
@@ -608,37 +547,6 @@ ul {
   opacity: 0.5;
 }
 
-#about-section {
-  display: flex;
-  flex-direction: column;
-  margin: 100px 0px 100px 0px;
-}
-#about-section div span {
-  text-align: center;
-  margin: 10px 50px 10px 50px;
-}
-
-#info-and-resume {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-#info-and-resume img {
-  width: 400px;
-  margin: 10px auto auto auto;
-}
-#info-and-resume div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#selfie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .case-file-object {
   width: 300px;
   height: 300px;
@@ -655,28 +563,6 @@ ul {
   .case-file-object {
     width: 700px;
     height: 340px;
-  }
-  #about-section {
-    display: flex;
-    flex-direction: column;
-  }
-  #info-and-resume {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-  }
-  #info-and-resume img {
-    width: 400px;
-    margin: 10px auto auto auto;
-  }
-  #info-and-resume span {
-    align-items: left;
-    text-align: left;
-  }
-  #info-and-resume div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 #cf-main-title {
@@ -706,5 +592,82 @@ ul {
 @media (min-width: 1200px) {
   .case-file-text {
     text-align: left;
+  }
+}
+#about-section {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0px 100px 0px;
+}
+#about-section #about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-section div span {
+  text-align: center;
+  margin: 10px 50px 10px 50px;
+}
+
+#info-and-resume {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#info-and-resume img {
+  width: 400px;
+  margin: 10px auto auto auto;
+}
+#info-and-resume div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#selfie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  #about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  #info-and-resume {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  #info-and-resume img {
+    width: 400px;
+    margin: 10px auto auto 150px;
+  }
+  #info-and-resume span {
+    align-items: left;
+    text-align: left;
+  }
+  #info-and-resume div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#contact-section {
+  margin-top: 120px;
+  margin-bottom: auto;
+}
+#contact-section #contactTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  #contact-section #contactTitle {
+    align-items: baseline;
+    margin-left: 150px;
   }
 }/*# sourceMappingURL=main.css.map */

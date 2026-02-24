@@ -1,6 +1,6 @@
 export function navMenu() {
 
-    const hamburger = document.querySelector('.hamburger');
+    const hamburger = document.querySelector('#logo');
     const menu = document.querySelector(".hamburger-dropdown");
 
 function closeMenu() {
