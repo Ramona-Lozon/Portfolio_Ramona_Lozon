@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramona Lozon</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +13,13 @@
     <script type="module" src="js/main.js"></script>
 </head>
 
-<?php require_once('includes/connect.php');
-$query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
-$results = mysqli_query($connect,$query);?>
-
 <body data-page="home">
 
 <header>
     <nav>
         <div id="logo"><img src="images/logo-colour-noText.svg" alt="logo"></div>
+        <div class="deskNavItem"><a class="button" href="index.php">Home</a></div>
         <div class="deskNavItem"><a class="button" href="work.php">Work</a></div>
-        <div class="deskNavItem"><a class="button" href="about.html">About</a></div>
         <div class="deskNavItem"><a class="button" href="contact.html">Contact</a></div>
                     <!-- mobile hamburger menu -->
         <div class="hamburger">
@@ -33,12 +29,45 @@ $results = mysqli_query($connect,$query);?>
         </div>
 
         <ul class="hamburger-dropdown">
+            <li class="hover-item"><a class="button" href="index.php">Home</a></li>
             <li class="hover-item"><a class="button" href="work.php">Work</a></li>
-            <li class="hover-item"><a class="button" href="about.html">About</a></li>
             <li class="hover-item"><a class="button" href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
+
+<main>
+
+                      <!-- About lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+        <h3 class="text main-title">More About Me</h3>
+            <p class="text info_text lightbox-text">
+                Hi there! I'm a creative and passionate individual who loves all things nerdy, from Dungeons & Dragons and tabletop role-playing games to sci-fi, fantasy, and post-apocalyptic fiction. My dedication to art and design drives me to explore creativity in every medium, whether it's graphic design or hands-on projects.
+                I support LGBTQ rights and volunteer as a graphic designer for a local group, Queer Intersections. With years of professional experience across various roles, I bring punctuality, professionalism, and a strong work ethic to everything I do.
+            </p>
+            <h3 class="text main-title">Education</h3>
+            <p class="text lightbox-text">Certificate of Design,<br>Fanshawe College<br><br>Interactive Media Design Program<br>Fanshawe College (Currently Enrolled)</P>
+  </div>
+</div>
+
+          <!--About-->
+            <section id="about-section">
+                <!-- <h3 class="text underline main-title invisible" id="about">About</h3> -->
+                <h3 class="text underline main-title" id="about">About</h3>
+
+                <!-- <div class="invisible" id="info-and-resume"> -->
+                <div id="info-and-resume">
+                    <img src="images/ramona_selfie.jpg" alt="a picture of me">
+                    <div>
+                        <span class="text info_text">Hi! I'm Ramona<br>I'm a Junior Front end develop and designer, I'm eager to make a splash in the industry and build connections.</span>
+                        <a href="about.html" class="button" id="learnMore">Learn More</a>
+                        <div class="button">Resume &dArr;</div>
+                    </div>
+                </div>
+            </section>
+
+</main>
 
 <footer>
     <div class="footer-icons">

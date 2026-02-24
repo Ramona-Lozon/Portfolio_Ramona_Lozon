@@ -8,6 +8,12 @@ ul {
     list-style: none;
 }
 
+#hero-section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
 #case-files-section {
     margin-bottom: 30px;
 }
@@ -18,16 +24,19 @@ ul {
 
 .case-file-hero {
     margin: 10px 0px 10px 0px;
-
     a {
         img {
             width: 100%;
             object-fit: cover;
-            border-radius: 15px;
             background-color: black;
     }
 }
 }
+
+.case-file-hero:hover {
+    opacity: 0.5;
+}
+
 #about-section {
     display: flex;
     flex-direction: column;
@@ -46,7 +55,6 @@ ul {
     flex-direction: column;
     img{
         width: 400px;
-        border-radius: 150px;
         margin: 10px auto auto auto;
         }
     div {
@@ -99,7 +107,6 @@ ul {
         flex-direction: row;
         img{
             width: 400px;
-            border-radius: 150px;
             margin: 10px auto auto auto;
             }
         span {
