@@ -14,9 +14,9 @@
 }
 
 .form-box {
-    background-color: a.$primary-color;
-    border-color: a.$secondary-color;
-    color: a.$secondary-color;
+    background-color: a.$hotPink-color;
+    border-color: a.$hotPink-color;
+    color: a.$paleBlue-color;
     padding: 10px;
     field-sizing: content;
     height: auto;
@@ -33,11 +33,11 @@
 }
 
 .form-box {
-    margin: 10px auto 10px 10vw
+    margin: 10px auto 10px 150px;
 }
 
 #send-button {
-        margin: 10px auto 10px 10vw
+        margin: 10px auto 10px 150px;
 }
 
 }

@@ -1,6 +1,7 @@
 @use "../abstracts" as a;
 
 .video-player {
+  display: none;
     border-radius: 15px;
     aspect-ratio: 16/9;
 }
@@ -35,12 +36,12 @@
     padding: 0;
     border: 0;
     background-color: transparent;
-    color: a.$secondary-color;
+    color: a.$hotPink-color;
     cursor: pointer;
   }
 
   .fa, .fa-solid {
-    color: a.$secondary-color;
+    color: a.$hotPink-color;
     font-size: 28px;
     margin-left: 20px;
   } 
@@ -70,7 +71,7 @@ input[type="range"] {
   /******** Chrome, Safari, Opera and Edge Chromium styles ********/
   /* slider track */
   input[type="range"]::-webkit-slider-runnable-track {
-    background-color: a.$secondary-color;
+    background-color: a.$hotPink-color;
     border-radius: 0.5rem;
     height: 0.5rem;
   }
@@ -94,7 +95,7 @@ input[type="range"] {
   /*********** Firefox styles ***********/
   /* slider track */
   input[type="range"]::-moz-range-track {
-    background-color: a.$secondary-color;
+    background-color: a.$hotPink-color;
     border-radius: 0.5rem;
     height: 0.5rem;
   }

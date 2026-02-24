@@ -22,31 +22,31 @@
 }
 
 .insta-icon:hover .insta-fill {
-    fill: a.$secondary-color;
+    fill: a.$hotPink-color;
   }
 
   .insta-icon:hover .insta-line {
-    stroke: a.$primary-color;
+    stroke: a.$darkRed-color;
   }
 
   .git-icon:hover .git-fill {
-    fill: a.$secondary-color;
+    fill: a.$hotPink-color;
   }
 
   .git-icon:hover .git-line {
-    stroke: a.$primary-color;
+    stroke: a.$darkRed-color;
   }
 
   .link-icon:hover .link-fill {
-    fill: a.$secondary-color;
+    fill: a.$hotPink-color;
   }
 
   .link-icon:hover .link-line {
-    fill: a.$primary-color;
+    fill: a.$darkRed-color;
   }
 
 body {
-    background-color: white;
+    background-color: a.$darkRed-color;
 }
 
 .button {
@@ -59,21 +59,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: a.$primary-color;
+    background-color: a.$hotPink-color;
     font-family: "Inclusive Sans", sans-serif;
     margin: 5px;
     a{
-        color: a.$secondary-color;
+        color: a.$hotPink-color;
         text-decoration: none;
     }
 }
 
 .button:hover {
-    background-color: a.$secondary-color;
-    color: a.$primary-color;
+    background-color: a.$paleBlue-color;
+    color: a.$darkRed-color;
     cursor: pointer;
     a{
-        color: a.$primary-color;
+        color: a.$darkRed-color;
     }
 }
 
@@ -94,7 +94,7 @@ body {
 
 .top-link {
   opacity: 0.5;
-  color: a.$secondary-color;
+  color: a.$hotPink-color;
   text-decoration: none;
   height: 50px;
   display: flex;
@@ -110,8 +110,8 @@ body {
 
 .top-link:hover {
   opacity: 1;
-  background-color: a.$primary-color;
-  border-color: a.$secondary-color;
+  background-color: a.$darkRed-color;
+  border-color: a.$hotPink-color;
 }
 
 //tablet styles
