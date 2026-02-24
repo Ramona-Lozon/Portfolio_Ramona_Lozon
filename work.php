@@ -21,11 +21,23 @@ $results = mysqli_query($connect,$query);?>
     
 <header>
     <nav>
-        <div id="logo"><img src="images/logo-colour-noText.svg" alt="logo">
-        <ul class="hamburger-dropdown">
-            <li class="hover-item"><a class="button" href="index.php">Home</a></li>
+        <div class="logo-con"><img id="logo" img src="images/logo-colour-noText.svg" alt="logo">
+            <div class="menu-con">
+                <ul class="hamburger-dropdown">
+            <li class="hover-item"><a class="button" href="index.html">Home</a></li>
             <li class="hover-item"><a class="button" href="about.html">About</a></li>
             <li class="hover-item"><a class="button" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<header>
+    <nav>
+        <div id="logo"><img src="images/logo-colour-noText.svg" alt="logo">
+        <ul class="hamburger-dropdown">
+
         </ul>
     </div>
     </nav>

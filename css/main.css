@@ -303,32 +303,45 @@ nav {
   margin: 10px 10px 10px auto;
 }
 
-nav:hover #logo img {
+#logo:hover {
   opacity: 1;
 }
 
-#logo {
+.logo-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 10px;
   height: 150px;
   margin-right: auto;
   z-index: 500;
 }
-#logo img {
+.logo-con img {
   height: 100%;
   width: auto;
   opacity: 0.2;
 }
 
-.hamburger-dropdown {
+.menu-con {
   display: none;
+  position: relative;
+  z-index: -1;
+  width: 400px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.X {
+  display: flex;
+}
+
+.hamburger-dropdown {
   flex-direction: row;
   position: absolute;
   background-color: #880d1e, 0.5;
   padding: 10px;
-  top: 60px;
-  left: -100%;
+  transform: translateX(-320px);
   width: inherit;
-  z-index: -2;
 }
 .hamburger-dropdown a {
   text-decoration: none;
@@ -348,18 +361,18 @@ nav:hover #logo img {
 
 @keyframes slide-out {
   0% {
-    left: -100%;
+    transform: translateX(-320px);
   }
   100% {
-    left: 150px;
+    transform: translateX(0px);
   }
 }
 @keyframes slide-back {
   0% {
-    left: 150px;
+    transform: translateX(0px);
   }
   100% {
-    left: -100%;
+    transform: translateX(-320px);
   }
 }
 #contactTitle {

@@ -19,26 +19,14 @@ nav {
     margin: 10px 10px 10px auto;
 } 
 
-// .deskNavItem {
-//     display: none;
-//     position: relative;
-//     top: -40px;
-//     a {
-//         text-decoration: none;
-//         padding: 10px;
-//     }
-//   }
-
-// nav:hover .deskNavItem {
-//     top:0;
-// }
-
-nav:hover #logo {
-    img {
+#logo:hover {
         opacity: 1;
-    }
 }
-#logo {
+
+.logo-con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 10px;
     height: 150px;
     margin-right: auto;
@@ -50,34 +38,26 @@ nav:hover #logo {
     }
 }
 
-// .hamburger {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     width: 30px;
-//     height: 20px;
-//     margin: 0 20px 0 auto;
-//     position: relative;
-//     cursor: pointer;
-//         span {
-//             display: block;
-//             width: 100%;
-//             height: 2px;
-//             background-color: a.$hotPink-color;
-//             border-radius: 2px;
-//         }
-// }
+.menu-con {
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 400px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.X {
+    display: flex;
+}
 
 .hamburger-dropdown {
-    display: none;
     flex-direction: row;
     position: absolute;
     background-color: a.$darkRed-color, 0.5;
     padding: 10px;
-    top: 60px;
-    left: -100%;
+    transform:translateX(-320px);
     width: inherit;
-    z-index: -2;
     a {
         text-decoration: none;
     }
@@ -95,38 +75,11 @@ nav:hover #logo {
 }
 
 @keyframes slide-out {
-    0% {left:-100%;}
-    100% {left:150px;}
+    0% {transform: translateX(-320px);}
+    100% {transform:translateX(0px);}
 }
 
 @keyframes slide-back {
-    0% {left:150px;}
-    100% {left: -100%}
-}
-
-//   .hamburger.X span:nth-child(1) {
-//     transform: rotate(45deg);
-//     top: 10px;
-//     position:absolute;
-//   }
-  
-//   .hamburger.X span:nth-child(2) {
-//     opacity: 0;
-//   }
-  
-//   .hamburger.X span:nth-child(3) {
-//     transform: rotate(-45deg);
-//     top: 10px;
-//     position: absolute;
-//   }
-
-@media (min-width: 768px) {
-
-    // .hamburger {
-    //     display: none;
-    // }
-
-    // .deskNavItem {
-    // display: block;
-    // } 
+    0% {transform: translateX(0px);}
+    100% {transform: translateX(-320px);}
 }
