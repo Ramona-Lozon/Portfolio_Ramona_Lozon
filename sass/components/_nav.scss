@@ -1,7 +1,9 @@
 @use "../abstracts" as a;
 
 Header {
-    position: sticky;
+    position: absolute;
+    height: 160px;
+    width: 160px;
     top: 0;
     z-index: 10000;
 }
@@ -10,53 +12,63 @@ nav {
     position: relative;
     display: flex;
     background-color: rgba(0,0,0,0);
-    display: flex;
-    flex-direction: row;
-    height: 50px;
+    height: 150px;
+    width: 150px;
 }
 
 #home-button {
     margin: 10px 10px 10px auto;
 } 
 
+
+#logo {
+      height: 150px;
+      width: auto;
+      opacity: 0.2;
+      z-index: 1000;
+}
+
 #logo:hover {
+        opacity: 1;
+}
+
+.menu-con:hover #logo {
         opacity: 1;
 }
 
 .logo-con {
     display: flex;
-    flex-direction: row;
+    position: relative;
+    flex-direction: column;
     align-items: center;
     padding: 10px;
     height: 150px;
     margin-right: auto;
     z-index: 500;
-    img {
-      height: 100%;
-      width: auto;
-      opacity: 0.2;
-    }
 }
 
 .menu-con {
     display: none;
-    position: relative;
-    z-index: -1;
-    width: 400px;
-    height: 50px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    top: 120px;
+    left: 60;
+    width: 120px;
+    height: 180px;
+    //background-color: wheat;
 }
 
 .X {
     display: flex;
+    z-index: 100;
+    filter: drop-shadow(10px 10px 30px black);
 }
 
 .hamburger-dropdown {
-    flex-direction: row;
+    flex-direction: column;
     position: absolute;
-    background-color: a.$darkRed-color, 0.5;
-    padding: 10px;
-    transform:translateX(-320px);
     width: inherit;
     a {
         text-decoration: none;
@@ -75,6 +87,39 @@ nav {
 }
 
 @keyframes slide-out {
+    0% {transform: translateY(-160px);}
+    100% {transform:translateY(10px);}
+}
+
+@keyframes slide-back {
+    0% {transform: translateY(10px);}
+    100% {transform: translateY(-160px);}
+}
+
+
+// 500 pixels breakpoint
+@media (min-width: 500px) {
+
+    .menu-con {
+        overflow: hidden;
+        position: relative;
+        flex-direction: row;
+        transform:translateY(0px);
+        width: 350px;
+        height: 60px;
+        top: 0px;
+        left: 0px;
+    }
+
+    .logo-con {
+        flex-direction: row;
+    }
+
+    .hamburger-dropdown {
+    flex-direction: row;
+    }
+
+@keyframes slide-out {
     0% {transform: translateX(-320px);}
     100% {transform:translateX(0px);}
 }
@@ -83,3 +128,5 @@ nav {
     0% {transform: translateX(0px);}
     100% {transform: translateX(-320px);}
 }
+}
+
