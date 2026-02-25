@@ -285,9 +285,9 @@ body {
   }
 }
 Header {
-  position: absolute;
-  height: 160px;
-  width: 160px;
+  position: sticky;
+  height: 100px;
+  width: 100px;
   top: 0;
   z-index: 10000;
 }
@@ -295,9 +295,8 @@ Header {
 nav {
   position: relative;
   display: flex;
-  background-color: rgba(0, 0, 0, 0);
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 
 #home-button {
@@ -305,17 +304,13 @@ nav {
 }
 
 #logo {
-  height: 150px;
+  height: 100px;
   width: auto;
   opacity: 0.2;
   z-index: 1000;
 }
 
-#logo:hover {
-  opacity: 1;
-}
-
-.menu-con:hover #logo {
+.logo-con:hover #logo {
   opacity: 1;
 }
 
@@ -325,7 +320,7 @@ nav {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  height: 150px;
+  height: 100px;
   margin-right: auto;
   z-index: 500;
 }
@@ -345,7 +340,6 @@ nav {
 .X {
   display: flex;
   z-index: 100;
-  filter: drop-shadow(10px 10px 30px black);
 }
 
 .hamburger-dropdown {
@@ -374,12 +368,12 @@ nav {
     transform: translateY(-160px);
   }
   100% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
 }
 @keyframes slide-back {
   0% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100% {
     transform: translateY(-160px);
@@ -407,12 +401,12 @@ nav {
       transform: translateX(-320px);
     }
     100% {
-      transform: translateX(0px);
+      transform: translateX(10px);
     }
   }
   @keyframes slide-back {
     0% {
-      transform: translateX(0px);
+      transform: translateX(10px);
     }
     100% {
       transform: translateX(-320px);
@@ -654,16 +648,11 @@ ul {
 #about-section {
   display: flex;
   flex-direction: column;
-  margin: 100px 0px 100px 0px;
 }
 #about-section #about {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#about-section div span {
-  text-align: center;
-  margin: 10px 50px 10px 50px;
 }
 
 #info-and-resume {
@@ -675,10 +664,18 @@ ul {
   width: 400px;
   margin: 10px auto auto auto;
 }
-#info-and-resume div {
+#info-and-resume #about-con {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f26a8d;
+}
+#info-and-resume #about-con #about, #info-and-resume #about-con #about-desk, #info-and-resume #about-con #education {
+  display: flex;
+}
+#info-and-resume #about-con #about-text, #info-and-resume #about-con #education-text {
+  text-align: center;
+  margin: 10px 50px 10px 50px;
 }
 
 #selfie {
@@ -692,8 +689,11 @@ ul {
     display: flex;
     flex-direction: column;
   }
+  #about-section #about {
+    display: none;
+  }
   #info-and-resume {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: row;
   }
@@ -701,14 +701,19 @@ ul {
     width: 400px;
     margin: 10px auto auto 150px;
   }
-  #info-and-resume span {
-    align-items: left;
-    text-align: left;
-  }
-  #info-and-resume div {
+  #info-and-resume #about-con {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+  }
+  #info-and-resume #about-con #about-desk, #info-and-resume #about-con #education {
+    align-items: flex-start;
+  }
+  #info-and-resume #about-con #about-text, #info-and-resume #about-con #education-text {
+    display: flex;
+    text-align: left;
+    text-decoration: none;
+    margin: 10px 50px 10px 50px;
   }
 }
 #contact-section {

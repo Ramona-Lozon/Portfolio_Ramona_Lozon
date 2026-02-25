@@ -1,9 +1,9 @@
 @use "../abstracts" as a;
 
 Header {
-    position: absolute;
-    height: 160px;
-    width: 160px;
+    position: sticky;
+    height: 100px;
+    width: 100px;
     top: 0;
     z-index: 10000;
 }
@@ -11,9 +11,9 @@ Header {
 nav {
     position: relative;
     display: flex;
-    background-color: rgba(0,0,0,0);
-    height: 150px;
-    width: 150px;
+    //background-color: rgba(0,0,0,0);
+    height: 100px;
+    width: 100px;
 }
 
 #home-button {
@@ -22,18 +22,15 @@ nav {
 
 
 #logo {
-      height: 150px;
+      height: 100px;
       width: auto;
       opacity: 0.2;
       z-index: 1000;
 }
 
-#logo:hover {
+.logo-con:hover #logo {
         opacity: 1;
-}
-
-.menu-con:hover #logo {
-        opacity: 1;
+            //filter: drop-shadow(10px 20px 0px black);
 }
 
 .logo-con {
@@ -42,7 +39,7 @@ nav {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    height: 150px;
+    height: 100px;
     margin-right: auto;
     z-index: 500;
 }
@@ -63,7 +60,7 @@ nav {
 .X {
     display: flex;
     z-index: 100;
-    filter: drop-shadow(10px 10px 30px black);
+    //filter: drop-shadow(10px 10px 0px black);
 }
 
 .hamburger-dropdown {
@@ -88,11 +85,11 @@ nav {
 
 @keyframes slide-out {
     0% {transform: translateY(-160px);}
-    100% {transform:translateY(10px);}
+    100% {transform:translateY(20px);}
 }
 
 @keyframes slide-back {
-    0% {transform: translateY(10px);}
+    0% {transform: translateY(20px);}
     100% {transform: translateY(-160px);}
 }
 
@@ -121,11 +118,11 @@ nav {
 
 @keyframes slide-out {
     0% {transform: translateX(-320px);}
-    100% {transform:translateX(0px);}
+    100% {transform:translateX(10px);}
 }
 
 @keyframes slide-back {
-    0% {transform: translateX(0px);}
+    0% {transform: translateX(10px);}
     100% {transform: translateX(-320px);}
 }
 }
