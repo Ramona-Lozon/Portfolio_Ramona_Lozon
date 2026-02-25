@@ -1,21 +1,14 @@
 @use '../abstracts' as a;
 
+
 #about-section {
     display: flex;
     flex-direction: column;
-    margin: 100px 0px 100px 0px;
     
     #about {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    div {
-            span {
-            text-align: center;
-            margin: 10px 50px 10px 50px;
-            }
     }
 }
 
@@ -26,12 +19,23 @@
     img{
         width: 400px;
         margin: 10px auto auto auto;
-        }
-    div {
+    }
+    
+    #about-con {
         display: flex;
         flex-direction: column;
         align-items: center;
-        }
+        background-color: a.$pink-color;
+
+            #about, #about-desk, #education {
+                display: flex;
+            }
+
+            #about-text, #education-text {
+                text-align: center;
+                margin: 10px 50px 10px 50px;
+            }
+    }
 }
 
 
@@ -48,24 +52,36 @@
         display: flex;
         flex-direction: column;
 
+        #about {
+            display: none;
+        }
     }
 
-        #info-and-resume {
-        text-align: center;
+    #info-and-resume {
+        text-align: left;
         display: flex;
         flex-direction: row;
+    
         img{
             width: 400px;
             margin: 10px auto auto 150px;
-            }
-        span {
-            align-items: left;
-            text-align: left;
         }
-        div {
+
+        #about-con {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
+
+        #about-desk, #education {
+            align-items: flex-start;
+        }
+
+            #about-text, #education-text {
+                display: flex;
+                text-align: left;
+                text-decoration: none;
+                margin: 10px 50px 10px 50px;
             }
+        }
     }
 }
