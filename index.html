@@ -13,22 +13,19 @@
     <script type="module" src="js/main.js"></script>
 </head>
 
-<?php require_once('includes/connect.php');
-$query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
-$results = mysqli_query($connect,$query);?>
-
 <body data-page="home">
 
 <header>
     <nav>
-        <div class="logo-con"><img id="logo" img src="images/logo-colour-noText.svg" alt="logo">
-            <div class="menu-con">
-                <ul class="hamburger-dropdown">
+        <div class="logo-con">
+        <img id="logo" img src="images/logo-colour-noText.svg" alt="logo">
+        <div class="menu-con">
+            <ul class="hamburger-dropdown">
                     <li class="hover-item"><a class="button" href="work.php">Work</a></li>
                     <li class="hover-item"><a class="button" href="about.html">About</a></li>
                     <li class="hover-item"><a class="button" href="contact.html">Contact</a></li>
                 </ul>
-            </div>
+        </div>
         </div>
     </nav>
 </header>
