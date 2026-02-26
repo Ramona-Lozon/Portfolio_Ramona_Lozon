@@ -1,7 +1,61 @@
 <?php
-require_once '../includes/connect.php';
+
 require_once 'auth.php';
+
+spl_autoload_register(function ($class) {
+    $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
+    $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
+    $filepath = __DIR__ . '/../includes/classes/' . $class . '.php';
+    $filepath = str_replace("/", DIRECTORY_SEPARATOR, $filepath); # only required for windows
+    
+    require_once $filepath;
+});
+
 use Portfolio_Ramona_Lozon\Database;
+$database = new Database();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$project = $_POST['project'];
+
+if ($project == null || $project == '') {
+    echo "Project is required!";
+    exit(1);
+}
+
+$proposition = $_POST['proposition'];
+
+if ($proposition == null || $proposition == '') {
+    echo "proposition is required!";
+    exit(1);
+}
+
+$deliverables = $_POST['deliverables'];
+
+if ($deliverables == null || $deliverables == '') {
+    echo "deliverables is required!";
+    exit(1);
+}
+
+$outcome = $_POST['outcome'];
+
+if ($outcome == null || $outcome == '') {
+    echo "Outcome is required!";
+    exit(1);
+}
+$database->execute('INSERT INTO case_file
+    (project, proposition, deliverables, outcome)
+    VALUES (:project, :proposition, :deliverables, :outcome);',
+    [
+        'project' => $project,
+        'proposition' => $proposition,
+        'deliverables' => $deliverables, 
+        'outcome' => $outcome
+    ]
+);
+
+header('location: dashboard.php');
+exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +90,46 @@ use Portfolio_Ramona_Lozon\Database;
 </header>
 
 <body data-page="dashboard">
+
+ <form class="input-form" id="addForm" method="POST" action="dashboard.php">
+
+                <input  class="form-box" 
+                        type="text" 
+                        name="project" 
+                        id="projectBox" 
+                        placeholder="project">
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="proposition" 
+                        id="propBox" 
+                        placeholder="proposition">
+                <br>
+                <br>
+                <input 
+                        class="form-box" 
+                        type="text" 
+                        name="deliverables" 
+                        id="delivBox" 
+                        placeholder="deliverables">
+
+                                <br>
+                <br>
+                <input 
+                        class="form-box" 
+                        type="text" 
+                        name="outcome" 
+                        id="outcome" 
+                        placeholder="outcome">
+
+                <div id="feedback"></div>
+
+                <input  class="button" 
+                        id="send-button" 
+                        type="submit" 
+                        value="Submit">
+            </form>
 
 </body>
 </html>
