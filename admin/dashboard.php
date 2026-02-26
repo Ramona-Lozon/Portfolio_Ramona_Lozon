@@ -1,3 +1,8 @@
+<?php
+require_once '../includes/connect.php';
+use Portfolio_Ramona_Lozon\Database;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +24,10 @@
         <img id="logo" img src="../images/logo-colour-noText.svg" alt="logo">
         <div class="menu-con">
             <ul class="hamburger-dropdown">
-                    <li class="hover-item"><a class="button" href="index.html">Home</a></li>
-                    <li class="hover-item"><a class="button" href="work.php">Work</a></li>
-                    <li class="hover-item"><a class="button" href="about.html">About</a></li>
-                    <li class="hover-item"><a class="button" href="contact.html">Contact</a></li>
+                    <li class="hover-item"><a class="button" href="../index.html">Home</a></li>
+                    <li class="hover-item"><a class="button" href="../work.php">Work</a></li>
+                    <li class="hover-item"><a class="button" href="../about.html">About</a></li>
+                    <li class="hover-item"><a class="button" href="../contact.html">Contact</a></li>
                 </ul>
         </div>
         </div>

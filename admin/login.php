@@ -21,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 //find spot in database to store the username and password
 // :username, ['username'=> $username] prevents sql injection 
     $results = $db->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
-//see if the password matches the one in the databse
+
+    //see if the password matches the one in the databse
 // password_verify will be able to de-hash stored password 
 
 // if username and varified password were found
@@ -31,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $_SESSION['username'] = $results[0]['username'];
 //send user who started session to the dashboard
 // header() sends them there
-    header('Location dashboard.php');
+    header('Location: dashboard.php');
 //exit stops the code from running or looping
-    exit;} 
+} 
 //if the login function failed, display error    
     else {$error = 'Wrong username or password';
     }
@@ -99,8 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 Log In
         </button>
     </form>
-
-    <hr>
 </main>
 </body>
 </html>
