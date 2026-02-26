@@ -11,12 +11,9 @@ class Database
         $connection = $this->connect();
         $statement = $connection->prepare($query);
         foreach ($bindings as $key => $value) {
-            // var_dump([$key => $value]);
-            $statement->bindValue(":$key", $value); // ":" . $key - js syntax `hello_${myVar}`
+            $statement->bindValue(":$key", $value);
         }
-        // var_dump($statement);
         $status = $statement->execute();
-        // var_dump($status);
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $results;
@@ -30,17 +27,17 @@ class Database
         $username = $config['username'];
         $password = $config['password'];
 
-        return new PDO($dsn, $username, $password);
+        return new PDO($dsn, $config['username'], $config['password']);
     }
 
     public function getConfig()
     {
         return [
             'username' => 'root',
-            'password' => '', // 'root'
+            'password' => '',
             'host' => 'localhost',
-            'database' => 'portfolio',
-            'port' => '3306' // OSX: 8889
+            'database' => 'portfolio_case_file',
+            'port' => '3306'
         ];
     }
 
