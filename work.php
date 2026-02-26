@@ -9,10 +9,7 @@ spl_autoload_register(function ($class) {
     $filepath = str_replace('/', DIRECTORY_SEPARATOR, $filepath); #only required for windows
 
     require_once $filepath;
-});
-
-
-?>
+});?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +63,7 @@ spl_autoload_register(function ($class) {
         <div class="case-file-hero">
         
         <a href="case_file.php?id=<?= $project['id'] ?>">
+    <!--used htmlspecialchars instead of echo to make sure it is translated properly-->
             <img src="images/<?= htmlspecialchars($project['Hero']) ?>" alt="case file">
     </a>
         </div>
@@ -191,14 +189,4 @@ spl_autoload_register(function ($class) {
     </div>
 </footer>
 </body>
-
-        <script>
-            async function test () {
-                return await fetch('http://localhost/portfolio/includes/scripts/projects.php');
-            }
-
-            const resp = test();
-            console.log(await resp.json());
-        </script>
-
 </html>
