@@ -5,8 +5,8 @@ require_once '../includes/connect.php';
 // get the portfolio class from the class folder which has the database
 use Portfolio_Ramona_Lozon\Database;
 
-//make a new instance of database
-$db = new Database();
+//make a new instance of the database class
+$database = new Database();
 $error = '';
 
 //login function
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 //this will define results as a username fetched from the database    
 //find spot in database to store the username and password
 // :username, ['username'=> $username] prevents sql injection 
-    $results = $db->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
+    $results = $database->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
 
     //see if the password matches the one in the databse
 // password_verify will be able to de-hash stored password 
