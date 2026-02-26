@@ -732,4 +732,29 @@ ul {
     align-items: baseline;
     margin-left: 150px;
   }
+}
+.cms-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-form-cms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box-cms {
+  background-color: black;
+  border-color: #dd2d4a;
+  color: pink;
+  padding: 10px;
+  field-sizing: content;
+  height: auto;
+  max-width: 500px;
+  overflow: hidden;
+  width: 80vw;
+  margin: 10px 10px 10px 10px;
 }/*# sourceMappingURL=main.css.map */
