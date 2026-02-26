@@ -19,15 +19,19 @@ class Database
         return $results;
     }
  
+    public function execute(string $query, array $bindings = []): bool
+    {
+        $connection = $this->connect();
+        $statement = $connection->prepare($query);
+        foreach ($bindings as $key => $value) {
+            $statement->bindValue(":$key", $value);
+        }
+        return $statement->execute();
+    }
+
     public function connect()
     {
-        $config = $this->getConfig();
-        $dsn = $this->getDsn();
-
-        $username = $config['username'];
-        $password = $config['password'];
-
-        return new PDO($dsn, $config['username'], $config['password']);
+        return new PDO($this->getDsn(), $this->getConfig()['username'], $this->getConfig()['password']);
     }
 
     public function getConfig()
