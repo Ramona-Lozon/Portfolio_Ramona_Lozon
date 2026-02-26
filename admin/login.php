@@ -3,10 +3,11 @@ session_start();
 //loads connect file
 require_once '../includes/connect.php';
 // get the portfolio class from the class folder which has the database
-use Portfolio_Ramona_lozon\Database;
+use Portfolio_Ramona_Lozon\Database;
 
 //make a new instance of database
 $db = new Database();
+$error = '';
 
 //login function
 
@@ -19,20 +20,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 //this will define results as a username fetched from the database    
 //find spot in database to store the username and password
 // :username, ['username'=> $username] prevents sql injection 
-    $results = $db->query('SELECT * FROM user WHERE = :username', ['username' => $username]);
-//see if the password matches the one in the databse
+    $results = $db->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
+
+    //see if the password matches the one in the databse
 // password_verify will be able to de-hash stored password 
 
 // if username and varified password were found
     if ($results && password_verify($password, $results[0]['password'])) {
 //if both are found store them in a session
     $_SESSION['user_id'] = $results[0]['id'];
-    $_SERVER['username'] = $results[0]['username'];
+    $_SESSION['username'] = $results[0]['username'];
 //send user who started session to the dashboard
 // header() sends them there
-    header('location dashboard.php');
+    header('Location: dashboard.php');
 //exit stops the code from running or looping
-    exit;} 
+} 
 //if the login function failed, display error    
     else {$error = 'Wrong username or password';
     }
@@ -61,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         <img id="logo" img src="../images/logo-colour-noText.svg" alt="logo">
         <div class="menu-con">
             <ul class="hamburger-dropdown">
+                    <li class="hover-item"><a class="button" href="home.html">Home</a></li>
                     <li class="hover-item"><a class="button" href="work.php">Work</a></li>
                     <li class="hover-item"><a class="button" href="about.html">About</a></li>
                     <li class="hover-item"><a class="button" href="contact.html">Contact</a></li>
@@ -73,15 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 <body data-page="login">
 
 <main class="cms-page">
-    <h1 class="cms-title text">Admin Login</h1>
+    <h3 class="cms-title text">Admin Login</h3>
 
     <?php if ($error): ?>
         <p class="error-message">
             <?= htmlspecialchars($error) ?>
         </p>
     <?php endif; ?>
-
-    <h2>Log In</h2>
     <form method="POST" class="input-form-cms">
         <input  class="form-box-cms"
                 type="text" 
@@ -99,8 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 Log In
         </button>
     </form>
-
-    <hr>
 </main>
 </body>
 </html>
