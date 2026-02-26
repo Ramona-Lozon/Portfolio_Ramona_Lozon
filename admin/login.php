@@ -17,6 +17,7 @@ $database = new Database();
 $error = '';
 
 //login function
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
     $username = $_POST['username'];
@@ -85,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             <?= htmlspecialchars($error) ?>
         </p>
     <?php endif; ?>
-    
+
     <form method="POST" class="input-form-cms">
         <input  class="form-box-cms"
                 type="text" 
