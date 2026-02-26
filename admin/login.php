@@ -1,45 +1,45 @@
 <?php
 session_start();
-//loads connect file
+
 require_once '../includes/connect.php';
-// get the portfolio class from the class folder which has the database
 use Portfolio_Ramona_Lozon\Database;
+
+spl_autoload_register(function ($class) {
+    $class = str_replace('Portfolio\\', '', $class);
+    $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
+    $filepath = __DIR__ . '/../../includes/classes/' . $class . '.php';
+    $filepath = str_replace("/", DIRECTORY_SEPARATOR, $filepath); # only required for windows
+    
+    require_once $filepath;
+});
 
 //make a new instance of the database class
 $database = new Database();
 $error = '';
 
 //login function
-
-//ask if user submitted a form instead of a get request
-//did that form get submitted using a login button using isset
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-//store username and password that were submitted on this page
     $username = $_POST['username'];
+    if ($username == null || $username == '') {
+        echo "Username is Required";
+        exit(1);
+    }
     $password = $_POST['password'];
-//this will define results as a username fetched from the database    
-//find spot in database to store the username and password
-// :username, ['username'=> $username] prevents sql injection 
-    $results = $database->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
+    if ($password == null || $password == '') {
+        echo "Password is Required";
+        exit(1);
+    } 
+    $results = $database->query('SELECT * FROM users WHERE 
+    username = :username', ['username' => $username]);
 
-    //see if the password matches the one in the databse
-// password_verify will be able to de-hash stored password 
-
-// if username and varified password were found
     if ($results && password_verify($password, $results[0]['password'])) {
-//if both are found store them in a session
     $_SESSION['user_id'] = $results[0]['id'];
     $_SESSION['username'] = $results[0]['username'];
-//send user who started session to the dashboard
-// header() sends them there
     header('Location: dashboard.php');
-//exit stops the code from running or looping
-} 
-//if the login function failed, display error    
+}    
     else {$error = 'Wrong username or password';
     }
 }
-//end of login function
 
 ?>
 <!DOCTYPE html>
