@@ -1,5 +1,6 @@
 <?php
 require_once '../includes/connect.php';
+require_once 'auth.php';
 use Portfolio_Ramona_Lozon\Database;
 ?>
 
@@ -35,8 +36,6 @@ use Portfolio_Ramona_Lozon\Database;
 </header>
 
 <body data-page="dashboard">
-
-
 
 </body>
 </html>
