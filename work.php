@@ -1,9 +1,17 @@
 <?php
-require_once('includes/connect.php');
+
 use Portfolio_Ramona_Lozon\Database;
 
-$db = new Database();
-$mediaItems = $db->query('SELECT id, Hero FROM media ORDER BY id ASC');
+spl_autoload_register(function ($class) {
+    $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
+    $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for mac & windows
+    $filepath = __DIR__ . '/includes/classes/' . $class . '.php';
+    $filepath = str_replace('/', DIRECTORY_SEPARATOR, $filepath); #only required for windows
+
+    require_once $filepath;
+});
+
+
 ?>
 
 <!DOCTYPE html>
@@ -48,12 +56,18 @@ $mediaItems = $db->query('SELECT id, Hero FROM media ORDER BY id ASC');
 </header>
 
 <section id="case-files-section">
-    <h2>My Work</h2>
-    <?php foreach ($mediaItems as $item): ?>
+    <?php
+    $db = new Database;
+    $db = new Portfolio_Ramona_Lozon\Database;
+    $results = $db->query('SELECT * FROM case_file;');
+    $results = $db->query('SELECT case_file.id, media.Hero FROM case_file JOIN media ON media.id = case_file.id');
+
+    foreach ($results as $project): ?>
         <div class="case-file-hero">
-            <a href="case_file.php?id=<?= $item['id'] ?>">
-                <img src="images/<?= htmlspecialchars($item['Hero']) ?>" alt="case file">
-            </a>
+        
+        <a href="case_file.php?id=<?= $project['id'] ?>">
+            <img src="images/<?= htmlspecialchars($project['Hero']) ?>" alt="case file">
+    </a>
         </div>
     <?php endforeach; ?>
 </section>
@@ -177,4 +191,14 @@ $mediaItems = $db->query('SELECT id, Hero FROM media ORDER BY id ASC');
     </div>
 </footer>
 </body>
+
+        <script>
+            async function test () {
+                return await fetch('http://localhost/portfolio/includes/scripts/projects.php');
+            }
+
+            const resp = test();
+            console.log(await resp.json());
+        </script>
+
 </html>

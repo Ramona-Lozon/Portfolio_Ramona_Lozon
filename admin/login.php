@@ -1,17 +1,16 @@
 <?php
 session_start();
 
-require_once '../includes/connect.php';
-use Portfolio_Ramona_Lozon\Database;
-
 spl_autoload_register(function ($class) {
-    $class = str_replace('Portfolio\\', '', $class);
+    $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
-    $filepath = __DIR__ . '/../../includes/classes/' . $class . '.php';
+    $filepath = __DIR__ . '/../includes/classes/' . $class . '.php';
     $filepath = str_replace("/", DIRECTORY_SEPARATOR, $filepath); # only required for windows
     
     require_once $filepath;
 });
+
+use Portfolio_Ramona_Lozon\Database;
 
 //make a new instance of the database class
 $database = new Database();
@@ -19,16 +18,19 @@ $error = '';
 
 //login function
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+
     $username = $_POST['username'];
     if ($username == null || $username == '') {
         echo "Username is Required";
         exit(1);
     }
+
     $password = $_POST['password'];
     if ($password == null || $password == '') {
         echo "Password is Required";
         exit(1);
     } 
+
     $results = $database->query('SELECT * FROM users WHERE 
     username = :username', ['username' => $username]);
 
@@ -36,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $_SESSION['user_id'] = $results[0]['id'];
     $_SESSION['username'] = $results[0]['username'];
     header('Location: dashboard.php');
-}    
+    exit;}    
     else {$error = 'Wrong username or password';
     }
 }
@@ -83,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             <?= htmlspecialchars($error) ?>
         </p>
     <?php endif; ?>
+    
     <form method="POST" class="input-form-cms">
         <input  class="form-box-cms"
                 type="text" 

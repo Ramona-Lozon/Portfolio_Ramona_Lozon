@@ -4,8 +4,14 @@ ini_set('display_errors', 0);
 error_reporting(E_ALL);     
 header('Content-Type: application/json');
 
-
-require_once('includes/connect.php');
+spl_autoload_register(function ($class) {
+    $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
+    $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
+    $filepath = __DIR__ . '/../includes/classes/' . $class . '.php';
+    $filepath = str_replace("/", DIRECTORY_SEPARATOR, $filepath); # only required for windows
+    
+    require_once $filepath;
+});
 
 $name  = trim($_POST['name']);
 $org   = trim($_POST['org']);
