@@ -1,0 +1,12 @@
+{
+    "name": "ramona/portfolio",
+    "description": "my portfolio!",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramona"
+        }
+    ],
+    "require": {}
+}

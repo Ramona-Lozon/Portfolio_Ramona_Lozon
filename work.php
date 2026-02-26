@@ -1,3 +1,11 @@
+<?php
+require_once('includes/connect.php');
+use Portfolio_Ramona_Lozon\Database;
+
+$db = new Database();
+$mediaItems = $db->query('SELECT id, Hero FROM media ORDER BY id ASC');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +20,6 @@
     <link rel="stylesheet" href="css/main.css">
     <script type="module" src="js/main.js"></script>
 </head>
-
-<?php require_once('includes/connect.php');
-$query = 'SELECT media.id AS media, Hero FROM media ORDER BY media.id ASC';
-$results = mysqli_query($connect,$query);?>
 
 <body data-page="home">
     
@@ -43,10 +47,16 @@ $results = mysqli_query($connect,$query);?>
     </nav>
 </header>
 
-         <section id="case-files-section"><h2>My Work</h2>           
-            <?php while($row = mysqli_fetch_array($results)){echo '<div class="case-file-hero"><a href="case_file.php?id='.$row['media'].'"><img src="images/'.$row['Hero'].'" alt="case files"></a></div>';}?>
-           
-        </section>
+<section id="case-files-section">
+    <h2>My Work</h2>
+    <?php foreach ($mediaItems as $item): ?>
+        <div class="case-file-hero">
+            <a href="case_file.php?id=<?= $item['id'] ?>">
+                <img src="images/<?= htmlspecialchars($item['Hero']) ?>" alt="case file">
+            </a>
+        </div>
+    <?php endforeach; ?>
+</section>
 
             <!-- skills -->
              <section id="skills-section">
