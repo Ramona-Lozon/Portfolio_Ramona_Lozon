@@ -15,43 +15,97 @@ use Portfolio_Ramona_Lozon\Database;
 $database = new Database();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-$project = $_POST['project'];
 
+$hero = $_POST['hero'];
+if ($hero == null || $hero == '') {
+    echo "Hero image is required!";
+    exit(1);
+}
+
+$project = $_POST['project'];
 if ($project == null || $project == '') {
     echo "Project is required!";
     exit(1);
 }
 
 $proposition = $_POST['proposition'];
-
 if ($proposition == null || $proposition == '') {
     echo "proposition is required!";
     exit(1);
 }
 
-$deliverables = $_POST['deliverables'];
+$prop_ex = $_POST['prop_ex'];
+if ($prop_ex == null || $prop_ex == '') {
+    echo "proposition is required!";
+    exit(1);
+}
 
+$prop_caption = $_POST['prop_caption'];
+if ($prop_caption == null || $prop_caption == '') {
+    echo "proposition is required!";
+    exit(1);
+}
+
+$deliverables = $_POST['deliverables'];
 if ($deliverables == null || $deliverables == '') {
     echo "deliverables is required!";
     exit(1);
 }
 
-$outcome = $_POST['outcome'];
+$work_ex = $_POST['work_ex'];
+if ($work_ex == null || $work_ex == '') {
+    echo "proposition is required!";
+    exit(1);
+}
 
+$work_caption = $_POST['work_caption'];
+if ($work_caption == null || $work_caption == '') {
+    echo "proposition is required!";
+    exit(1);
+}
+
+$product_ex = $_POST['product_ex'];
+if ($product_ex == null || $product_ex == '') {
+    echo "proposition is required!";
+    exit(1);
+}
+
+$product_caption = $_POST['product_caption'];
+if ($product_caption == null || $product_caption == '') {
+    echo "proposition is required!";
+    exit(1);
+}
+
+$outcome = $_POST['outcome'];
 if ($outcome == null || $outcome == '') {
     echo "Outcome is required!";
     exit(1);
 }
-$database->execute('INSERT INTO case_file
-    (project, proposition, deliverables, outcome)
-    VALUES (:project, :proposition, :deliverables, :outcome);',
-    [
-        'project' => $project,
-        'proposition' => $proposition,
-        'deliverables' => $deliverables, 
-        'outcome' => $outcome
-    ]
-);
+ $database->execute('INSERT INTO case_file 
+ (project, proposition, deliverables, outcome) 
+VALUES (:project, :proposition, :deliverables, :outcome)',
+        [
+            'project'      => $project,
+            'proposition'  => $proposition,
+            'deliverables' => $deliverables,
+            'outcome'      => $outcome
+        ]
+    );
+
+    // insert into media table
+    $database->execute('INSERT INTO media 
+    (Hero, prop_ex, prop_caption, work_ex, work_caption, product_ex, product_caption) 
+VALUES (:hero, :prop_ex, :prop_caption, :work_ex, :work_caption, :product_ex, :product_caption)',
+        [
+            'hero'            => $hero,
+            'prop_ex'         => $prop_ex,
+            'prop_caption'    => $prop_caption,
+            'work_ex'         => $work_ex,
+            'work_caption'    => $work_caption,
+            'product_ex'      => $product_ex,
+            'product_caption' => $product_caption
+        ]
+    );
 
 header('location: dashboard.php');
 exit;
@@ -95,6 +149,13 @@ exit;
 
                 <input  class="form-box" 
                         type="text" 
+                        name="hero" 
+                        id="heroImage" 
+                        placeholder="Hero Image">
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
                         name="project" 
                         id="projectBox" 
                         placeholder="project">
@@ -107,14 +168,55 @@ exit;
                         placeholder="proposition">
                 <br>
                 <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="prop_ex" 
+                        id="propImage" 
+                        placeholder="Proposition Image">
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="prop_caption" 
+                        id="propCaption" 
+                        placeholder="Proposition Image Caption">
+                <br>
+                <br>
                 <input 
                         class="form-box" 
                         type="text" 
                         name="deliverables" 
                         id="delivBox" 
                         placeholder="deliverables">
-
-                                <br>
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="work_ex" 
+                        id="workImage" 
+                        placeholder="Work Image">
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="work_caption" 
+                        id="workCaption" 
+                        placeholder="Work Image Caption">
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="product_ex" 
+                        id="prodImage" 
+                        placeholder="Product Image">
+                <br>
+                <br>
+                <input  class="form-box" 
+                        type="text" 
+                        name="product_caption" 
+                        id="prodCaption" 
+                        placeholder="Product Iamge Caption">
+                <br>
                 <br>
                 <input 
                         class="form-box" 
