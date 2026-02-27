@@ -50,15 +50,16 @@ body {
 }
 
 .button {
-    width: fit-content;
-    width: 80px;
-    height: 30px;
+    min-width: 70px;
+    height: 40px;
     color: a.$paleBlue-color;
     text-decoration: none; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: a.$hotPink-color;
+    border-radius: 15px;
+    background-color: a.$darkRed-color;
+    border: solid 2px a.$pink-color; 
     font-family: "Inclusive Sans", sans-serif;
     margin: 5px;
     a{
@@ -71,9 +72,21 @@ body {
     background-color: a.$paleBlue-color;
     color: a.$darkRed-color;
     cursor: pointer;
+    box-shadow: 5px 5px 0px a.$hotPink-color;
+    animation: shadow 0.25s forwards;
+    z-index: 200;
     a{
         color: a.$darkRed-color;
     }
+  }
+
+    @keyframes shadow {
+        0% {box-shadow: none;
+            transform: translateX(0px);
+            transform: translateY(0px);}
+        100% {box-shadow: 5px 5px 0px a.$pink-color;
+            transform: translateX(-5px);
+            transform: translateY(-5px);}
 }
 
 .icon-list {

@@ -25,7 +25,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        //background-color: a.$pink-color;
 
             #about, #about-desk, #education {
                 display: flex;
@@ -43,6 +42,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 25px;
+    box-shadow: 15px 15px 0px a.$hotPink-color;
+    border: solid 3px a.$hotPink-color;
+    transform: translateX(-15px);
+    transform: translateY(-15px);
 
 }
 
@@ -70,10 +74,10 @@
         #about-con {
             display: flex;
             flex-direction: column;
-            align-items: left;
+            align-items: flex-start;
 
         #about-desk, #education {
-            align-items: flex-start;
+            margin-left: 50px;
         }
 
             #about-text, #education-text {
