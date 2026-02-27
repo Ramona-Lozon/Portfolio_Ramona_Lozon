@@ -91,7 +91,7 @@ if (!$row) {
     </div>
 
     '<div class="case-file-image" id="cf-media-image">
-        <img src="images/<?= htmlspecialchars($row['prop_ex']) ?>" alt="Media Image" class="responsive-image">
+        <img src="images/<?= htmlspecialchars($row['product_ex']) ?>" alt="Media Image" class="responsive-image">
     </div>
 
     <div>
