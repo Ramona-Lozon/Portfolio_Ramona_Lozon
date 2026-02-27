@@ -11,8 +11,8 @@ spl_autoload_register(function ($class) {
     require_once $filepath;
 });
 
-use Portfolio_Ramona_Lozon\Database;
-$database = new Database();
+use Portfolio_Ramona_Lozon\database;
+$database = new database();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 

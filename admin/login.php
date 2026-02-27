@@ -10,10 +10,10 @@ spl_autoload_register(function ($class) {
     require_once $filepath;
 });
 
-use Portfolio_Ramona_Lozon\Database;
+use Portfolio_Ramona_Lozon\database;
 
 //make a new instance of the database class
-$database = new Database();
+$database = new database();
 $error = '';
 
 //login function
@@ -66,10 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         <img id="logo" img src="../images/logo-colour-noText.svg" alt="logo">
         <div class="menu-con">
             <ul class="hamburger-dropdown">
-                    <li class="hover-item"><a class="button" href="home.html">Home</a></li>
-                    <li class="hover-item"><a class="button" href="work.php">Work</a></li>
-                    <li class="hover-item"><a class="button" href="about.html">About</a></li>
-                    <li class="hover-item"><a class="button" href="contact.html">Contact</a></li>
+                    <li class="hover-item"><a class="button" href="../index.html">Home</a></li>
+                    <li class="hover-item"><a class="button" href="../work.php">Work</a></li>
+                    <li class="hover-item"><a class="button" href="../about.html">About</a></li>
+                    <li class="hover-item"><a class="button" href="../contact.html">Contact</a></li>
                 </ul>
         </div>
         </div>

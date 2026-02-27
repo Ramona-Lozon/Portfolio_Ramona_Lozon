@@ -19,8 +19,12 @@ ul {
     z-index: 1;
 
         #index-name-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .index-name-text {
                 font-size: 60px;
+                font-weight: bold;
             }
             #index-ramona {
                 display: flex;
@@ -28,6 +32,12 @@ ul {
             }
             #index-lozon {
                 display: flex;
+            }
+
+            .index-title-text {
+                font-weight: normal;
+                font-size: 24px;
+                margin: 10px;
             }
         }
 
@@ -37,6 +47,7 @@ ul {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                border-radius: 15px;
 
                 .index-button {
                     display: flex;
@@ -58,6 +69,7 @@ ul {
                     color: a.$darkRed-color;
                     border-radius: 10px;
                     animation: shadow 0.25s forwards;
+                    z-index: 200;
                 }
 
                 @keyframes shadow {
@@ -69,6 +81,10 @@ ul {
                         transform: translateY(-5px);}
                 }
             }
+
+            #index-nav:has(.index-button:hover) {
+                background-color: a.$darkRed-color;
+                }
 
         #socials-box {
                 display: flex;

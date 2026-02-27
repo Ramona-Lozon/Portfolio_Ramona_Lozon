@@ -1,6 +1,6 @@
 <?php
 
-use Portfolio_Ramona_Lozon\Database;
+use Portfolio_Ramona_Lozon\database;
 
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
@@ -9,7 +9,11 @@ spl_autoload_register(function ($class) {
     $filepath = str_replace('/', DIRECTORY_SEPARATOR, $filepath); #only required for windows
 
     require_once $filepath;
-});?>
+});
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
