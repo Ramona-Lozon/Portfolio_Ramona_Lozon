@@ -127,9 +127,9 @@ body {
 
 .button {
   width: fit-content;
-  width: 100px;
+  width: 80px;
   height: 30px;
-  color: white;
+  color: #cbeef3;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -328,13 +328,11 @@ nav {
 .menu-con {
   display: none;
   position: absolute;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  top: 120px;
+  top: 90px;
   left: 60;
-  width: 160px;
-  height: 180px;
+  width: 110px;
+  height: 150px;
 }
 
 .X {
@@ -344,6 +342,7 @@ nav {
 
 .hamburger-dropdown {
   flex-direction: column;
+  align-items: center;
   position: absolute;
   width: inherit;
 }
@@ -573,8 +572,79 @@ ul {
 
 #hero-section {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
+}
+#hero-section #index-name-box .index-name-text {
+  font-size: 60px;
+}
+#hero-section #index-name-box #index-ramona {
+  display: flex;
+}
+#hero-section #index-name-box #index-lozon {
+  display: flex;
+}
+#hero-section #nav-box #index-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#hero-section #nav-box #index-nav .index-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 120px;
+  height: 30px;
+  padding: 10px;
+  border: 2px solid #cbeef3;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  margin: 10px;
+}
+#hero-section #nav-box #index-nav .index-button:hover {
+  border: 2px solid #f26a8d;
+  background-color: #cbeef3;
+  color: #880d1e;
+  border-radius: 10px;
+  animation: shadow 0.25s forwards;
+}
+@keyframes shadow {
+  0% {
+    box-shadow: none;
+    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    box-shadow: 5px 5px 0px #f26a8d;
+    transform: translateX(-5px);
+    transform: translateY(-5px);
+  }
+}
+#hero-section #nav-box #socials-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#hero-section #nav-box #socials-box .socials-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+#hero-section #nav-box #socials-box #linkedin-box {
+  background-image: url("../../images/linkedin_icon.svg");
+}
+#hero-section #nav-box #socials-box #github-box {
+  background-image: url("../../images/github_icon.svg");
+}
+#hero-section #nav-box #socials-box #insta-box {
+  background-image: url("../../images/insta_icon.svg");
 }
 
 #case-files-section {
