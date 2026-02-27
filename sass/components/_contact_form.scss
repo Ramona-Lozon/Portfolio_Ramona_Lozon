@@ -14,10 +14,12 @@
 }
 
 .form-box {
-    background-color: a.$hotPink-color;
-    border-color: a.$hotPink-color;
+    background-color: a.$darkRed-color;
+    border: solid 3px a.$pink-color;
+    border-radius: 15px;
     color: a.$paleBlue-color;
-    padding: 10px;
+    font-weight: bold;
+    padding: 20px;
     field-sizing: content;
     height: auto;
     max-width: 500px;
