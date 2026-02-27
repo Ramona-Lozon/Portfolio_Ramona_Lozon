@@ -26,7 +26,7 @@ spl_autoload_register(function ($class) {
     <script type="module" src="js/main.js"></script>
 </head>
 
-<body data-page="home">
+<body data-page="work">
     
 <header>
     <nav>

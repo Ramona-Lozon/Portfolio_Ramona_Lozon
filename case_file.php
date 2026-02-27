@@ -35,7 +35,7 @@ if (!$row) {
     <script type="module" src="js/main.js"></script>
 </head>
 
-<body data-page="caseFile">
+<body data-page="case_file">
 
 <header>
     <nav>

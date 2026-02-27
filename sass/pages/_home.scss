@@ -15,8 +15,8 @@ ul {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-
-
+    position: relative;
+    z-index: 1;
 
         #index-name-box {
             .index-name-text {
@@ -30,6 +30,7 @@ ul {
                 display: flex;
             }
         }
+
     #nav-box{
         #index-nav {
                 display: flex;
@@ -124,6 +125,17 @@ ul {
     width: 300px;
     height: 300px;
     margin: 5px auto 5px auto;
+}
+
+@media (min-width:500px) {
+
+#hero-section {
+    #nav-box{
+        #index-nav {
+                flex-direction: row;
+            }
+        }
+    }
 }
 
 //tablet styles
