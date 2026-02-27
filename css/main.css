@@ -82,6 +82,14 @@ footer .top-button {
   display: none;
 }
 
+a {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
 .invisible {
   visibility: hidden;
   transform: translateX(-25px);
@@ -130,10 +138,11 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: center;
+  font-weight: 500;
   align-items: center;
   border-radius: 15px;
   background-color: #880d1e;
-  border: solid 2px #f26a8d;
+  border: solid 2px #cbeef3;
   font-family: "Inclusive Sans", sans-serif;
   margin: 5px;
 }
@@ -146,6 +155,7 @@ body {
   background-color: #cbeef3;
   color: #880d1e;
   cursor: pointer;
+  border: solid 2px #dd2d4a;
   box-shadow: 5px 5px 0px #dd2d4a;
   animation: shadow 0.25s forwards;
   z-index: 200;
@@ -585,14 +595,6 @@ input[type=range]:focus::-moz-range-thumb {
   z-index: -1;
 }
 
-a {
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
-}
-
 #hero-section {
   display: flex;
   align-items: center;
@@ -688,48 +690,9 @@ ul {
   background-image: url("../../images/insta_icon.svg");
 }
 
-#case-files-section {
-  margin-bottom: 30px;
-}
-
-#demo-reel-title {
-  margin: 10px 0px 30px 0px;
-}
-
-.case-file-hero {
-  margin: 10px 0px 10px 0px;
-}
-.case-file-hero a img {
-  width: 100%;
-  object-fit: cover;
-  background-color: black;
-}
-
-.case-file-hero:hover {
-  opacity: 0.5;
-}
-
-.case-file-object {
-  width: 300px;
-  height: 300px;
-  margin: 5px auto 5px auto;
-}
-
 @media (min-width: 500px) {
   #hero-section #nav-box #index-nav {
     flex-direction: row;
-  }
-}
-@media (min-width: 768px) {
-  .case-file-object {
-    width: 700px;
-    height: 340px;
-  }
-}
-@media (min-width: 1200px) {
-  .case-file-object {
-    width: 700px;
-    height: 340px;
   }
 }
 #cf-main-title {
@@ -877,4 +840,86 @@ ul {
   overflow: hidden;
   width: 80vw;
   margin: 10px 10px 10px 10px;
+}
+
+#work-intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 10px 50px 10px;
+}
+#work-intro-section div #work-intro-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  left: 20px;
+}
+
+#case-files-section {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-file-hero {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 10px 10px;
+  width: 100vw;
+}
+.case-file-hero .case-file-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+}
+.case-file-hero .case-file-hero-image {
+  display: flex;
+}
+.case-file-hero .case-file-hero-image img {
+  display: flex;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  background-color: black;
+  border-radius: 15px;
+  border: solid 3px #dd2d4a;
+}
+
+@media (min-width: 768px) {
+  .case-file-hero {
+    width: 600px;
+  }
+  .case-file-hero .case-file-title {
+    justify-content: end;
+    transform: translateX(-50px);
+  }
+  .case-file-hero .case-file-hero-image:hover img {
+    animation: shadow 0.25s forwards;
+  }
+  @keyframes shadow {
+    0% {
+      box-shadow: none;
+      transform: translateX(0px);
+      transform: translateY(0px);
+    }
+    100% {
+      box-shadow: 5px 5px 0px #f26a8d;
+      transform: translateX(-5px);
+      transform: translateY(-5px);
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .case-file-hero {
+    width: 800px;
+  }
+  .case-file-object {
+    width: 700px;
+    height: 340px;
+  }
 }/*# sourceMappingURL=main.css.map */

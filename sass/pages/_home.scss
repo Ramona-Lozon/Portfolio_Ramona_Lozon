@@ -1,13 +1,5 @@
 @use "../abstracts" as a;
 
-a {
-    cursor: pointer;
-}
-
-ul {
-    list-style: none;
-}
-
 #hero-section {
     display: flex;
     align-items: center;
@@ -114,34 +106,6 @@ ul {
     }
 }
 
-#case-files-section {
-    margin-bottom: 30px;
-}
-
-#demo-reel-title {
-    margin: 10px 0px 30px 0px;
-}
-
-.case-file-hero {
-    margin: 10px 0px 10px 0px;
-    a {
-        img {
-            width: 100%;
-            object-fit: cover;
-            background-color: black;
-    }
-}
-}
-
-.case-file-hero:hover {
-    opacity: 0.5;
-}
-
-.case-file-object {
-    width: 300px;
-    height: 300px;
-    margin: 5px auto 5px auto;
-}
 
 @media (min-width:500px) {
 
@@ -153,21 +117,3 @@ ul {
         }
     }
 }
-
-//tablet styles
-@media (min-width:768px) {
-
-    .case-file-object {
-        width: 700px;
-        height: 340px;
-    }
-}
-
-//desktop styles
-@media (min-width:1200px) {
-
-    .case-file-object {
-        width: 700px;
-        height: 340px;
-    }
-    }

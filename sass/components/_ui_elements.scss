@@ -9,6 +9,14 @@
     display: none;
 }
 
+a {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
 .invisible {
   visibility: hidden;
   transform: translateX(-25px);
@@ -56,10 +64,11 @@ body {
     text-decoration: none; 
     display: flex;
     justify-content: center;
+    font-weight: 500;
     align-items: center;
     border-radius: 15px;
     background-color: a.$darkRed-color;
-    border: solid 2px a.$pink-color; 
+    border: solid 2px a.$paleBlue-color; 
     font-family: "Inclusive Sans", sans-serif;
     margin: 5px;
     a{
@@ -72,6 +81,7 @@ body {
     background-color: a.$paleBlue-color;
     color: a.$darkRed-color;
     cursor: pointer;
+    border: solid 2px a.$hotPink-color;
     box-shadow: 5px 5px 0px a.$hotPink-color;
     animation: shadow 0.25s forwards;
     z-index: 200;
