@@ -6,12 +6,24 @@
 }
 
 .case-file-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 10px 0px 10px 0px;
+
             img {
-                width: 100%;
+                width: fit-content;
+                max-width: 90vw;
                 object-fit: cover;
+                border: solid 2px a.$pink-color;
                 border-radius: 15px;
         }
+}
+
+.case-file-video {
+        width: 90vw;
+        border-radius: 15px;
 }
 
 .case-file-link {
@@ -19,8 +31,6 @@
 }
 
 .case-file-text {
-        color: a.$hotPink-color;
-        font-family: "inclusive-sans", "Montserrat";
         margin: 10px 15px 10px 15px;
         font-size: 16px;
     }
