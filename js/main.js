@@ -1,9 +1,21 @@
 import { navMenu } from "./modules/nav.js"; 
-import { contactForm } from "./modules/contactForm.js"; 
+import { contactForm } from "./modules/contactForm.js";
+import { indexAnimation } from "./modules/index-animation.js"; 
+
+const page = document.body.dataset.page;
+
+if (page === 'home') {
+    indexAnimation();
+} else if (page === 'about') {
+    navMenu();
+} else if (page === 'contact') {
     navMenu();
     contactForm();
-
-
+} else if (page === 'work') {
+    navMenu();
+} else if (page === 'case_file') {
+    navMenu();
+}
 // (() => {
 //   gsap.registerPlugin(ScrollToPlugin);
 
