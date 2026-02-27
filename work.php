@@ -46,151 +46,32 @@ error_reporting(E_ALL);
     </nav>
 </header>
 
-<header>
-    <nav>
-        <div id="logo"><img src="images/logo-colour-noText.svg" alt="logo">
-        <ul class="hamburger-dropdown">
-
-        </ul>
-    </div>
-    </nav>
-</header>
+<section id="work-intro-section">
+    <div><h3 class="text main-title" id="work-intro-title">Take a look at my work!</h3></div>
+</section>
 
 <section id="case-files-section">
     <?php
     $db = new Database;
     $db = new Portfolio_Ramona_Lozon\Database;
     $results = $db->query('SELECT * FROM case_file;');
-    $results = $db->query('SELECT case_file.id, media.Hero FROM case_file JOIN media ON media.id = case_file.id');
+    $results = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM case_file JOIN media ON media.id = case_file.id');
 
-    foreach ($results as $project): ?>
-        <div class="case-file-hero">
-        
-        <a href="case_file.php?id=<?= $project['id'] ?>">
-    <!--used htmlspecialchars instead of echo to make sure it is translated properly-->
+foreach ($results as $project): ?>
+
+    <div class="case-file-hero">
+
+        <h3 class="case-file-title text main-title"><?= htmlspecialchars($project['project']) ?></h3>
+
+        <a class="case-file-hero-image" href="case_file.php?id=<?= $project['id'] ?>">
             <img src="images/<?= htmlspecialchars($project['Hero']) ?>" alt="case file">
-    </a>
-        </div>
-    <?php endforeach; ?>
+        </a>
+    </div>
+
+<?php endforeach; ?>
 </section>
 
-            <!-- skills -->
-             <section id="skills-section">
-            <div>
-                <h3 class="text underline main-title invisible" id="skills">skills</h3>
-            </div>
-
-            <!-- logo and branding section -->
-            <!-- <h3 class="text info_text invisible" id="brand-design">logo and brand design</h3> -->
-            <h3 class="text info_text" id="brand-design">logo and brand design</h3>          
-            <article class="skills-box">
-            <h2>logo and branding skills</h2>
-                <div class="icon-box" id="brandingSkills">
-                    <div class="icon-card">
-                        <img src="images/adobe-illustrator-logo.png" id="illustratorLogo" alt="Adobe illustrator Logo">
-                        <span class="text">Adobe Illustrator</span>
-                    </div>
-                    
-                    <div class="icon-card">
-                        <img src="images/adobe_photoshop_logo.png" id="photoshopLogo" alt="Adobe Photoshop Logo">
-                        <span class="text">Adobe Photoshop</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/Adobe_After_Effects_logo.png" id="afterEffectsLogo" alt="Adobe After Effects Logo">
-                        <span class="text">Adobe After Effects</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/Cinema-4D-Logo.png" id="cinema4dLogo" alt="Cinema4d Logo">
-                        <span class="text">Cinema 4D</span>
-                    </div>
-
-                    </div>
-            </article>
-
-            <!-- coding section -->
-            <h3 class="text info_text" id="codingSkillsTitle">coding</h3>
-            <article class="skills-box">
-            <h2>coding skills</h2>
-                <div class="icon-box" id="codingSkills">
-                    <div class="icon-card">
-                        <img src="images/html5.png" id="HTML5_logo" alt="HTML5 Logo">
-                        <span class="text">HTML5</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/css-3.svg" id="CSS3_logo" alt="CSS3 Logo">
-                        <span class="text">CSS</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/JavaScript-Logo.png" id="JS_logo" alt="Javascript logo">
-                        <span class="text">Javascript</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/PHP-logo.png" id="PHP_logo" alt="PHP logo">
-                        <span class="text">PHP</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/github-logo.png" id="GIT_logo" alt="Github logo">
-                        <span class="text">Github</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/Sass_Logo_Color.svg" id="SASS_logo" alt="SASS logo">
-                        <span class="text">SASS</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/greensock-logo.png" id="Greensock_logo" alt="Greensock logo">
-                        <span class="text">Greensock</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- web design section -->
-            <h3 class="text info_text" id="webDesignTitle">Web Design</h3>
-            <article class="skills-box">
-                <div class="icon-box" id="webDesignSkills">
-            <h2>web design skills</h2>
-
-                    <div class="icon-card">
-                        <img src="images/Adobe_XD_Logo.png" id="xdLogo" alt="Adobe XD Logo">
-                        <span class="text">Adobe XD</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/Figma-logo.png" id="figmaLogo" alt="Figma Logo">
-                        <span class="text">Figma</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- video editing -->
-            <h3 class="text info_text" id="videoEditingTitle">Video Editing</h3>
-            <article class="skills-box">
-            <h2>Video Editing skills</h2>
-                <div class="icon-box" id="videoEditingSkills">
-                    <div class="icon-card">
-                        <img src="images/Adobe_Premiere_logo.png" id="premierLogo" alt="Adobe Premier Logo">
-                        <span class="text">Adobe Premier</span>
-                    </div>
-
-                    <div class="icon-card">
-                        <img src="images/after-effects.svg" id="afterEffectsLogo2" alt="After Effects Logo">
-                        <span class="text">Adobe After Effects</span>
-                    </div>
-                </div>
-            </article>
-        </section>
-
         <footer>
-    <div class="top-button">
-        <span class="page-link"><a class="top-link" href="#top">Top &uArr;</a></span>
-    </div>
 </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @use '../abstracts' as a;
 
 #contact-section {
-    margin-top:120px;
+    margin-top:20px;
     margin-bottom: auto;
     #contactTitle {
         display: flex;
@@ -9,7 +9,7 @@
         align-items: center;
         justify-content: center;
     }
-}
+                }
 
 @media (min-width: 768px) {
     #contact-section{

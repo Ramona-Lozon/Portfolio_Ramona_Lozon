@@ -4,18 +4,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 150px;
+    margin: 50px 0px 20px 0px;
 }
 
 .skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 5px auto 5px auto;
+    width: auto;
 }
 
 .icon-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 10px;
-    //visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-card {
@@ -32,21 +36,22 @@
         margin: auto;
     }
     span {
-        color: a.$hotPink-color;
+        color: a.$paleBlue-color;
         margin-top: auto;
+        text-align: center;
     }
   }
 
   @media (min-width:768px) {
-    .icon-box {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
+    // .icon-box {
+    //     display: grid;
+    //     grid-template-columns: repeat(5, 1fr);
+    // }
   }
 
   @media (min-width:1200px) {
-    .icon-box {
-        display: flex;
-        grid-template-columns: row;
-    }
+    // .icon-box {
+    //     display: flex;
+    //     grid-template-columns: row;
+    // }
   }

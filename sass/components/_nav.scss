@@ -30,7 +30,6 @@ nav {
 
 .logo-con:hover #logo {
         opacity: 1;
-            //filter: drop-shadow(10px 20px 0px black);
 }
 
 .logo-con {
@@ -51,14 +50,12 @@ nav {
     top: 90px;
     left: 60;
     width: 110px;
-    height: 150px;
-    //background-color: wheat;
+    height: 200px;
 }
 
 .X {
     display: flex;
     z-index: 100;
-    //filter: drop-shadow(10px 10px 0px black);
 }
 
 .hamburger-dropdown {
@@ -103,7 +100,7 @@ nav {
         transform:translateY(0px);
         width: 350px;
         height: 60px;
-        top: 10px;
+        top: 5px;
         left: 0px;
     }
 

@@ -1,9 +1,5 @@
 @use '../abstracts' as a;
 
-#example-mixin-class {
-    @include a.blue;
-}
-
 footer {
   height: 150px;
   margin: 50px 0px 0px 0px;
