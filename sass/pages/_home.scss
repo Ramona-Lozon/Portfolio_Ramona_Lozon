@@ -10,8 +10,91 @@ ul {
 
 #hero-section {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
+
+
+
+        #index-name-box {
+            .index-name-text {
+                font-size: 60px;
+            }
+            #index-ramona {
+                display: flex;
+
+            }
+            #index-lozon {
+                display: flex;
+            }
+        }
+    #nav-box{
+        #index-nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .index-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    width: 120px;
+                    height: 30px;
+                    padding: 10px;
+                    border: 2px solid a.$paleBlue-color;
+                    background-color: rgba(0,0,0,0.0);
+                    border-radius: 10px;
+                    margin: 10px;
+                }
+
+                .index-button:hover {
+                    border: 2px solid a.$pink-color;
+                    background-color: a.$paleBlue-color;
+                    color: a.$darkRed-color;
+                    border-radius: 10px;
+                    animation: shadow 0.25s forwards;
+                }
+
+                @keyframes shadow {
+                    0% {box-shadow: none;
+                        transform: translateX(0px);
+                        transform: translateY(0px);}
+                    100% {box-shadow: 5px 5px 0px a.$pink-color;
+                        transform: translateX(-5px);
+                        transform: translateY(-5px);}
+                }
+            }
+
+        #socials-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+            .socials-icon {
+                display: flex;
+                width: 60px;
+                height: 60px;
+                margin: 5px;
+            }
+            
+            #linkedin-box {
+                background-image: url('../../images/linkedin_icon.svg');
+            }
+
+            #github-box {
+                background-image: url('../../images/github_icon.svg');
+            }
+
+            #insta-box {
+                background-image: url('../../images/insta_icon.svg');
+            }
+        }
+    }
 }
 
 #case-files-section {
