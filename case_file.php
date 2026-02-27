@@ -62,13 +62,13 @@ if (!$row) {
 <main>
     <div>
         <h3 class="text main-title" id="cf-main-title">
-            <?= htmlspecialchars($row['project']) ?>
+            <?= $row['project'] ?>
         </h3>
     </div>
     
     <div>
-        <p class="case-file-text" id="cf-prop">
-            <?= htmlspecialchars($row['proposition']) ?>
+        <p class="text info_text case-file-text" id="cf-prop">
+            <?= $row['proposition'] ?>
         </p>
     </div>
 
@@ -77,43 +77,64 @@ if (!$row) {
     </div>
 
     <div>
-        <p class="case-file-text" id="cf-prop-caption">
-            <?= htmlspecialchars($row['prop_caption']) ?>
-        </p>
+        <div class="text info_text case-file-text" id="cf-prop-caption">
+            <?= $row['prop_caption'] ?>
+    </div>
     </div>'
     
     <div>
-        <p class="case-file-text" id="cf-deliverables">
-            <?= htmlspecialchars($row['deliverables']) ?>
+        <p class="text info_text case-file-text" id="cf-deliverables">
+            <?= $row['deliverables'] ?>
         </p>
     </div>
 
     <div class="case-file-image" id="cf-work-ex">
-        <img src="images/<?= htmlspecialchars($row['work_ex']) ?>" alt="work image">
+        <img src="images/<?= $row['work_ex'] ?>" alt="work image">
     </div>
 
     <div>
-        <p class="case-file-text" id="cf-work-caption">
-            <?= htmlspecialchars($row['work_caption']) ?>
+        <p class="text info_text case-file-text" id="cf-work-caption">
+            <?= $row['work_caption'] ?>
         </p>
     </div>
 
-    '<div class="case-file-image" id="cf-media-image">
-        <img src="images/<?= htmlspecialchars($row['product_ex']) ?>" alt="Media Image" class="responsive-image">
-    </div>
+<div class="case-file-image" id="cf-media-image">
+    <?php
+    $product_ex = $row['product_ex'];
+    $extension = strtolower(pathinfo($product_ex, PATHINFO_EXTENSION));
+    $videoExtensions = ['mp4', 'webm', 'ogg'];
+    if (in_array($extension, $videoExtensions)): ?>
+        <div id="player-container">
+            <video muted class="video-player" controls preload="metadata" poster="images/logo.svg" id="video">
+                <source src="video/<?= $product_ex ?>" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+            </video>
+        <div class="video-controls hidden" id="video-controls">
+            <button id="play-button" class="play-button"><i class="fa fa-play-circle-o video-button"></i></button>
+            <button id="pause-button" class="pause-button"><i class="fa fa-pause-circle-o video-button"></i></button>
+            <button id="stop-button" class="stop-button"><i class="fa fa-stop-circle-o video-button"></i></button>
+            <i class="fa fa-volume-up"></i>
+            <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+            <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
+        </div>
+        </div>
+    <?php else: ?>
+        <img src="images/<?= htmlspecialchars($product_ex) ?>" alt="product example">
+    <?php endif; ?>
+</div>
 
     <div>
-        <p class="case-file-text" id="cf-prod-caption">
-            <?= htmlspecialchars($row['product_caption']) ?>
+        <p class="text info_text case-file-text" id="cf-prod-caption">
+            <?= $row['product_caption'] ?>
         </p>
     </div>
 
     <div>
-        <p class="case-file-text" id="cf-outcome">
-            <?= htmlspecialchars($row['outcome']) ?>
+        <p class="text info_text case-file-text" id="cf-outcome">
+            <?= $row['outcome'] ?>
         </p>
     </div>
 </main>
-
+<footer></footer>
 </body>
 </html>

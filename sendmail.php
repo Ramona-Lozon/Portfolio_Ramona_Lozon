@@ -48,6 +48,7 @@ if(empty($errors)) {
         mail($to, $subject, $message);
 
         echo json_encode(['status' => 'success', 'message' => 'Message sent successfully!']);
+        header('Location: contact.html');
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Database error, please try again']);
     }

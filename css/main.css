@@ -468,9 +468,10 @@ nav {
   }
 }
 .video-player {
-  display: none;
+  display: flex;
   border-radius: 15px;
   aspect-ratio: 16/9;
+  width: 90vw;
 }
 
 #player-container {
@@ -694,11 +695,22 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .case-file-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 10px 0px 10px 0px;
 }
 .case-file-image img {
-  width: 100%;
+  width: fit-content;
+  max-width: 90vw;
   object-fit: cover;
+  border: solid 2px #f26a8d;
+  border-radius: 15px;
+}
+
+.case-file-video {
+  width: 90vw;
   border-radius: 15px;
 }
 
@@ -707,8 +719,6 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .case-file-text {
-  color: #dd2d4a;
-  font-family: "inclusive-sans", "Montserrat";
   margin: 10px 15px 10px 15px;
   font-size: 16px;
 }
