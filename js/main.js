@@ -15,6 +15,11 @@ if (page === 'home') {
     navMenu();
 } else if (page === 'case_file') {
     navMenu();
+} else if (page === 'login') {
+    navMenu();
+} else if (page === 'dashboard') {
+    navMenu();
+    contactForm();
 }
 // (() => {
 //   gsap.registerPlugin(ScrollToPlugin);

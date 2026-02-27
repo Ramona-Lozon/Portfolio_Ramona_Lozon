@@ -589,8 +589,14 @@ ul {
   position: relative;
   z-index: 1;
 }
+#hero-section #index-name-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #hero-section #index-name-box .index-name-text {
   font-size: 60px;
+  font-weight: bold;
 }
 #hero-section #index-name-box #index-ramona {
   display: flex;
@@ -598,11 +604,17 @@ ul {
 #hero-section #index-name-box #index-lozon {
   display: flex;
 }
+#hero-section #index-name-box .index-title-text {
+  font-weight: normal;
+  font-size: 24px;
+  margin: 10px;
+}
 #hero-section #nav-box #index-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 15px;
 }
 #hero-section #nav-box #index-nav .index-button {
   display: flex;
@@ -623,6 +635,7 @@ ul {
   color: #880d1e;
   border-radius: 10px;
   animation: shadow 0.25s forwards;
+  z-index: 200;
 }
 @keyframes shadow {
   0% {
@@ -635,6 +648,9 @@ ul {
     transform: translateX(-5px);
     transform: translateY(-5px);
   }
+}
+#hero-section #nav-box #index-nav:has(.index-button:hover) {
+  background-color: #880d1e;
 }
 #hero-section #nav-box #socials-box {
   display: flex;

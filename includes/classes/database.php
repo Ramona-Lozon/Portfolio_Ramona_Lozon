@@ -4,7 +4,7 @@ namespace Portfolio_Ramona_Lozon;
 
 use PDO;
 
-class Database
+class database
 {
     public function query(string $query, array $bindings = []): array
     {
@@ -36,6 +36,16 @@ class Database
 
     public function getConfig()
     {
+        //web
+        // return [
+        //     'username' => 'thede519_txtp126',
+        //     'password' => 'b1lly-g0@t',
+        //     'host' => 'localhost',
+        //     'database' => 'thede519_portfolio_case_file',
+        //     'port' => '3306'
+        // ];
+
+        //local
         return [
             'username' => 'root',
             'password' => '',
