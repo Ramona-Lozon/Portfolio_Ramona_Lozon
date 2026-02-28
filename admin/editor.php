@@ -1,6 +1,7 @@
-<?php
-session_start();
 
+<?php
+require_once 'auth.php';
+use Portfolio_Ramona_Lozon\database;
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
@@ -9,32 +10,9 @@ spl_autoload_register(function ($class) {
     
     require_once $filepath;
 });
+require_once '../includes/scripts/edit.php';
 
-$db = new Portfolio_Ramona_Lozon\Database();
-$id = $_GET['id'] ?? null;
-if (!$id) die('No project ID provided.');
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $db->execute(
-        'UPDATE case_file SET project=:project, proposition=:proposition, deliverables=:deliverables, outcome=:outcome WHERE id=:id',
-        ['project' => $_POST['project'], 'proposition' => $_POST['proposition'], 'deliverables' => $_POST['deliverables'], 'outcome' => $_POST['outcome'], 'id' => $id]
-    );
-    $db->execute(
-        'UPDATE media SET Hero=:hero, prop_ex=:prop_ex, prop_caption=:prop_caption, work_ex=:work_ex, work_caption=:work_caption, product_ex=:product_ex, product_caption=:product_caption WHERE id=:id',
-        ['hero' => $_POST['hero'], 'prop_ex' => $_POST['prop_ex'], 'prop_caption' => $_POST['prop_caption'], 'work_ex' => $_POST['work_ex'], 'work_caption' => $_POST['work_caption'], 'product_ex' => $_POST['product_ex'], 'product_caption' => $_POST['product_caption'], 'id' => $id]
-    );
-    header('Location: dashboard.php');
-    exit;
-}
-$results = $db->query(
-    'SELECT case_file.project, case_file.proposition, case_file.deliverables, case_file.outcome, media.Hero, media.prop_ex, media.prop_caption, media.work_ex, media.work_caption, media.product_ex, media.product_caption FROM case_file JOIN media ON media.id = case_file.id WHERE case_file.id = :id',
-    ['id' => $id]
-    
-);
-$row = $results[0] ?? null;
-if (!$row) { die('Project not found.'); }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +28,12 @@ if (!$row) { die('Project not found.'); }
     <script type="module" src="../js/main.js"></script>
 </head>
     <h1>Edit Project #<?= $id ?></h1>
-    <a href="dashboard.php">← Back</a>
+    
+    <div>
+    <a class="button" href="dashboard.php">Back</a>
+    </div>
 
-    <form method="POST" action="?id=<?= $id ?>">
+    <form method="POST" action="../includes/scripts/edit.php?id=<?= $id ?>">
         <label>
             Project Name: 
             <input  type="text" 
