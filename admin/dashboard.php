@@ -1,6 +1,7 @@
 <?php
 
 require_once 'auth.php';
+use Portfolio_Ramona_Lozon\database;
 
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
@@ -9,7 +10,11 @@ spl_autoload_register(function ($class) {
     $filepath = str_replace("/", DIRECTORY_SEPARATOR, $filepath); # only required for windows
     
     require_once $filepath;
-});?>
+});
+
+$db = new database();
+$projects = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM case_file JOIN media ON media.id = case_file.id ORDER BY case_file.id ASC');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +39,7 @@ spl_autoload_register(function ($class) {
             <ul class="hamburger-dropdown">
                     <li class="hover-item"><a class="button" href="../index.html">Home</a></li>
                     <li class="hover-item"><a class="button" href="add.php">Add Files</a></li>
-                    <li class="hover-item"><a class="button" href="edit.php">Edit Files</a></li>
-                    <li class="hover-item"><a class="button" href="../contact.html">Contact</a></li>
+                    <li class="hover-item"><a class="button" href="logout.php">Log Out</a></li>
                 </ul>
         </div>
         </div>
@@ -43,8 +47,38 @@ spl_autoload_register(function ($class) {
 </header>
 
 <body data-page="dashboard">
+<main>
+    <h2>Projects</h2>
 
+    <!-- dashboard project array -->
+        <section>
+            <?php foreach ($projects as $project): ?>
 
+                <div id="dash-project-id">
+                    <h3 class="text main-title">Project ID: <?= $project['id'] ?></h3>
+                </div>
+
+                <div id="dash-project-title">
+                    <h3 class="text main-title">Project: <?= $project['project'] ?></h3>
+                </div>
+                
+                <div id="dash-project-hero">
+                    <img src="../images/<?= $project['Hero'] ?>" alt="hero">
+                </div>
+                
+                <div class="button" id="dash-edit-button">
+                    <a href="edit.php?id=<?= $project['id'] ?>">Edit</a>
+                </div>
+
+                <div class="button" id="dash-delete-button">
+                    <a href="delete.php?id=<?= $project['id'] ?>">Delete</a>
+                </div>
+
+            <?php endforeach; ?>
+        </section>
+    </main>
+<footer></footer>    
 
 </body>
+
 </html>
