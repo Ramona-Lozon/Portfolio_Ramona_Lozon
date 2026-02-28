@@ -10,6 +10,10 @@ spl_autoload_register(function ($class) {
     require_once $filepath;
 });
 
+$db = new Portfolio_Ramona_Lozon\Database();
+$id = $_GET['id'] ?? null;
+if (!$id) die('No project ID provided.');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db->execute(
         'UPDATE case_file SET project=:project, proposition=:proposition, deliverables=:deliverables, outcome=:outcome WHERE id=:id',
@@ -25,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $results = $db->query(
     'SELECT case_file.project, case_file.proposition, case_file.deliverables, case_file.outcome, media.Hero, media.prop_ex, media.prop_caption, media.work_ex, media.work_caption, media.product_ex, media.product_caption FROM case_file JOIN media ON media.id = case_file.id WHERE case_file.id = :id',
     ['id' => $id]
+    
 );
 $row = $results[0] ?? null;
 if (!$row) { die('Project not found.'); }
@@ -46,7 +51,8 @@ if (!$row) { die('Project not found.'); }
 </head>
     <h1>Edit Project #<?= $id ?></h1>
     <a href="dashboard.php">← Back</a>
-    <form method="POST">
+
+    <form method="POST" action="?id=<?= $id ?>">
         <label>
             Project Name: 
             <input  type="text" 
@@ -127,7 +133,7 @@ if (!$row) { die('Project not found.'); }
             Save Changes
         </button>
     </form>
-    
+
 </main>
 </body>
 </html>
