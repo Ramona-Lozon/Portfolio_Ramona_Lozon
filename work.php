@@ -52,8 +52,8 @@ error_reporting(E_ALL);
 
 <section id="case-files-section">
     <?php
-    $db = new Database;
-    $db = new Portfolio_Ramona_Lozon\Database;
+    $db = new database;
+    $db = new Portfolio_Ramona_Lozon\database;
     $results = $db->query('SELECT * FROM case_file;');
     $results = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM case_file JOIN media ON media.id = case_file.id');
 
