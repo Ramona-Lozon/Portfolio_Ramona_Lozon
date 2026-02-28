@@ -1,5 +1,4 @@
 <?php
-
 require_once 'auth.php';
 use Portfolio_Ramona_Lozon\database;
 
@@ -67,7 +66,7 @@ $projects = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM 
                 </div>
                 
                 <div class="button" id="dash-edit-button">
-                    <a href="edit.php?id=<?= $project['id'] ?>">Edit</a>
+                    <a href="editor.php?id=<?= $project['id'] ?>">Edit</a>
                 </div>
 
                 <div class="button" id="dash-delete-button">
