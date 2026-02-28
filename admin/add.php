@@ -10,106 +10,8 @@ spl_autoload_register(function ($class) {
     
     require_once $filepath;
 });
-
+require_once '../includes/scripts/add-case-file.php';
 use Portfolio_Ramona_Lozon\database;
-$database = new database();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-$hero = $_POST['hero'];
-if ($hero == null || $hero == '') {
-    echo "Hero image is required!";
-    exit(1);
-}
-
-$project = $_POST['project'];
-if ($project == null || $project == '') {
-    echo "Project is required!";
-    exit(1);
-}
-
-$proposition = $_POST['proposition'];
-if ($proposition == null || $proposition == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$prop_ex = $_POST['prop_ex'];
-if ($prop_ex == null || $prop_ex == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$prop_caption = $_POST['prop_caption'];
-if ($prop_caption == null || $prop_caption == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$deliverables = $_POST['deliverables'];
-if ($deliverables == null || $deliverables == '') {
-    echo "deliverables is required!";
-    exit(1);
-}
-
-$work_ex = $_POST['work_ex'];
-if ($work_ex == null || $work_ex == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$work_caption = $_POST['work_caption'];
-if ($work_caption == null || $work_caption == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$product_ex = $_POST['product_ex'];
-if ($product_ex == null || $product_ex == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$product_caption = $_POST['product_caption'];
-if ($product_caption == null || $product_caption == '') {
-    echo "proposition is required!";
-    exit(1);
-}
-
-$outcome = $_POST['outcome'];
-if ($outcome == null || $outcome == '') {
-    echo "Outcome is required!";
-    exit(1);
-}
- $database->execute('INSERT INTO case_file 
- (project, proposition, deliverables, outcome) 
-VALUES (:project, :proposition, :deliverables, :outcome)',
-        [
-            'project'      => $project,
-            'proposition'  => $proposition,
-            'deliverables' => $deliverables,
-            'outcome'      => $outcome
-        ]
-    );
-
-    // insert into media table
-    $database->execute('INSERT INTO media 
-    (Hero, prop_ex, prop_caption, work_ex, work_caption, product_ex, product_caption) 
-VALUES (:hero, :prop_ex, :prop_caption, :work_ex, :work_caption, :product_ex, :product_caption)',
-        [
-            'hero'            => $hero,
-            'prop_ex'         => $prop_ex,
-            'prop_caption'    => $prop_caption,
-            'work_ex'         => $work_ex,
-            'work_caption'    => $work_caption,
-            'product_ex'      => $product_ex,
-            'product_caption' => $product_caption
-        ]
-    );
-
-header('location: add.php');
-exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -150,7 +52,7 @@ exit;
 that they will appear on the page. when adding image files, apply the image name exactly 
 and upload the image to the images folder from the file manager</p></div>
 
- <form class="input-form" id="addForm" method="POST" action="dashboard.php">
+ <form class="input-form" id="addForm" method="POST" action="../includes/scripts/add-case-file.php">
 
                 <input  class="form-box" 
                         type="text" 

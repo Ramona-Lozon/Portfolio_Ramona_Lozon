@@ -1,10 +1,9 @@
 <?php
-require_once 'auth.php';
 
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
-    $filepath = __DIR__ . '/../includes/classes/' . $class . '.php';
+    $filepath = __DIR__ . '/../classes/' . $class . '.php';
     $filepath = str_replace("/", DIRECTORY_SEPARATOR, $filepath); # only required for windows
     
     require_once $filepath;
@@ -19,5 +18,5 @@ if ($id) {
     $db->execute('DELETE FROM media WHERE id = :id', ['id' => $id]);
 }
 
-header('Location: dashboard.php');
+header('Location: ../../admin/dashboard.php');
 exit;
