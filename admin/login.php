@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
@@ -9,42 +9,10 @@ spl_autoload_register(function ($class) {
     
     require_once $filepath;
 });
-
+require_once '../includes/scripts/login-function.php';
 use Portfolio_Ramona_Lozon\database;
-
-//make a new instance of the database class
-$database = new database();
-$error = '';
-
-//login function
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-
-    $username = $_POST['username'];
-    if ($username == null || $username == '') {
-        echo "Username is Required";
-        exit(1);
-    }
-
-    $password = $_POST['password'];
-    if ($password == null || $password == '') {
-        echo "Password is Required";
-        exit(1);
-    } 
-
-    $results = $database->query('SELECT * FROM users WHERE 
-    username = :username', ['username' => $username]);
-
-    if ($results && password_verify($password, $results[0]['password'])) {
-    $_SESSION['user_id'] = $results[0]['id'];
-    $_SESSION['username'] = $results[0]['username'];
-    header('Location: dashboard.php');
-    exit;}    
-    else {$error = 'Wrong username or password';
-    }
-}
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,13 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 <main class="cms-page">
     <h3 class="cms-title text">Admin Login</h3>
 
-    <?php if ($error): ?>
-        <p class="error-message">
-            <?= htmlspecialchars($error) ?>
-        </p>
-    <?php endif; ?>
-
-    <form method="POST" class="input-form-cms" action="">
+    <form method="POST" class="input-form-cms" action="../includes/scripts/login-function.php">
         <input  class="form-box-cms"
                 type="text" 
                 name="username" 

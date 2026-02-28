@@ -38,7 +38,7 @@ $projects = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM 
             <ul class="hamburger-dropdown">
                     <li class="hover-item"><a class="button" href="../index.html">Home</a></li>
                     <li class="hover-item"><a class="button" href="add.php">Add Files</a></li>
-                    <li class="hover-item"><a class="button" href="logout.php">Log Out</a></li>
+                    <li class="hover-item"><a class="button" href="../includes/scripts/logout.php">Log Out</a></li>
                 </ul>
         </div>
         </div>
