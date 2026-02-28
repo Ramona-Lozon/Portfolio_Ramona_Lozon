@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         </p>
     <?php endif; ?>
 
-    <form method="POST" class="input-form-cms">
+    <form method="POST" class="input-form-cms" action="">
         <input  class="form-box-cms"
                 type="text" 
                 name="username" 

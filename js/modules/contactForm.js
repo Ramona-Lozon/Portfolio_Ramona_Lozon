@@ -14,30 +14,30 @@ export function contactForm() {
 
         console.log(formdata);
 
-        fetch('sendmail.php', {
-            method: 'POST',
-            body: formdata,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        })
-        .then(response => {
-                console.log('Status:', response.status);
-                return response.text();
-        })
-        .then(data => {
-            console.log('Raw response:', data);
-            if(data.status === 'success') {
-                feedBack.textContent = data.message;
-                feedBack.classList.add('success');
-                form.reset();
-            } else {
-                feedBack.textContent = data.message;
-                feedBack.classList.add('error');
-            }
-        })
-        .catch(error => {
-            feedBack.textContent = 'Something went wrong!';
-            console.error('Fetch error:', error);
-        });
+fetch('sendmail.php', {
+    method: 'POST',
+    body: formdata,
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+})
+.then(response => {
+    console.log('Status:', response.status);
+    return response.json(); // changed from response.text()
+})
+.then(data => {
+    console.log('Response:', data);
+    if(data.status === 'success') {
+        feedBack.textContent = data.message;
+        feedBack.classList.add('success');
+        form.reset();
+    } else {
+        feedBack.textContent = data.message;
+        feedBack.classList.add('error');
+    }
+})
+.catch(error => {
+    feedBack.textContent = 'Something went wrong!';
+    console.error('Fetch error:', error);
+});
     }
 
     form.addEventListener("submit", regForm);

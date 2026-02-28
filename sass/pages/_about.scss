@@ -17,11 +17,21 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    img{
-        width: 400px;
-        margin: 10px auto auto auto;
-    }
+    align-items: center;
     
+#selfie {
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 15px 15px 0px a.$hotPink-color;
+    border: solid 3px a.$hotPink-color;
+    transform: translateX(-15px);
+    transform: translateY(-15px);
+
+}
+
     #about-con {
         display: flex;
         flex-direction: column;
@@ -58,18 +68,6 @@
                 margin: 10px 50px 10px 50px;
         }
     }
-
-#selfie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-    box-shadow: 15px 15px 0px a.$hotPink-color;
-    border: solid 3px a.$hotPink-color;
-    transform: translateX(-15px);
-    transform: translateY(-15px);
-
-}
 
 @media (min-width:1200px) {
 
