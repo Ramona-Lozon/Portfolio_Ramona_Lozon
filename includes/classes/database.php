@@ -34,6 +34,11 @@ class database
         return new PDO($this->getDsn(), $this->getConfig()['username'], $this->getConfig()['password']);
     }
 
+    public function lastInsertId()
+    {
+        return $this->connect()->lastInsertId();
+    }
+
     public function getConfig()
     {
         //web

@@ -20,14 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $username = $_POST['username'];
     if ($username == null || $username == '') {
         $_SESSION['error_messages']['username'] = "Username is Required"; 
-        header('Location: dashboard.php');
+        header('Location: ../../admin/login.php');
         exit(1);
     }
 
     $password = $_POST['password'];
     if ($password == null || $password == '') {
         $_SESSION['error_messages']['password'] = "Password is Required"; 
-        header('Location: dashboard.php');
+        header('Location: ../../admin/login.php');
         exit(1);
     } 
 

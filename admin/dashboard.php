@@ -70,7 +70,7 @@ $projects = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM 
                 </div>
 
                 <div class="button" id="dash-delete-button">
-                    <a href="delete.php?id=<?= $project['id'] ?>">Delete</a>
+                    <a href="../includes/scripts/delete.php?id=<?= $project['id'] ?>">Delete</a>
                 </div>
 
             <?php endforeach; ?>
