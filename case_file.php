@@ -60,13 +60,14 @@ if (!$row) {
 </header>
 
 <main>
+    <section id="case-file-section">
     <div>
         <h3 class="text main-title" id="cf-main-title">
             <?= $row['project'] ?>
         </h3>
     </div>
     
-    <div>
+    <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-prop">
             <?= $row['proposition'] ?>
         </p>
@@ -76,13 +77,13 @@ if (!$row) {
         <img src="images/<?= htmlspecialchars($row['prop_ex']) ?>" alt="proposition image">
     </div>
 
-    <div>
+    <div class="case-file-text-con">
         <div class="text info_text case-file-text" id="cf-prop-caption">
             <?= $row['prop_caption'] ?>
     </div>
-    </div>'
+    </div>
     
-    <div>
+    <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-deliverables">
             <?= $row['deliverables'] ?>
         </p>
@@ -92,7 +93,7 @@ if (!$row) {
         <img src="images/<?= $row['work_ex'] ?>" alt="work image">
     </div>
 
-    <div>
+    <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-work-caption">
             <?= $row['work_caption'] ?>
         </p>
@@ -123,17 +124,18 @@ if (!$row) {
     <?php endif; ?>
 </div>
 
-    <div>
+    <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-prod-caption">
             <?= $row['product_caption'] ?>
         </p>
     </div>
 
-    <div>
+    <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-outcome">
             <?= $row['outcome'] ?>
         </p>
     </div>
+    </section>
 </main>
 <footer></footer>
 </body>

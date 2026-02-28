@@ -466,9 +466,13 @@ nav {
   #send-button {
     margin: 10px auto 10px 150px;
   }
+  #feedback {
+    margin: 10px auto 10px 150px;
+  }
 }
 .video-player {
   display: flex;
+  border: solid 3px #f26a8d;
   border-radius: 15px;
   aspect-ratio: 16/9;
   width: 90vw;
@@ -491,7 +495,7 @@ nav {
   position: absolute;
   bottom: 0px;
   transition: all 0.2s ease;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #880d1e);
   display: flex;
   border-radius: 15px;
 }
@@ -550,14 +554,14 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -4px; /* Centers thumb on the track */
-  background-color: #808080;
+  background-color: #880d1e;
   border-radius: 0.5rem;
   height: 1rem;
   width: 1rem;
 }
 
 input[type=range]:focus::-webkit-slider-thumb {
-  outline: 3px solid #808080;
+  outline: 3px solid #880d1e;
   outline-offset: 0.125rem;
 }
 
@@ -571,7 +575,7 @@ input[type=range]::-moz-range-track {
 
 /* slider thumb */
 input[type=range]::-moz-range-thumb {
-  background-color: #808080;
+  background-color: #880d1e;
   border: none; /*Removes extra border that FF applies*/
   border-radius: 0.5rem;
   height: 1rem;
@@ -579,7 +583,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 input[type=range]:focus::-moz-range-thumb {
-  outline: 3px solid #808080;
+  outline: 3px solid #880d1e;
   outline-offset: 0.125rem;
 }
 
@@ -619,6 +623,7 @@ input[type=range]:focus::-moz-range-thumb {
 }
 #hero-section #index-name-box .index-title-text {
   font-weight: normal;
+  text-align: center;
   font-size: 24px;
   margin: 10px;
 }
@@ -690,8 +695,19 @@ input[type=range]:focus::-moz-range-thumb {
     flex-direction: row;
   }
 }
+#case-file-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #cf-main-title {
-  margin-top: 100px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.case-file-text-con {
+  width: 90vw;
 }
 
 .case-file-image {
@@ -703,7 +719,7 @@ input[type=range]:focus::-moz-range-thumb {
 }
 .case-file-image img {
   width: fit-content;
-  max-width: 90vw;
+  max-width: 80vw;
   object-fit: cover;
   border: solid 2px #f26a8d;
   border-radius: 15px;
@@ -743,10 +759,18 @@ input[type=range]:focus::-moz-range-thumb {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-#info-and-resume img {
-  width: 400px;
-  margin: 10px auto auto auto;
+#info-and-resume #selfie {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 15px 15px 0px #dd2d4a;
+  border: solid 3px #dd2d4a;
+  transform: translateX(-15px);
+  transform: translateY(-15px);
 }
 #info-and-resume #about-con {
   display: flex;
@@ -777,17 +801,6 @@ input[type=range]:focus::-moz-range-thumb {
 .education-con #education-text {
   text-align: center;
   margin: 10px 50px 10px 50px;
-}
-
-#selfie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 25px;
-  box-shadow: 15px 15px 0px #dd2d4a;
-  border: solid 3px #dd2d4a;
-  transform: translateX(-15px);
-  transform: translateY(-15px);
 }
 
 @media (min-width: 1200px) {
@@ -892,7 +905,7 @@ input[type=range]:focus::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   margin: 10px 10px 10px 10px;
-  width: 100vw;
+  width: 90vw;
 }
 .case-file-hero .case-file-title {
   display: flex;
