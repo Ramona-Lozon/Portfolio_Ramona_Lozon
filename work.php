@@ -47,7 +47,7 @@ error_reporting(E_ALL);
 </header>
 
 <section id="work-intro-section">
-    <div><h3 class="text main-title" id="work-intro-title">Take a look at my work!</h3></div>
+    <div><h3 class="text main-title" id="work-intro-title fadeIn">Take a look at my work!</h3></div>
 </section>
 
 <section id="case-files-section">
@@ -61,10 +61,10 @@ foreach ($results as $project): ?>
 
     <div class="case-file-hero">
 
-        <h3 class="case-file-title text main-title"><?= htmlspecialchars($project['project']) ?></h3>
+        <h3 class="case-file-title text main-title fadeIn"><?= $project['project'] ?></h3>
 
-        <a class="case-file-hero-image" href="case_file.php?id=<?= $project['id'] ?>">
-            <img src="images/<?= htmlspecialchars($project['Hero']) ?>" alt="case file">
+        <a class="case-file-hero-image fadeIn" href="case_file.php?id=<?= $project['id'] ?>">
+            <img src="images/<?= $project['Hero'] ?>" alt="case file">
         </a>
     </div>
 

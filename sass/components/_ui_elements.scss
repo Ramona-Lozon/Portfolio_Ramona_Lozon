@@ -22,6 +22,11 @@ ul {
   transform: translateX(-25px);
 }
 
+.fadeIn {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .invisible-still {
   visibility: hidden;
 }
