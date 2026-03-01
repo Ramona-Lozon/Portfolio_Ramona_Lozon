@@ -2,6 +2,7 @@ import { navMenu } from "./modules/nav.js";
 import { contactForm } from "./modules/contactForm.js";
 import { indexAnimation } from "./modules/index-animation.js"; 
 import { fadeIn } from "./modules/fadeIn.js";
+import { videoPlayer } from "./modules/videoPlayer.js";
 
 const page = document.body.dataset.page;
 
@@ -21,9 +22,11 @@ if (page === 'home') {
 } else if (page === 'case_file') {
     navMenu();
     fadeIn();
+    videoPlayer();
 } else if (page === 'login') {
     navMenu();
 } else if (page === 'dashboard') {
     navMenu();
-    contactForm();
+} else if (page === 'editor') {
+    navMenu();
 }

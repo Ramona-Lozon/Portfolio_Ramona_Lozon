@@ -24,3 +24,70 @@
     width: 80vw;
     margin: 10px 10px 10px 10px
 }
+
+.dash-project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dash-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    border: solid 3px a.$paleBlue-color;
+    border-radius: 15px;
+    background-color: transparent;
+    margin: 10px;
+.dash-project-hero {
+    display: flex;
+    img {
+        display: flex;
+        width: 60vw;
+        border-radius: 15px;
+    }
+}
+
+.dash-edit-delete {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+        .dash-button {
+            a {
+                color: a.$paleBlue-color;
+            }
+
+        }
+        .dash-button:hover {
+            a {
+                color: a.$darkRed-color;
+            }
+        }
+    }
+}
+
+.add-text {
+    text-align: center;
+}
+
+.editor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-box-dash {
+    background-color: a.$darkRed-color;
+    border: solid 3px a.$pink-color;
+    border-radius: 15px;
+    color: a.$paleBlue-color;
+    font-weight: bold;
+    padding: 20px;
+    field-sizing: content;
+    height: auto;
+    max-width: 500px;
+    overflow: hidden;
+    width: 80vw;
+    margin: 10px 10px 10px 10px
+}

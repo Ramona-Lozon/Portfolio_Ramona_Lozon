@@ -1,4 +1,4 @@
-    export function videoPlayer() {
+export function videoPlayer() {
 
   const playerCon = document.querySelector('#player-container');
   const player = document.querySelector('video');
