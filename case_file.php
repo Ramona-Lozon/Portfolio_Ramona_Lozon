@@ -111,7 +111,7 @@ if (!$row) {
     $videoExtensions = ['mp4', 'webm', 'ogg'];
     if (in_array($extension, $videoExtensions)): ?>
         <div id="player-container">
-            <video muted class="video-player" controls preload="metadata" poster="images/logo.svg" id="video">
+            <video muted class="video-player" controls preload="metadata" poster="images/logo-colour-noText.svg" id="video">
                 <source src="video/<?= $product_ex ?>" type="video/mp4">
                 <p>Your browser does not support the video tag.</p>
             </video>
