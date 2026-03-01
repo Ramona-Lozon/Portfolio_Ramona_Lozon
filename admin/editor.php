@@ -27,94 +27,132 @@ require_once '../includes/scripts/edit.php';
     <link rel="stylesheet" href="../css/main.css">
     <script type="module" src="../js/main.js"></script>
 </head>
-    <h1>Edit Project #<?= $id ?></h1>
-    
-    <div>
-    <a class="button" href="dashboard.php">Back</a>
-    </div>
 
-    <form method="POST" action="../includes/scripts/edit.php?id=<?= $id ?>">
+<header>
+    <nav>
+        <div class="logo-con">
+        <img id="logo" img src="../images/logo-colour-noText.svg" alt="logo">
+        <div class="menu-con">
+            <ul class="hamburger-dropdown">
+                    <li class="hover-item"><a class="button" href="../index.html">Home</a></li>
+                    <li class="hover-item"><a class="button" href="dashboard.php">Dashboard</a></li>
+                    <li class="hover-item"><a class="button" href="../includes/scripts/logout.php">Log Out</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+</header>
+
+<body data-page="editor">
+
+<main>
+    <section class="dash-project-list">
+    <h3 class="text main-title">Edit Project #<?= $id ?></h3>
+    
+    <form class="editor-form" method="POST" action="../includes/scripts/edit.php?id=<?= $id ?>">
         <label>
-            Project Name: 
-            <input  type="text" 
-                    name="project" 
-                    value="<?= $row['project'] ?>" required>
+            <p class="text">Project Name:</p> 
+            <input  
+                class="form-box-dash"
+                type="text" 
+                name="project" 
+                value="<?= $row['project'] ?>" required>
         </label>
-    <br>
+
         <label>
-            Proposition: 
-            <textarea   name="proposition" 
-                        required><?= $row['proposition'] ?>
+            <p class="text">Hero Image</p>
+            <input  
+                class="form-box-dash"
+                type="text" 
+                name="hero" 
+                value="<?= $row['Hero'] ?>" required>
+        </label>
+
+        <label>
+            <p class="text">Proposition:</p> 
+            <textarea   
+                class="form-box-dash"
+                name="proposition" 
+                required><?= $row['proposition'] ?>
+            </textarea>
+        </label>
+
+        <label>
+            <p class="text">Deliverables:</p>
+            <textarea   
+                class="form-box-dash"
+                name="deliverables" 
+                required><?= $row['deliverables'] ?>
             </textarea>
         </label>
     <br>
         <label>
-            Deliverables: 
-            <textarea   name="deliverables" 
-                        required><?= $row['deliverables'] ?>
+            <p class="text">Outcome</p>
+            <textarea   
+                class="form-box-dash"
+                name="outcome" 
+                required><?= $row['outcome'] ?>
             </textarea>
         </label>
-    <br>
-        <label>Outcome: 
-            <textarea   name="outcome" 
-                        required><?= $row['outcome'] ?>
-            </textarea>
-        </label>
-        <br>
-        <hr>
+
         <label>
-            Hero Image filename: 
-            <input  type="text" 
-                    name="hero" 
-                    value="<?= $row['Hero'] ?>" required>
-        </label>
-    <br>
-        <label>
-            Proposition Image filename: 
-            <input  type="text" 
+            <p class="text">Proposition Image</p>
+            <input  
+                class="form-box-dash"
+                    type="text" 
                     name="prop_ex" 
                     value="<?= $row['prop_ex'] ?>" required>
         </label>
-    <br>
+
         <label>
-            Proposition Caption: 
-            <textarea   name="prop_caption" 
-                        required><?= $row['prop_caption'] ?>
+            <p class="text">Proposition Image Caption</p> 
+            <textarea   
+                class="form-box-dash"
+                    name="prop_caption" 
+                    required><?= $row['prop_caption'] ?>
             </textarea>
         </label>
-    <br>
+
         <label>
-            Work Image filename: 
-            <input  type="text" 
+            <p class="text">Work Image</p> 
+            <input  
+                class="form-box-dash"
+                    type="text" 
                     name="work_ex" 
                     value="<?= $row['work_ex'] ?>" required>
         </label>
-    <br>
+
         <label>
-            Work Caption: 
-            <input  type="text" 
+            <p class="text">Work Image Caption</p> 
+            <input  
+                class="form-box-dash"
+                    type="text" 
                     name="work_caption" 
                     value="<?= $row['work_caption'] ?>" required>
         </label>
-    <br>
+
         <label>
-            Product Image filename: 
-            <input  type="text" 
+            <p class="text">Product Image</p> 
+            <input  
+                class="form-box-dash"
+                    type="text" 
                     name="product_ex" 
                     value="<?= $row['product_ex'] ?>" required>
         </label>
-    <br>
-        <label>Product Caption: 
-            <input  type="text" 
+
+        <label>
+            <p class="text">Product Image Caption</p>  
+            <input  
+                class="form-box-dash"
+                    type="text" 
                     name="product_caption" 
                     value="<?= $row['product_caption'] ?>" required>
         </label>
     <br>
-        <button type="submit">
-            Save Changes
-        </button>
+        <button class="button" type="submit">Save</button>
     </form>
-
+</section>
+    <footer></footer>
 </main>
 </body>
 </html>

@@ -47,31 +47,38 @@ $projects = $db->query('SELECT case_file.id, case_file.project, media.Hero FROM 
 
 <body data-page="dashboard">
 <main>
-    <h2>Projects</h2>
+
 
     <!-- dashboard project array -->
-        <section>
+        <section class="dash-project-list">
+            <h3 class="text main-title">Dashboard<br><br></h3>
+            <h3 class="text main-title">Projects List</h3>
+
             <?php foreach ($projects as $project): ?>
 
-                <div id="dash-project-id">
+                <article class="dash-card">
+                <div class="dash-project-id">
                     <h3 class="text main-title">Project ID: <?= $project['id'] ?></h3>
                 </div>
 
-                <div id="dash-project-title">
+                <div class="dash-project-title">
                     <h3 class="text main-title">Project: <?= $project['project'] ?></h3>
                 </div>
                 
-                <div id="dash-project-hero">
+                <div class="dash-project-hero">
                     <img src="../images/<?= $project['Hero'] ?>" alt="hero">
                 </div>
                 
-                <div class="button" id="dash-edit-button">
-                    <a href="editor.php?id=<?= $project['id'] ?>">Edit</a>
-                </div>
+                <div class="dash-edit-delete">
+                    <div class="button dash-button">
+                        <a href="editor.php?id=<?= $project['id'] ?>">Edit</a>
+                    </div>
 
-                <div class="button" id="dash-delete-button">
-                    <a href="../includes/scripts/delete.php?id=<?= $project['id'] ?>">Delete</a>
+                    <div class="button dash-button">
+                        <a href="../includes/scripts/delete.php?id=<?= $project['id'] ?>">Delete</a>
+                    </div>
                 </div>
+            </article>
 
             <?php endforeach; ?>
         </section>

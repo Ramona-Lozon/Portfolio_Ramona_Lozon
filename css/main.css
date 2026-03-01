@@ -500,7 +500,7 @@ nav {
   position: absolute;
   bottom: 0px;
   transition: all 0.2s ease;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #880d1e);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), black);
   display: flex;
   border-radius: 15px;
 }
@@ -875,6 +875,67 @@ input[type=range]:focus::-moz-range-thumb {
   border-color: #dd2d4a;
   color: pink;
   padding: 10px;
+  field-sizing: content;
+  height: auto;
+  max-width: 500px;
+  overflow: hidden;
+  width: 80vw;
+  margin: 10px 10px 10px 10px;
+}
+
+.dash-project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  border: solid 3px #cbeef3;
+  border-radius: 15px;
+  background-color: transparent;
+  margin: 10px;
+}
+.dash-card .dash-project-hero {
+  display: flex;
+}
+.dash-card .dash-project-hero img {
+  display: flex;
+  width: 60vw;
+  border-radius: 15px;
+}
+.dash-card .dash-edit-delete {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.dash-card .dash-edit-delete .dash-button a {
+  color: #cbeef3;
+}
+.dash-card .dash-edit-delete .dash-button:hover a {
+  color: #880d1e;
+}
+
+.add-text {
+  text-align: center;
+}
+
+.editor-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-box-dash {
+  background-color: #880d1e;
+  border: solid 3px #f26a8d;
+  border-radius: 15px;
+  color: #cbeef3;
+  font-weight: bold;
+  padding: 20px;
   field-sizing: content;
   height: auto;
   max-width: 500px;
