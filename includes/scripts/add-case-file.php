@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio_Ramona_Lozon\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
@@ -13,8 +15,10 @@ use Portfolio_Ramona_Lozon\database;
 $database = new database();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-$hero = $_POST['hero'];
+//     error_log(print_r($_POST, true)); 
+//     var_dump($_POST);
+//     die(); 
+$hero = $_POST['Hero'];
 if ($hero == null || $hero == '') {
 $_SESSION['error_messages']['Hero'] = "Hero is Required"; 
 header('Location: ../../admin/add.php');
@@ -106,10 +110,10 @@ $newId = $database->lastInsertId();
 
     $database->execute('INSERT INTO media 
     (id, Hero, prop_ex, prop_caption, work_ex, work_caption, product_ex, product_caption) 
-VALUES (:id, :hero, :prop_ex, :prop_caption, :work_ex, :work_caption, :product_ex, :product_caption)',
+VALUES (:id, :Hero, :prop_ex, :prop_caption, :work_ex, :work_caption, :product_ex, :product_caption)',
         [
-            'id'                =>$newId,
-            'hero'              => $hero,
+            'id'                => $newId,
+            'Hero'              => $hero,
             'prop_ex'           => $prop_ex,
             'prop_caption'      => $prop_caption,
             'work_ex'           => $work_ex,
@@ -119,7 +123,7 @@ VALUES (:id, :hero, :prop_ex, :prop_caption, :work_ex, :work_caption, :product_e
         ]
     );
 
-header('location: ../../admin/add.php');
+header('Location: https://ramonalozon.ca/admin/add.php');
 exit;
 }
 ?>
