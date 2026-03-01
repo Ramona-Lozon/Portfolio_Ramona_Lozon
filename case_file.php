@@ -62,44 +62,44 @@ if (!$row) {
 <main>
     <section id="case-file-section">
     <div>
-        <h3 class="text main-title" id="cf-main-title">
+        <h3 class="text main-title fadeIn" id="cf-main-title">
             <?= $row['project'] ?>
         </h3>
     </div>
     
-    <div class="case-file-text-con">
+    <div class="case-file-text-con fadeIn">
         <p class="text info_text case-file-text" id="cf-prop">
             <?= $row['proposition'] ?>
         </p>
     </div>
 
-    <div class="case-file-image" id="cf-prop-ex">
-        <img src="images/<?= htmlspecialchars($row['prop_ex']) ?>" alt="proposition image">
+    <div class="case-file-image fadeIn" id="cf-prop-ex">
+        <img src="images/<?= $row['prop_ex'] ?>" alt="proposition image">
     </div>
 
-    <div class="case-file-text-con">
+    <div class="case-file-text-con fadeIn">
         <div class="text info_text case-file-text" id="cf-prop-caption">
             <?= $row['prop_caption'] ?>
     </div>
     </div>
     
-    <div class="case-file-text-con">
+    <div class="case-file-text-con fadeIn">
         <p class="text info_text case-file-text" id="cf-deliverables">
             <?= $row['deliverables'] ?>
         </p>
     </div>
 
-    <div class="case-file-image" id="cf-work-ex">
+    <div class="case-file-image fadeIn" id="cf-work-ex">
         <img src="images/<?= $row['work_ex'] ?>" alt="work image">
     </div>
 
-    <div class="case-file-text-con">
+    <div class="case-file-text-con fadeIn">
         <p class="text info_text case-file-text" id="cf-work-caption">
             <?= $row['work_caption'] ?>
         </p>
     </div>
 
-<div class="case-file-image" id="cf-media-image">
+<div class="case-file-image fadeIn" id="cf-media-image">
     <?php
     $product_ex = $row['product_ex'];
     $extension = strtolower(pathinfo($product_ex, PATHINFO_EXTENSION));
@@ -120,17 +120,17 @@ if (!$row) {
         </div>
         </div>
     <?php else: ?>
-        <img src="images/<?= htmlspecialchars($product_ex) ?>" alt="product example">
+        <img src="images/<?= $product_ex ?>" alt="product example">
     <?php endif; ?>
 </div>
 
-    <div class="case-file-text-con">
+    <div class="case-file-text-con fadeIn">
         <p class="text info_text case-file-text" id="cf-prod-caption">
             <?= $row['product_caption'] ?>
         </p>
     </div>
 
-    <div class="case-file-text-con">
+    <div class="case-file-text-con fadeIn">
         <p class="text info_text case-file-text" id="cf-outcome">
             <?= $row['outcome'] ?>
         </p>
