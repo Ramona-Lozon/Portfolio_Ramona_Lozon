@@ -21,7 +21,7 @@ fetch('sendmail.php', {
 })
 .then(response => {
     console.log('Status:', response.status);
-    return response.json(); // changed from response.text()
+    return response.json();
 })
 .then(data => {
     console.log('Response:', data);
