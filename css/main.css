@@ -78,6 +78,10 @@ footer .top-button {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
 .hidden {
   display: none;
 }
@@ -843,7 +847,7 @@ input[type=range]:focus::-moz-range-thumb {
 #contact-section {
   margin-top: 20px;
   margin-bottom: auto;
-  height: 90vh;
+  min-height: 100vh;
 }
 #contact-section #contactTitle {
   display: flex;
