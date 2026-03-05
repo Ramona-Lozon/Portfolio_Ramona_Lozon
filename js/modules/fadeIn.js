@@ -9,7 +9,7 @@ export function fadeIn() {
             scrollTrigger: {
                 trigger: element,
                 toggleActions: "play reverse play reverse",
-                markers: false,
+                markers: true,
                 start: "top 80%",
                 end: "bottom 20%"
             },

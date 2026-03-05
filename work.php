@@ -50,7 +50,7 @@ error_reporting(E_ALL);
         </div>
     </nav>
 </header>
-
+<main>
 <section id="work-intro-section">
     <div><h3 class="text main-title" id="work-intro-title fadeIn">Take a look at my work!</h3></div>
 </section>
@@ -75,8 +75,7 @@ foreach ($results as $project): ?>
 
 <?php endforeach; ?>
 </section>
-
-        <footer>
-</footer>
+</main>
+<footer></footer>
 </body>
 </html>
