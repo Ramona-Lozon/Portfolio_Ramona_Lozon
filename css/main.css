@@ -61,7 +61,7 @@ footer {
   margin: 50px 0px 0px 0px;
   display: flex;
   padding: 0px;
-  background-image: linear-gradient(to bottom, #880d1e, rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
   flex-direction: row;
   width: 100%;
 }
@@ -831,6 +831,17 @@ input[type=range]:focus::-moz-range-thumb {
   animation-delay: -48s;
   transform-origin: -13vw 6vh;
   box-shadow: -40vmin 0 5.3020703332vmin currentColor;
+}
+
+body.about-page {
+  --s: 100px; /* control the size*/
+  --c1: #790f21;
+  --c2: #6b0513;
+  --c3: #50000b;
+  --_g: 0 120deg,#0000 0;
+  background: conic-gradient(at 83.3333333333% 33.3333333333%, var(--c3) var(--_g)), conic-gradient(from -120deg at 16.6666666667% 33.3333333333%, var(--c2) var(--_g)), conic-gradient(from 120deg at 33.3333333333% 83.3333333333%, var(--c1) var(--_g)), conic-gradient(from 120deg at 66.6666666667% 83.3333333333%, var(--c1) var(--_g)), conic-gradient(from -180deg at 33.3333333333% 50%, var(--c2) 60deg, var(--c1) var(--_g)), conic-gradient(from 60deg at 66.6666666667% 50%, var(--c1) 60deg, var(--c3) var(--_g)), conic-gradient(from -60deg at 50% 33.3333333333%, var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
+  background-size: calc(var(--s) * 1.7320508076) var(--s);
+  background-attachment: fixed;
 }
 
 #hero-section {
