@@ -843,6 +843,7 @@ input[type=range]:focus::-moz-range-thumb {
 #contact-section {
   margin-top: 20px;
   margin-bottom: auto;
+  height: 90vh;
 }
 #contact-section #contactTitle {
   display: flex;
@@ -1024,4 +1025,4 @@ input[type=range]:focus::-moz-range-thumb {
     width: 700px;
     height: 340px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
