@@ -45,6 +45,10 @@ if (!$row) {
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script>gsap.registerPlugin(ScrollTrigger);</script>
+    <script type="module">import { fadeIn } from "./js/modules/fadeIn.js";fadeIn();</script>
     <script type="module" src="js/main.js"></script>
 </head>
 

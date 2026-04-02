@@ -1,7 +1,3 @@
-import { gsap } from "https://cdn.skypack.dev/gsap";
-import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
 export function fadeIn() {
     gsap.utils.toArray(".fadeIn").forEach(element => {
         gsap.to(element, {
@@ -9,7 +5,7 @@ export function fadeIn() {
             scrollTrigger: {
                 trigger: element,
                 toggleActions: "play reverse play reverse",
-                markers: true,
+                markers: false,
                 start: "top 80%",
                 end: "bottom 20%"
             },
