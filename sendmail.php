@@ -26,6 +26,16 @@ if(empty($email)) {
 }
 
 if(empty($errors)) {
+    $db = new \Portfolio_Ramona_Lozon\database();
+    $db->execute(
+        "INSERT INTO contacts (name, org, email, msg) VALUES (:name, :org, :email, :msg)",
+        [
+            'name' => $name,
+            'org' => $org,
+            'email' => $email,
+            'msg' => $msg
+        ]
+    );
     $to = 'lozonramona@gmail.com';
     $subject = 'Message from your Portfolio site!';
     $message = "You have received a new contact form submission:\n\n";
@@ -33,9 +43,10 @@ if(empty($errors)) {
     $message .= "Org: " . $org . "\n";
     $message .= "Email: " . $email . "\n\n";
     $message .= "Message: " . $msg;
-    $headers = "lozonramona@gmail.com.ca\r\n";
+    $headers = "lozonramona@gmail.com.com\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
 
+    mail($to, $subject, $message, $headers);
     // temporary for local testing
 echo json_encode(['status' => 'success', 'message' => 'Message sent successfully!']);
 exit;
