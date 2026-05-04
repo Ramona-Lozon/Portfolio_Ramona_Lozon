@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramona Lozon</title>
+    @vite(['resources/css/main.css', 'resources/css/grid.css', 'resources/js/main.js'])
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
@@ -29,9 +30,9 @@
         <div class="logo-con"><img id="logo" img src="images/logo-colour-noText.svg" alt="logo">
             <div class="menu-con">
                 <ul class="hamburger-dropdown">
-            <li class="hover-item"><a class="button" href="index.html">Home</a></li>
-            <li class="hover-item"><a class="button" href="work.php">Work</a></li>
-            <li class="hover-item"><a class="button" href="about.html">About</a></li>
+                    <li class="hover-item"><a class="button" href="{{ route('home') }}">Home</a></li>
+                    <li class="hover-item"><a class="button" href="{{ route('work') }}">Work</a></li>
+                    <li class="hover-item"><a class="button" href="{{ route('about') }}">About</a></li>
                 </ul>
             </div>
         </div>
