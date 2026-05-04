@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramona Lozon</title>
+    @vite(['resources/css/main.css', 'resources/css/grid.css', 'resources/js/main.js'])
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
@@ -13,14 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="https://unpkg.com/thpace"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
     <script>gsap.registerPlugin(ScrollTrigger);</script>
     <script type="module">import { fadeIn } from "./js/modules/fadeIn.js";fadeIn();</script>
-    <script type="module" src="js/main.js"></script>
 </head>
 
 <body data-page="home">
@@ -40,9 +38,9 @@
         <article id="nav-box">
 
             <div id="index-nav">
-                <a class="index-button text fadeIn" href="work.php">Work</a>
-                <a class="index-button text fadeIn" href="about.html">About</a>
-                <a class="index-button text fadeIn" href="contact.html">Contact</a>
+                <a class="index-button text fadeIn" href="{{ route('work') }}">Work</a>
+                <a class="index-button text fadeIn" href="{{ route('about') }}">About</a>
+                <a class="index-button text fadeIn" href="{{ route('contact') }}">Contact</a>
             </div>
 
             <!-- <div id="socials-box">
