@@ -5,9 +5,10 @@ h2 {
 }
 
 .text {
-    color: a.$paleBlue-color;
+    color: black;
     font-family: "inclusive-sans", "Montserrat";
     margin: 5px;
+    text-decoration: none;
 }
 
 .main-title {
@@ -45,3 +46,39 @@ h3 {
 li {
     list-style: none;
 }
+
+.hover-item:hover {
+    color: white;
+    transform: translateX(10px);
+    transition: all 0.1s ease-in-out;
+}
+
+.title-text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subtitle-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (min-width:768px) {
+    .title-text {
+        font-size: 38px;
+    }
+    .subtitle-text {
+        font-size: 25px;
+    }
+}
+
+@media (min-width:1200px) {
+    .title-text {
+        font-size: 62px;
+    }
+    .subtitle-text {
+        font-size: 38px;
+    }
+}
+
+

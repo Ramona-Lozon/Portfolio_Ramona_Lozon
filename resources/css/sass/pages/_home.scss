@@ -2,7 +2,7 @@
 
 #hero-section {
     display: flex;
-    align-items: center;
+    align-items:baseline;
     justify-content: center;
     flex-direction: column;
     width: 100vw;
@@ -13,11 +13,9 @@
         #index-name-box {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            .index-name-text {
-                font-size: 60px;
-                font-weight: bold;
-            }
+            align-items: left;
+            margin-left: 10vw;
+            
             #index-ramona {
                 display: flex;
 
@@ -34,13 +32,13 @@
             }
         }
 
-    #nav-box{
-        #index-nav {
+
+                .index-nav {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                border-radius: 15px;
+                align-items:baseline;
+
+
 
                 .index-button {
                     display: flex;
@@ -76,37 +74,48 @@
                 }
             }
 
-            // #index-nav:has(.index-button:hover) {
-            //     background-color: a.$darkRed-color;
-            //     }
-
         #socials-box {
                 display: flex;
                 flex-direction: row;
-                align-items: center;
-                justify-content: center;
+                justify-content: left;
 
             .socials-icon {
+                cursor: pointer;
                 display: flex;
                 width: 60px;
                 height: 60px;
                 margin: 5px;
-            }
-            
-            #linkedin-box {
-                background-image: url('../../images/linkedin_icon.svg');
+
+                .svg-edge {
+                    fill: black;
+                }
+
+                .svg-border {
+                    fill: black;
+                }
+
+                .svg-fill {
+                    fill: #dd2d4a;
+                }
             }
 
-            #github-box {
-                background-image: url('../../images/github_icon.svg');
-            }
+            .socials-icon:hover {
+    transform: translateX(5px);
+    transition: all 0.1s ease;
+                .svg-edge {
+                    fill: black;
+                }
 
-            #insta-box {
-                background-image: url('../../images/insta_icon.svg');
+                .svg-border {
+                    fill: black;
+                }
+
+                .svg-fill {
+                    fill: white;
+                }
             }
         }
     }
-}
 
 
 @media (min-width:500px) {

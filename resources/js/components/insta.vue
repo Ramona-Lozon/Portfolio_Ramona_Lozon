@@ -1,0 +1,41 @@
+
+<template>
+<svg class="socials-icon" id="insta-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <g>
+    
+        <path id="insta-fill" class="svg-fill" d="M27.63,6.91h44.75c11.43,0,20.71,9.28,20.71,20.71v44.75c0,11.43-9.28,20.71-20.71,20.71H27.62c-11.43,0-20.71-9.28-20.71-20.71V27.63c0-11.43,9.28-20.71,20.71-20.71Z"/>
+        
+        <path class="svg-border" d="M72.37,8.41c10.6,0,19.21,8.62,19.21,19.21v44.75c0,10.6-8.62,19.21-19.21,19.21H27.63c-10.6,0-19.21-8.62-19.21-19.21V27.63c0-10.6,8.62-19.21,19.21-19.21h44.75M72.37,5.41H27.63C15.36,5.41,5.41,15.36,5.41,27.63v44.75c0,12.27,9.95,22.21,22.21,22.21h44.75c12.27,0,22.21-9.95,22.21-22.21V27.63c0-12.27-9.95-22.21-22.21-22.21h0Z"/>
+  
+    </g>
+  
+  <rect class="insta-3" x="35.32" y="35.32" width="29.37" height="29.37" rx="14.68" ry="14.68"/>
+  
+  <rect class="insta-2" x="70.72" y="24.48" width="6" height="6" rx="3" ry="3"/>
+  
+</svg>
+</template>
+
+    <style>
+      .insta-1 {
+        fill: red;
+      }
+
+      .insta-2 {
+        stroke-width: 7px;
+      }
+
+      .insta-2, .insta-3 {
+        fill: none;
+        stroke: black;
+        stroke-miterlimit: 10;
+      }
+
+      .insta-4 {
+        fill: #03252f;
+      }
+
+      .insta-3 {
+        stroke-width: 4px;
+      }
+    </style>
