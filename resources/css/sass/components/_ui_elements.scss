@@ -63,7 +63,7 @@ ul {
   }
 
 body {
-    background-color: a.$darkRed-color;
+    background-color: a.$hotPink-color;
 }
 
 .button {
@@ -143,6 +143,16 @@ body {
   opacity: 1;
   background-color: a.$darkRed-color;
   border-color: a.$hotPink-color;
+}
+
+.blink {
+  animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
 }
 
 //tablet styles

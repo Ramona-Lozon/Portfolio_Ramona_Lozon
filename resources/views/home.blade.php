@@ -24,32 +24,38 @@
 <body data-page="home">
 
 <main>
-
-<canvas id="thpace-canvas"></canvas>
-
     <section id="hero-section">
         
         <article id="index-name-box">
-            <div class="text index-name-text fadeIn" id="index-ramona">Ramona</div>
-            <div class="text index-name-text fadeIn" id="index-lozon">Lozon</div>
-            <h3 class="text index-title-text fadeIn">Junior Web Developer and Designer</h3>      
-        </article>
+            <div class="text title-text fadeIn" id="index-ramona">Ramona Lozon</div>
+            <h3 class="text subtitle-text fadeIn">Junior Web Developer and Designer</h3>      
 
-        <article id="nav-box">
 
-            <div id="index-nav">
-                <a class="index-button text fadeIn" href="{{ route('work') }}">Work</a>
-                <a class="index-button text fadeIn" href="{{ route('about') }}">About</a>
-                <a class="index-button text fadeIn" href="{{ route('contact') }}">Contact</a>
+        <article class="nav-box">
+
+            <div class="index-nav">
+                <a class="text subtitle-text hover-item fadeIn" href="{{ route('about') }}">// Who am I?</a>
+                <a class="text subtitle-text hover-item fadeIn" href="{{ route('work') }}">// My Work</a>
+            </div>
+            
+            <div id="socials-box">
+                <div id="linkedin-box">
+                    <a id="linked-in" href="https://www.linkedin.com/in/ramona-lozon-21536a321/"></a>
+                </div>
+                <div id="github-box">
+                    <a id="git" href="https://github.com/Ramona-Lozon"></a>
+                </div>
+                <div id="insta-box">
+                    <a id="insta" href="https://www.instagram.com/lozonramona?igsh=eThzZTRoMnl4bzhn"></a>
+                </div>
             </div>
 
-            <!-- <div id="socials-box">
-                <div class="socials-icon" id="linkedin-box"></div>
-                <div class="socials-icon" id="github-box"></div>
-                <div class="socials-icon" id="insta-box"></div>
-            </div> -->
-        </article>
+            <div class="index-nav">
+                <a class="text subtitle-text hover-item fadeIn" href="{{ route('contact') }}">Work With Me <span class="blink">&#8658;</span></a>
+            </div>
 
+        </article>
+    </article>
     </section>
 </main>
 

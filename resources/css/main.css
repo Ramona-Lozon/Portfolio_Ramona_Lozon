@@ -15,9 +15,10 @@ h2 {
 }
 
 .text {
-  color: #cbeef3;
+  color: black;
   font-family: "inclusive-sans", "Montserrat";
   margin: 5px;
+  text-decoration: none;
 }
 
 .main-title {
@@ -56,6 +57,38 @@ li {
   list-style: none;
 }
 
+.hover-item:hover {
+  color: white;
+  transform: translateX(10px);
+  transition: all 0.1s ease-in-out;
+}
+
+.title-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subtitle-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .title-text {
+    font-size: 38px;
+  }
+  .subtitle-text {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .title-text {
+    font-size: 62px;
+  }
+  .subtitle-text {
+    font-size: 38px;
+  }
+}
 footer {
   height: 150px;
   margin: 50px 0px 0px 0px;
@@ -137,7 +170,7 @@ ul {
 }
 
 body {
-  background-color: #880d1e;
+  background-color: #dd2d4a;
 }
 
 .button {
@@ -222,6 +255,21 @@ body {
   border-color: #dd2d4a;
 }
 
+.blink {
+  animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media (min-width: 1200px) {
   .desk-top-button {
     display: flex;
@@ -846,7 +894,7 @@ body.about-page {
 
 #hero-section {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   flex-direction: column;
   width: 100vw;
@@ -857,11 +905,8 @@ body.about-page {
 #hero-section #index-name-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-#hero-section #index-name-box .index-name-text {
-  font-size: 60px;
-  font-weight: bold;
+  align-items: left;
+  margin-left: 10vw;
 }
 #hero-section #index-name-box #index-ramona {
   display: flex;
@@ -875,14 +920,12 @@ body.about-page {
   font-size: 24px;
   margin: 10px;
 }
-#hero-section #nav-box #index-nav {
+#hero-section .index-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
+  align-items: baseline;
 }
-#hero-section #nav-box #index-nav .index-button {
+#hero-section .index-nav .index-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -896,7 +939,7 @@ body.about-page {
   border-radius: 10px;
   margin: 10px;
 }
-#hero-section #nav-box #index-nav .index-button:hover {
+#hero-section .index-nav .index-button:hover {
   border: 2px solid #880d1e;
   background-color: #cbeef3;
   color: #880d1e;
@@ -916,26 +959,39 @@ body.about-page {
     transform: translateY(-5px);
   }
 }
-#hero-section #nav-box #socials-box {
+#hero-section #socials-box {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
-#hero-section #nav-box #socials-box .socials-icon {
+#hero-section #socials-box .socials-icon {
+  cursor: pointer;
   display: flex;
   width: 60px;
   height: 60px;
   margin: 5px;
 }
-#hero-section #nav-box #socials-box #linkedin-box {
-  background-image: url("../../images/linkedin_icon.svg");
+#hero-section #socials-box .socials-icon .svg-edge {
+  fill: black;
 }
-#hero-section #nav-box #socials-box #github-box {
-  background-image: url("../../images/github_icon.svg");
+#hero-section #socials-box .socials-icon .svg-border {
+  fill: black;
 }
-#hero-section #nav-box #socials-box #insta-box {
-  background-image: url("../../images/insta_icon.svg");
+#hero-section #socials-box .socials-icon .svg-fill {
+  fill: #dd2d4a;
+}
+#hero-section #socials-box .socials-icon:hover {
+  transform: translateX(5px);
+  transition: all 0.1s ease;
+}
+#hero-section #socials-box .socials-icon:hover .svg-edge {
+  fill: black;
+}
+#hero-section #socials-box .socials-icon:hover .svg-border {
+  fill: black;
+}
+#hero-section #socials-box .socials-icon:hover .svg-fill {
+  fill: white;
 }
 
 @media (min-width: 500px) {
