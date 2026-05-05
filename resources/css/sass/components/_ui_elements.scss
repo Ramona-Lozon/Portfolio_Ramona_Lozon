@@ -155,9 +155,44 @@ body {
   100%{opacity: 0;}
 }
 
+
+.breakpoint-con {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.breakpoint-group {
+  display:flex;
+  flex-direction: column;
+  padding: 5px;
+  flex: 1;
+}
+
+.breakpoint-item {
+  display: flex;
+}
+
+// .breakpoint-item {
+
+// }
+
 //tablet styles
 @media (min-width:768px) {
+  .breakpoint-con {
+    flex-direction: row;
+  }
 
+  .breakpoint-group {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .breakpoint-item {
+    width: 40vw;
+  }
 }
 
 //desktop styles

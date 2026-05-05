@@ -118,6 +118,47 @@
     }
 
 
+//my work
+
+#my-work {
+    min-height: 100vh;
+}
+
+.work-image {
+    width: 80vw;
+}
+
+.case-file-slug {
+  text-decoration: none;
+  position: relative;
+  background: linear-gradient(120deg, a.$pink-color 0%, a.$hotPink-color 95%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 100% 100%;
+  transition: all 0.1s ease-in;
+}
+
+.case-file-slug:hover {
+    transform: scale(1.1);
+    transform: translateX(5px); 
+    background-size: 100% 100%;
+    cursor: pointer;
+
+    .breakpoint-group {
+        h3 {
+            color: a.$darkRed-color;
+        }
+        p {
+            color: a.$darkRed-color;
+        }
+    }
+}
+
+//about section
+
+
+
+
 @media (min-width:500px) {
 
 #hero-section {
@@ -126,5 +167,11 @@
                 flex-direction: row;
             }
         }
+    }
+}
+
+@media (min-width:768px) {
+    .work-image {
+        width: 40vw;
     }
 }
