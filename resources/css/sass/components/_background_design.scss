@@ -1,10 +1,10 @@
 @use '../abstracts/' as a;
 
-body.about-page {
+#section-id {
   --s: 100px; /* control the size*/
-  --c1: #790f21;
-  --c2: #6b0513;
-  --c3: #50000b;
+  --c1: white;
+  --c2: lightgray;
+  --c3: rgb(175, 175, 175);
   
   --_g: 0 120deg,#0000 0;
   background:

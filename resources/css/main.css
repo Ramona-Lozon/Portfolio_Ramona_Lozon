@@ -63,14 +63,34 @@ li {
   transition: all 0.1s ease-in-out;
 }
 
+.title-con {
+  width: 90vw;
+  margin-left: auto;
+}
+
 .title-text {
   font-size: 25px;
   font-weight: bold;
 }
 
+.subtitle-con {
+  width: 90vw;
+  margin-left: auto;
+}
+
 .subtitle-text {
   font-size: 18px;
   font-weight: bold;
+}
+
+.body-text-con {
+  width: 90vw;
+  margin-left: auto;
+}
+
+.body-text {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
@@ -87,6 +107,9 @@ li {
   }
   .subtitle-text {
     font-size: 38px;
+  }
+  .body-text {
+    font-size: 22px;
   }
 }
 footer {
@@ -268,6 +291,37 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+.breakpoint-con {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.breakpoint-group {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  flex: 1;
+}
+
+.breakpoint-item {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .breakpoint-con {
+    flex-direction: row;
+  }
+  .breakpoint-group {
+    flex: 1;
+    min-width: 0;
+  }
+  .breakpoint-item {
+    width: 40vw;
   }
 }
 @media (min-width: 1200px) {
@@ -517,14 +571,17 @@ nav {
   .input-form {
     align-items: baseline;
   }
+  .label {
+    margin: 10px auto 0px 11vw;
+  }
   .form-box {
-    margin: 10px auto 10px 150px;
+    margin: 0px auto 10px 10vw;
   }
   #send-button {
-    margin: 10px auto 10px 150px;
+    margin: 10px auto 10px 10vw;
   }
   #feedback {
-    margin: 10px auto 10px 150px;
+    margin: 10px auto 10px 10vw;
   }
 }
 .video-player {
@@ -881,11 +938,11 @@ input[type=range]:focus::-moz-range-thumb {
   box-shadow: -40vmin 0 5.3020703332vmin currentColor;
 }
 
-body.about-page {
+#section-id {
   --s: 100px; /* control the size*/
-  --c1: #790f21;
-  --c2: #6b0513;
-  --c3: #50000b;
+  --c1: white;
+  --c2: lightgray;
+  --c3: rgb(175, 175, 175);
   --_g: 0 120deg,#0000 0;
   background: conic-gradient(at 83.3333333333% 33.3333333333%, var(--c3) var(--_g)), conic-gradient(from -120deg at 16.6666666667% 33.3333333333%, var(--c2) var(--_g)), conic-gradient(from 120deg at 33.3333333333% 83.3333333333%, var(--c1) var(--_g)), conic-gradient(from 120deg at 66.6666666667% 83.3333333333%, var(--c1) var(--_g)), conic-gradient(from -180deg at 33.3333333333% 50%, var(--c2) 60deg, var(--c1) var(--_g)), conic-gradient(from 60deg at 66.6666666667% 50%, var(--c1) 60deg, var(--c3) var(--_g)), conic-gradient(from -60deg at 50% 33.3333333333%, var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
   background-size: calc(var(--s) * 1.7320508076) var(--s);
@@ -994,9 +1051,45 @@ body.about-page {
   fill: white;
 }
 
+#my-work {
+  min-height: 100vh;
+}
+
+.work-image {
+  width: 80vw;
+}
+
+.case-file-slug {
+  text-decoration: none;
+  position: relative;
+  background: linear-gradient(120deg, #f26a8d 0%, #dd2d4a 95%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 100% 100%;
+  transition: all 0.1s ease-in;
+}
+
+.case-file-slug:hover {
+  transform: scale(1.1);
+  transform: translateX(5px);
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.case-file-slug:hover .breakpoint-group h3 {
+  color: #880d1e;
+}
+.case-file-slug:hover .breakpoint-group p {
+  color: #880d1e;
+}
+
 @media (min-width: 500px) {
   #hero-section #nav-box #index-nav {
     flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .work-image {
+    width: 40vw;
   }
 }
 #case-file-section {
@@ -1049,6 +1142,7 @@ body.about-page {
   }
 }
 #about-section {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }

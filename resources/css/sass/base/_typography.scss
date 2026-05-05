@@ -53,14 +53,34 @@ li {
     transition: all 0.1s ease-in-out;
 }
 
+.title-con {
+    width: 90vw;
+    margin-left: auto;
+}
+
 .title-text {
     font-size: 25px;
     font-weight: bold;
 }
 
+.subtitle-con {
+    width: 90vw;
+    margin-left: auto;
+}
+
 .subtitle-text {
     font-size: 18px;
     font-weight: bold;
+}
+
+.body-text-con {
+    width: 90vw;
+    margin-left: auto;
+}
+
+.body-text {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 @media (min-width:768px) {
@@ -78,6 +98,9 @@ li {
     }
     .subtitle-text {
         font-size: 38px;
+    }
+    .body-text {
+        font-size: 22px;
     }
 }
 
