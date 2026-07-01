@@ -567,6 +567,10 @@ nav {
   margin: 10px 10px 10px 10px;
 }
 
+#honeypot {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .input-form {
     align-items: baseline;
