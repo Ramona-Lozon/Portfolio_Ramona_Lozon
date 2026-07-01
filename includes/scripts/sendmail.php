@@ -14,8 +14,10 @@ $name  = trim($_POST['name'] ?? '');
 $org   = trim($_POST['org'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $msg   = trim($_POST['msg'] ?? '');
+$honeypot   = trim($_POST['honeypot'] ?? '');
 
 $errors = [];
+if (!empty($honeypot)) $errors['honeypot'] = 'Spam detected.';
 if(empty($name))  $errors['name']  = 'Name field cannot be empty';
 if(empty($org))   $errors['org']   = 'Organization field cannot be empty';
 if(empty($msg))   $errors['msg']   = 'Message field cannot be empty';

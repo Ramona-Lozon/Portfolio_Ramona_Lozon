@@ -304,6 +304,12 @@
                             id="msg" 
                             placeholder="message">
                 </textarea>
+
+                <input 
+                        type="text" 
+                        id="honeypot" 
+                        name="honeypot"
+                        placeholder="organization">
                 <br>
                 <br>
                 
