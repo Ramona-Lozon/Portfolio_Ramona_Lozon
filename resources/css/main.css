@@ -164,6 +164,27 @@ ul {
   visibility: hidden;
 }
 
+.case-files-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+}
+
+.error {
+  color: black;
+}
+
+.case-file-link {
+  margin-top: 15px;
+  display: inline-block;
+}
+
 .centered {
   text-align: center;
 }

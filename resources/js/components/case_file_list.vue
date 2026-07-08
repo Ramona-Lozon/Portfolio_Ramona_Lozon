@@ -1,14 +1,14 @@
 <template>
   <section id="my-work">
     <div class="title-con">
-      <h3 class="text title-text fadeIn">My Work</h3>
+      <h3 class="text title-text">My Work</h3>
     </div>
 
-    <div v-if="loading" class="loading">
+    <div v-if="loading" class="loading text body-text">
       <p>Loading case files...</p>
     </div>
 
-    <div v-else-if="error" class="error">
+    <div v-else-if="error" class="error text body-text">
       <p>Error: {{ error }}</p>
     </div>
 
@@ -16,7 +16,7 @@
       <article 
         v-for="caseFile in caseFiles" 
         :key="caseFile.id"
-        class="case-file-slug breakpoint-con fadeIn"
+        class="case-file-slug breakpoint-con"
       >
         <div class="breakpoint-group">
           <h3 class="text subtitle-text">
@@ -90,26 +90,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.case-files-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.loading,
-.error {
-  text-align: center;
-  padding: 40px;
-}
-
-.error {
-  color: #d32f2f;
-}
-
-.case-file-link {
-  margin-top: 15px;
-  display: inline-block;
-}
-</style>
