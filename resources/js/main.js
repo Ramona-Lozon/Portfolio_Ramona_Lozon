@@ -3,6 +3,7 @@ import linkedIn from './components/linkedIn.vue';
 import insta from './components/insta.vue';
 import github from './components/github.vue';
 import { createApp } from 'vue';
+import CaseFile from './components/case_file.vue';
 import { navMenu } from "./modules/nav.js"; 
 import { contactForm } from "./modules/contactForm.js";
 import { indexAnimation } from "./modules/index-animation.js"; 
@@ -11,6 +12,9 @@ import { videoPlayer } from "./modules/videoPlayer.js";
 
 
 const page = document.body.dataset.page;
+
+app.component('case-file', CaseFile);
+app.mount('#app');
 
 if (page === 'home') {
     indexAnimation();
