@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CaseFileController;
+use App\Http\Controllers\MediaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +23,9 @@ Route::get('/work', function () {
 Route::get('/case_file', function () {
     return view('case_file');
 })->name('case_file');
+
+Route::get('/case-file', [CaseFileController::class, 'show']);
+Route::get('/media', [MediaController::class, 'show']);
 
 Route::get('/contact', function () {
     return view('contact');
