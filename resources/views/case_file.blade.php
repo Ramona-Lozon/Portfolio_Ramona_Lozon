@@ -51,13 +51,9 @@
 
 <main>
 
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
-    <case-file></case-file>
+    <case-file :id="{{ $id }}"></case-file>
 </div>
-@endsection
 
 </main>
 <footer></footer>

@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\CaseFile;
 
@@ -37,16 +36,16 @@ class CaseFileSeeder extends Seeder
         ],
 
         [
-        'project' => 'The Devils Advocate Accounting Agency',
+        'project' => 'The Devil\'s Advocate Accounting Agency',
         'proposition' => 'A local accountant wanted to get their small business rolling with some branding, business cards and a website. So i got to work and began designing.',
         'deliverables' => 'In total, a Logo, a Business card, and a Website was needed. I Started with the logo and worked my way from there.',
-        'outcome' => 'The initial site just has a landing page, an about page and a contact page. The project is still ongoing, I have more features and pages that I intend to add, but what Ive made so far works great and the client is pleased.'
+        'outcome' => 'The initial site just has a landing page, an about page and a contact page. The project is still ongoing, I have more features and pages that I intend to add, but what I\'ve made so far works great and the client is pleased.'
         ],
 
         [
-        'project' => '"Let Us Handle that For You" Cleaning Service',
+        'project' => '\"Let Us Handle that For You\" Cleaning Service',
         'proposition' => 'some friends of mine wanted help with the branding for their cleaning service, so i gladly helped.',
-        'deliverables' => 'The scope of the project wasnt too large, they simply wanted a logo and business card.',
+        'deliverables' => 'The scope of the project wasn\'t too large, they simply wanted a logo and business card.',
         'outcome' => 'they were very pleased with the results.'
         ],
 
