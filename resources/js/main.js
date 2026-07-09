@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp} from 'vue';
 import linkedIn from './components/linkedIn.vue';
 import insta from './components/insta.vue';
 import github from './components/github.vue';
@@ -15,47 +15,71 @@ const page = document.body.dataset.page;
 
 const app = createApp({});
 
-app.component('case-file', CaseFile);
 app.component('case-file-list', CaseFileList);
-
+app.component('case-file', CaseFile);
 app.mount('#app');
-setTimeout(() => {
-    fadeIn();
-    if (window.gsap && window.gsap.ScrollTrigger) {
-        gsap.ScrollTrigger.refresh();
+    // Wait for Vue to render, then initialize GSAP
+    function initializePageModules() {
+        console.log('Initializing Page Modules...');
+        fadeIn();
+        if (window.gsap && window.gsap.ScrollTrigger) {
+            gsap.ScrollTrigger.refresh();
+        }
     }
-}, 0);
+
 
 if (page === 'home') {
-    indexAnimation();
 
+    indexAnimation();
     const linkedInSVG = createApp(linkedIn);
     linkedInSVG.mount('#linked-in');
-
     const gitSVG = createApp(github);
     gitSVG.mount('#git');
-
     const instaSVG = createApp(insta);
     instaSVG.mount('#insta');
 
-} else if (page === 'about') {
-    navMenu();
-    fadeIn();
-} else if (page === 'contact') {
-    navMenu();
-    contactForm();
-    fadeIn();
-} else if (page === 'work') {
-    navMenu();
-    fadeIn();
 } else if (page === 'case_file') {
     navMenu();
-    fadeIn();
     videoPlayer();
-} else if (page === 'login') {
-    navMenu();
-} else if (page === 'dashboard') {
-    navMenu();
-} else if (page === 'editor') {
-    navMenu();
 }
+
+   // Watch for Vue rendering
+    const observer = new MutationObserver(() => {
+        const appElement = document.getElementById('app');
+        if (appElement && appElement.children.length > 0) {
+            observer.disconnect();
+            initializePageModules();
+        }
+    });
+
+    observer.observe(document.getElementById('app'), {
+        childList: true,
+        subtree: true,
+    });
+
+    // Timeout fallback
+    setTimeout(() => {
+        observer.disconnect();
+        initializePageModules();
+    }, 500);
+
+// } else if (page === 'about') {
+//     navMenu();
+//     fadeIn();
+// } else if (page === 'contact') {
+//     navMenu();
+//     contactForm();
+//     fadeIn();
+// } else if (page === 'work') {
+//     navMenu();
+//     fadeIn();
+
+// } else if (page === 'login') {
+//     navMenu();
+// } else if (page === 'dashboard') {
+//     navMenu();
+// } else if (page === 'editor') {
+//     navMenu();
+// }
+
+

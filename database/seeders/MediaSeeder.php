@@ -32,8 +32,8 @@ class MediaSeeder extends Seeder
         'prop_caption' => 'we started with sketches and idea concepts, and built out a style guide, logo and branding. we designed the logo in adobe illustrator, and modeled some products in Cimena4d.',
         'work_ex' => 'facebook-image-1.jpg',
         'work_caption' => 'from there me and my group member organized a photoshoot where we acted as the models, and we took the assets we made for the project and made advertisements in photoshop.',
-        'product_ex' => 'Lozon_ramona_earbuds_ad.mp4',
-        'product_caption' => 'ramona_cassidy_makeup_assignment_pt2_video.mp4',
+        'product_ex' => 'ramona_cassidy_makeup_assignment_pt2_video.mp4',
+        'product_caption' => 'we then made a video using rendered 3d scenes and video that we filmed during the photoshoot, and organized it into a quick commercial.',
         ]);
 
         //industry night website

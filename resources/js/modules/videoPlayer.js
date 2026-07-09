@@ -9,6 +9,16 @@ export function videoPlayer() {
   const volumeSlider = document.querySelector("#change-vol");
   const fullScreen = document.querySelector("#full-screen");
   
+  if (!player || !playerCon) {
+    console.warn('Video player elements not found');
+    return;
+  }
+
+  if (!videoControls || !playButton || !pauseButton || !stopButton || !volumeSlider || !fullScreen) {
+    console.warn('Some video control elements not found');
+    return;
+  }
+
   player.controls = false;
   videoControls.classList.remove('hidden');
 
