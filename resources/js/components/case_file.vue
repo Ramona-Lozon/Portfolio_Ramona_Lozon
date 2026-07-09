@@ -13,51 +13,66 @@
     <div v-else>
       <!-- Title -->
       <div>
-        <h3 class="text main-title fadeIn" id="cf-main-title">
+        <h3 class="text main-title" id="cf-main-title">
           {{ caseFile.project }}
         </h3>
       </div>
 
       <!-- Proposition -->
-      <div class="case-file-text-con fadeIn">
+      <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-prop">
           {{ caseFile.proposition }}
         </p>
       </div>
 
       <!-- Proposition Image -->
-      <div v-if="media && media.prop_ex" class="case-file-image fadeIn" id="cf-prop-ex">
+      <div v-if="media && media.prop_ex" class="case-file-image" id="cf-prop-ex">
         <img :src="`/images/${media.prop_ex}`" :alt="`${caseFile.project} proposition`">
       </div>
 
-      <div v-if="media && media.prop_caption" class="case-file-text-con fadeIn">
+      <div v-if="media && media.prop_caption" class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-prop-caption">
           {{ media.prop_caption }}
         </p>
       </div>
 
       <!-- Deliverables -->
-      <div class="case-file-text-con fadeIn">
+      <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-deliverables">
           {{ caseFile.deliverables }}
         </p>
       </div>
 
       <!-- Work Image -->
-      <div v-if="media && media.work_ex" class="case-file-image fadeIn" id="cf-work-ex">
+      <div v-if="media && media.work_ex" class="case-file-image" id="cf-work-ex">
         <img :src="`/images/${media.work_ex}`" :alt="`${caseFile.project} work`">
       </div>
 
-      <div v-if="media && media.work_caption" class="case-file-text-con fadeIn">
+      <div v-if="media && media.work_caption" class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-work-caption">
           {{ media.work_caption }}
         </p>
       </div>
 
       <!-- Product/Video -->
-      <div v-if="media && media.product_ex" class="case-file-image fadeIn" id="cf-media-image">
+      <div v-if="media && media.product_ex" class="case-file-image" id="cf-media-image">
+        
         <div id="player-container">
-          <video 
+
+<video 
+  v-if="isVideo(media.product_ex)"
+  muted 
+  class="video-player" 
+  controls 
+  preload="metadata" 
+  poster="../images/logo.svg" 
+  id="video"
+>
+  <source :src="`/video/${media.product_ex}`" type="video/mp4">
+  <p>Your browser does not support the video tag.</p>
+</video>
+
+          <!-- <video 
             v-if="isVideo(media.product_ex)"
             muted 
             class="video-player" 
@@ -68,7 +83,9 @@
           >
             <source :src="`/video/${media.product_ex}`" type="video/mp4">
             <p>Your browser does not support the video tag.</p>
-          </video>
+          </video> -->
+
+
           <img 
             v-else
             :src="`/images/${media.product_ex}`" 
@@ -77,22 +94,22 @@
         </div>
       </div>
 
-      <div v-if="media && media.product_caption" class="case-file-text-con fadeIn">
+      <div v-if="media && media.product_caption" class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-prod-caption">
           {{ media.product_caption }}
         </p>
       </div>
 
       <!-- Outcome -->
-      <div class="case-file-text-con fadeIn">
+      <div class="case-file-text-con">
         <p class="text info_text case-file-text" id="cf-outcome">
           {{ caseFile.outcome }}
         </p>
       </div>
 
       <!-- Back Button -->
-      <div class="case-file-text-con fadeIn">
-        <router-link to="/home" class="button">Back to Work</router-link>
+      <div class="case-file-text-con">
+        <a href="/home" class="button">Back to Work</a>
       </div>
     </div>
   </section>

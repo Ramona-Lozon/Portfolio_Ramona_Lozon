@@ -20,14 +20,14 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
     <script>gsap.registerPlugin(ScrollTrigger);</script>
-    <script type="module">import { fadeIn } from "./js/modules/fadeIn.js";fadeIn();</script>
+    <!-- <script type="module">import { fadeIn } from "./js/modules/fadeIn.js";fadeIn();</script> -->
 </head>
 
 <body data-page="case_file">
 
 <header>
     <nav>
-        <div class="logo-con"><img id="logo" img src="images/logo-colour-noText.svg" alt="logo">
+        <div class="logo-con"><img id="logo" img src="../images/logo-colour-noText.svg" alt="logo">
             <div class="menu-con">
                 <ul class="hamburger-dropdown">
                     <li class="hover-item"><a class="button" href="{{ route('home') }}">Home</a></li>
@@ -42,7 +42,7 @@
 
 <main>
 
-<div class="container">
+<div class="container" id="app">
     <case-file :id="{{ $id }}"></case-file>
 </div>
 
