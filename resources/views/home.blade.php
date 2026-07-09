@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
     <script>gsap.registerPlugin(ScrollTrigger);</script>
-    <script type="module">import { fadeIn } from "./js/modules/fadeIn.js";fadeIn();</script>
+    <!-- <script type="module">import { fadeIn } from "./js/modules/fadeIn.js";fadeIn();</script> -->
 </head>
 
 <body data-page="home">
@@ -60,7 +60,12 @@
     </section>
 
     <!-- case file list -->
-    <section id="my-work">
+
+<div class="container" id="app">
+    <case-file-list></case-file-list>
+</div>
+
+    <!-- <section id="my-work">
 
             <div class="title-con">
                 <h3 class="text title-text fadeIn">My Work</h3>
@@ -117,7 +122,7 @@
             <img class="work-image" src="{{ asset('images\placeholder-images-01.jpg') }}">
         </div>
 
-        </article>
+        </article> -->
 
     </section>
 

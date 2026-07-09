@@ -3,18 +3,9 @@
 <head>
     <meta charset="UTF-8">
 
-        <script type="importmap">
-      {
-        "imports": {
-          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-        }
-      }
-    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramona Lozon</title>
-
-    <script>window.case_file = @json($case_file);</script>
 
     @vite(['resources/css/main.css', 'resources/css/grid.css', 'resources/js/main.js'])
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
@@ -51,13 +42,9 @@
 
 <main>
 
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
-    <case-file></case-file>
+    <case-file :id="{{ $id }}"></case-file>
 </div>
-@endsection
 
 </main>
 <footer></footer>

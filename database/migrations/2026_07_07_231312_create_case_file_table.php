@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('case_file', function (Blueprint $table) {
             $table->id();
-            $table->project();
-            $table->proposition();
-            $table->deliverables();
-            $table->outcome();
+            $table->string('project', 250);
+            $table->string('proposition', 1500);
+            $table->string('deliverables', 1500);
+            $table->string('outcome', 1500);
             $table->timestamps();
         });
     }

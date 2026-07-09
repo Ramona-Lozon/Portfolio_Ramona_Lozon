@@ -9,7 +9,8 @@ class Media extends Model
 {
     protected $table = 'media';
     protected $fillable = [
-        'hero',
+        'case_file_id',
+        'Hero',
         'prop_ex',
         'prop_caption',
         'work_ex',
@@ -24,6 +25,6 @@ class Media extends Model
      */
     public function caseFile(): BelongsTo
     {
-        return $this->belongsTo(CaseFile::class);
+        return $this->belongsTo(CaseFile::class, 'case_file_id');
     }
 }

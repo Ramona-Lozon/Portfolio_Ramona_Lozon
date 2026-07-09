@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\CaseFile;
 use Illuminate\Http\JsonResponse;
 
@@ -13,15 +12,32 @@ class CaseFileController extends Controller
      */
     public function index(): JsonResponse
     {
-        $caseFiles = CaseFile::with('Media')->get();
+        $caseFiles = CaseFile::with('media')->get();
         return response()->json(['data' => $caseFiles]);
+    }
+
+    /**
+     * Get a single case file by ID
+     */
+    public function detail($id): JsonResponse
+    {
+        $caseFile = CaseFile::with('media')->findOrFail($id);
+        return response()->json(['data' => $caseFile]);
     }
 
     /**
      * Display the case file page (Blade view)
      */
-    public function show()
+    public function list()
     {
-        return view('case_file');
+        return view('home');
+    }
+
+    /**
+     * Display the case file detail page (Blade view)
+     */
+    public function show($id)
+    {
+        return view('case_file', ['id' => $id]);
     }
 }

@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class CaseFile extends Model
 {
-    protected $table = 'case_files';
+    protected $table = 'case_file';
     protected $fillable = [
         'project',
         'proposition',
@@ -19,8 +19,8 @@ class CaseFile extends Model
     /**
      * A case file has many media items
      */
-    public function media(): HasMany
+    public function media(): HasOne
     {
-        return $this->hasMany(Media::class);
+        return $this->hasOne(Media::class, 'case_file_id');
     }
 }
