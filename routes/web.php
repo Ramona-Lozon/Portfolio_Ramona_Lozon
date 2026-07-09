@@ -9,16 +9,13 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [CaseFileController::class, 'list'])->name('home');
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-Route::get('/work', function () {
-    return view('work');
-})->name('work');
+
+Route::get('/about', function () {return view('about');})->name('about');
+Route::get('/work', function () {return view('work');})->name('work');
+Route::get('/case-files', [CaseFileController::class, 'index']);
 Route::get('/case-file/{id}', [CaseFileController::class, 'show'])->name('case-file.show');
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+
+Route::get('/contact', function () {return view('contact');})->name('contact');
 
 
 // Route::get('/home', function () {

@@ -13,7 +13,7 @@
     </div>
 
     <div v-else class="case-files-container">
-      <article 
+      <a :href="`/case-file/${caseFile.id}`" 
         v-for="caseFile in caseFiles" 
         :key="caseFile.id"
         class="case-file-slug breakpoint-con"
@@ -25,12 +25,6 @@
           <p class="text body-text">
             {{ caseFile.proposition }}
           </p>
-          <router-link 
-            :to="`/case-file/${caseFile.id}`" 
-            class="button case-file-link"
-          >
-            View Details
-          </router-link>
         </div>
 
         <div class="breakpoint-item">
@@ -47,7 +41,7 @@
             alt="placeholder image"
           >
         </div>
-      </article>
+      </a>
     </div>
   </section>
 </template>
@@ -71,7 +65,7 @@ export default defineComponent({
     async fetchCaseFiles() {
       try {
         this.loading = true;
-        const response = await fetch('/api/case-files');
+        const response = await fetch('/case-files');
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

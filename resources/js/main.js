@@ -1,9 +1,7 @@
-
-//import './bootstrap';
+import { createApp } from 'vue';
 import linkedIn from './components/linkedIn.vue';
 import insta from './components/insta.vue';
 import github from './components/github.vue';
-import { createApp } from 'vue';
 import CaseFile from './components/case_file.vue';
 import CaseFileList from './components/case_file_list.vue';
 import { navMenu } from "./modules/nav.js"; 
@@ -21,10 +19,15 @@ app.component('case-file', CaseFile);
 app.component('case-file-list', CaseFileList);
 
 app.mount('#app');
+setTimeout(() => {
+    fadeIn();
+    if (window.gsap && window.gsap.ScrollTrigger) {
+        gsap.ScrollTrigger.refresh();
+    }
+}, 0);
 
 if (page === 'home') {
     indexAnimation();
-    fadeIn();
 
     const linkedInSVG = createApp(linkedIn);
     linkedInSVG.mount('#linked-in');

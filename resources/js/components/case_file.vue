@@ -124,7 +124,7 @@ export default defineComponent({
     async fetchCaseFile() {
       try {
         this.loading = true;
-        const response = await fetch(`/api/case-files/${this.id}`);
+        const response = await fetch(`/case-files/${this.id}`);
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

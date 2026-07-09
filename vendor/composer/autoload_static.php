@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
+class ComposerStaticInit9e0c06cf6070e45441aff7fcac3828e4
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
@@ -539,9 +539,14 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\CaseFileController' => __DIR__ . '/../..' . '/app/Http/Controllers/CaseFileController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\MediaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MediaController.php',
+        'App\\Models\\CaseFile' => __DIR__ . '/../..' . '/app/Models/CaseFile.php',
+        'App\\Models\\Media' => __DIR__ . '/../..' . '/app/Models/Media.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -672,7 +677,9 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\CaseFileSeeder' => __DIR__ . '/../..' . '/database/seeders/CaseFileSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\MediaSeeder' => __DIR__ . '/../..' . '/database/seeders/MediaSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
@@ -1444,6 +1451,7 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
         'GuzzleHttp\\MessageFormatter' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/MessageFormatter.php',
         'GuzzleHttp\\MessageFormatterInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/MessageFormatterInterface.php',
         'GuzzleHttp\\Middleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Middleware.php',
+        'GuzzleHttp\\Multiplexing' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Multiplexing.php',
         'GuzzleHttp\\Pool' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Pool.php',
         'GuzzleHttp\\PrepareBodyMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php',
         'GuzzleHttp\\Promise\\AggregateException' => __DIR__ . '/..' . '/guzzlehttp/promises/src/AggregateException.php',
@@ -1741,6 +1749,7 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
         'Illuminate\\Console\\BufferedConsoleOutput' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/BufferedConsoleOutput.php',
         'Illuminate\\Console\\CacheCommandMutex' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/CacheCommandMutex.php',
         'Illuminate\\Console\\Command' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Command.php',
+        'Illuminate\\Console\\CommandInput' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/CommandInput.php',
         'Illuminate\\Console\\CommandMutex' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/CommandMutex.php',
         'Illuminate\\Console\\Concerns\\CallsCommands' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php',
         'Illuminate\\Console\\Concerns\\ConfiguresPrompts' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/ConfiguresPrompts.php',
@@ -2283,6 +2292,9 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
         'Illuminate\\Foundation\\Bus\\PendingDispatch' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Bus/PendingDispatch.php',
         'Illuminate\\Foundation\\CacheBasedMaintenanceMode' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/CacheBasedMaintenanceMode.php',
         'Illuminate\\Foundation\\Cloud' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud.php',
+        'Illuminate\\Foundation\\Cloud\\AgentAwareLostConnectionDetector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud/AgentAwareLostConnectionDetector.php',
+        'Illuminate\\Foundation\\Cloud\\AgentUnreachableException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud/AgentUnreachableException.php',
+        'Illuminate\\Foundation\\Cloud\\CloudJob' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud/CloudJob.php',
         'Illuminate\\Foundation\\Cloud\\Events' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud/Events.php',
         'Illuminate\\Foundation\\Cloud\\FailedJobProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud/FailedJobProvider.php',
         'Illuminate\\Foundation\\Cloud\\JsonFormatter' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud/JsonFormatter.php',
@@ -2742,6 +2754,7 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
         'Illuminate\\Queue\\Middleware\\FailOnException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/FailOnException.php',
         'Illuminate\\Queue\\Middleware\\RateLimited' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/RateLimited.php',
         'Illuminate\\Queue\\Middleware\\RateLimitedWithRedis' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/RateLimitedWithRedis.php',
+        'Illuminate\\Queue\\Middleware\\Release' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/Release.php',
         'Illuminate\\Queue\\Middleware\\Skip' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/Skip.php',
         'Illuminate\\Queue\\Middleware\\SkipIfBatchCancelled' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/SkipIfBatchCancelled.php',
         'Illuminate\\Queue\\Middleware\\ThrottlesExceptions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php',
@@ -5127,6 +5140,7 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
         'PhpParser\\Lexer\\TokenEmulator\\AttributeEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/AttributeEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\EnumTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/EnumTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\ExplicitOctalEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ExplicitOctalEmulator.php',
+        'PhpParser\\Lexer\\TokenEmulator\\FnTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/FnTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\KeywordEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/KeywordEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\MatchTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/MatchTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\NullsafeTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NullsafeTokenEmulator.php',
@@ -7232,9 +7246,9 @@ class ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit12a93e9ee58f99b3ee9ac9b5d35d65e5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9e0c06cf6070e45441aff7fcac3828e4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9e0c06cf6070e45441aff7fcac3828e4::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit9e0c06cf6070e45441aff7fcac3828e4::$classMap;
 
         }, null, ClassLoader::class);
     }
