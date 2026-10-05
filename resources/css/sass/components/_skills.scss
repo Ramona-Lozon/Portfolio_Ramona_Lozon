@@ -2,6 +2,7 @@
 
 #skills-section {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     margin: 50px 0px 20px 0px;
@@ -9,10 +10,10 @@
 
 .skills-box {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     justify-content: center;
+    width: 80vw;
     margin: 5px auto 5px auto;
-    width: auto;
 }
 
 .icon-box {
@@ -24,10 +25,13 @@
 
 .icon-card {
     display: flex;
+    background-color: a.$darkRed-color;
+    border-radius: 15px;
     flex-direction: column;
     width: 120px;
     height: 150px;
-    margin: 0px auto 0px auto;
+    margin: 10px;
+    padding: 5px 0px;
     align-items: center;
     justify-content: center;
     img {
@@ -36,7 +40,7 @@
         margin: auto;
     }
     span {
-        color: a.$paleBlue-color;
+        color: a.$lightPink-color;
         margin-top: auto;
         text-align: center;
     }

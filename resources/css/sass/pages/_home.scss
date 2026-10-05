@@ -127,11 +127,13 @@
 
 .work-image {
     width: 80vw;
+            border-radius: 15px;
 }
 
 .case-file-slug {
   text-decoration: none;
   position: relative;
+    border-radius: 15px;
   background: linear-gradient(120deg, a.$pink-color 0%, a.$hotPink-color 95%);
   background-repeat: no-repeat;
   background-size: 0% 100%;

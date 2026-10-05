@@ -355,6 +355,7 @@ body {
 }
 #skills-section {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin: 50px 0px 20px 0px;
@@ -362,10 +363,9 @@ body {
 
 .skills-box {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  width: 80vw;
   margin: 5px auto 5px auto;
-  width: auto;
 }
 
 .icon-box {
@@ -377,10 +377,13 @@ body {
 
 .icon-card {
   display: flex;
+  background-color: #880d1e;
+  border-radius: 15px;
   flex-direction: column;
   width: 120px;
   height: 150px;
-  margin: 0px auto 0px auto;
+  margin: 10px;
+  padding: 5px 0px;
   align-items: center;
   justify-content: center;
 }
@@ -390,7 +393,7 @@ body {
   margin: auto;
 }
 .icon-card span {
-  color: #cbeef3;
+  color: #f49cbb;
   margin-top: auto;
   text-align: center;
 }
@@ -669,7 +672,8 @@ button {
 /*********** Baseline, reset styles ***********/
 input[type=range] {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   background: transparent;
   cursor: pointer;
   width: 15rem;
@@ -1078,11 +1082,13 @@ input[type=range]:focus::-moz-range-thumb {
 
 .work-image {
   width: 80vw;
+  border-radius: 15px;
 }
 
 .case-file-slug {
   text-decoration: none;
   position: relative;
+  border-radius: 15px;
   background: linear-gradient(120deg, #f26a8d 0%, #dd2d4a 95%);
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -1132,13 +1138,16 @@ input[type=range]:focus::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 15px;
   align-items: center;
   margin: 10px 0px 10px 0px;
 }
 .case-file-image img {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: 80vw;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: solid 2px #f26a8d;
   border-radius: 15px;
 }
@@ -1411,7 +1420,8 @@ input[type=range]:focus::-moz-range-thumb {
   display: flex;
   position: relative;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: black;
   border-radius: 15px;
   border: solid 3px #dd2d4a;
@@ -1449,4 +1459,4 @@ input[type=range]:focus::-moz-range-thumb {
     width: 700px;
     height: 340px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
