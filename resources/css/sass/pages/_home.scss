@@ -125,18 +125,28 @@
 //     height: fit-content;
 // }
 
+
+// #app {
+//     min-height: 1602px;
+// }
+
 .work-image {
     width: 80vw;
+    aspect-ratio: 16 / 9;  
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
 }
 
 .case-file-slug {
-  text-decoration: none;
-  position: relative;
-  background: linear-gradient(120deg, a.$pink-color 0%, a.$hotPink-color 95%);
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-position: 100% 100%;
-  transition: all 0.1s ease-in;
+    text-decoration: none;
+    position: relative;
+    border-radius: 15px;
+    background: linear-gradient(120deg, a.$pink-color 0%, a.$hotPink-color 95%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: 100% 100%;
+//   transition: all 0.1s ease-in;
 }
 
 .case-file-slug:hover {

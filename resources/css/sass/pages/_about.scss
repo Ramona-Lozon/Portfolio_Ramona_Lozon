@@ -21,15 +21,13 @@
     align-items: center;
     
 #selfie {
-    display: flex;
+    object-fit: cover;
+    display: block;
     width: 80vw;
-    flex-direction: column;
-    align-items: center;
+    aspect-ratio: 9 / 14;
     border-radius: 25px;
     box-shadow: 15px 15px 0px a.$hotPink-color;
     border: solid 3px a.$hotPink-color;
-    transform: translateX(-15px);
-    transform: translateY(-15px);
 
 }
 

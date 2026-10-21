@@ -16,7 +16,7 @@
       <a :href="`/case-file/${caseFile.id}`" 
         v-for="caseFile in caseFiles" 
         :key="caseFile.id"
-        class="case-file-slug breakpoint-con"
+        class="case-file-slug breakpoint-con fade-item"
       >
         <div class="breakpoint-group">
           <h3 class="text subtitle-text">
@@ -46,6 +46,54 @@
   </section>
 </template>
 
+
+<script>
+import { defineComponent } from 'vue';
+import { fadeIn } from '../modules/fadeIn'; // adjust the path
+
+export default defineComponent({
+  name: 'CaseFileList',
+  data() {
+    return {
+      caseFiles: [],
+      loading: true,
+      error: null,
+      gsapCtx: null,
+    };
+  },
+async mounted() {
+  await this.fetchCaseFiles();
+  await this.$nextTick();
+  this.gsapCtx = fadeIn(this.$el, '.fade-item');
+  ScrollTrigger.refresh(); // recalculates every trigger, including the static ones below #app
+},
+  beforeUnmount() {
+    this.gsapCtx?.revert(); // kills the triggers when the component goes away
+  },
+  methods: {
+async fetchCaseFiles() {
+  console.log('fetch starting');
+  try {
+    this.loading = true;
+    const response = await fetch('/case-files');
+    console.log('response', response.status);
+    const data = await response.json();
+    console.log('data', data);
+    this.caseFiles = data.data;
+    this.error = null;
+  } catch (error) {
+    console.error('fetch failed', error);
+    this.error = error.message;
+  } finally {
+    this.loading = false;
+    console.log('loading is now', this.loading);
+  }
+},
+  },
+});
+</script>
+
+<!-- 
 <script>
 import { defineComponent } from 'vue';
 
@@ -83,4 +131,4 @@ export default defineComponent({
     },
   },
 });
-</script>
+</script> -->
