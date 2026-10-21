@@ -1,11 +1,12 @@
 import { createApp} from 'vue';
+import { ScrollTrigger} from 'gsap/ScrollTrigger';
 import linkedIn from './components/linkedIn.vue';
 import insta from './components/insta.vue';
 import github from './components/github.vue';
 import CaseFile from './components/case_file.vue';
 import CaseFileList from './components/case_file_list.vue';
 import { navMenu } from "./modules/nav.js"; 
-import { contactForm } from "./modules/contactForm.js";
+//import { contactForm } from "./modules/contactForm.js";
 import { indexAnimation } from "./modules/index-animation.js"; 
 import { fadeIn } from "./modules/fadeIn.js";
 import { videoPlayer } from "./modules/videoPlayer.js";
@@ -19,17 +20,17 @@ app.component('case-file-list', CaseFileList);
 app.component('case-file', CaseFile);
 app.mount('#app');
     // Wait for Vue to render, then initialize GSAP
-    function initializePageModules() {
-        console.log('Initializing Page Modules...');
-        fadeIn();
-        if (window.gsap && window.gsap.ScrollTrigger) {
-            gsap.ScrollTrigger.refresh();
-        }
-    }
+    // function initializePageModules() {
+    //     console.log('Initializing Page Modules...');
+    //     fadeIn();
+    //     if (window.gsap && window.gsap.ScrollTrigger) {
+    //         gsap.ScrollTrigger.refresh();
+    //     }
+    // }
 
 
 if (page === 'home') {
-
+window.addEventListener('load', () => ScrollTrigger.refresh());
     indexAnimation();
     const linkedInSVG = createApp(linkedIn);
     linkedInSVG.mount('#linked-in');
@@ -43,25 +44,27 @@ if (page === 'home') {
     videoPlayer();
 }
 
-   // Watch for Vue rendering
-    const observer = new MutationObserver(() => {
-        const appElement = document.getElementById('app');
-        if (appElement && appElement.children.length > 0) {
-            observer.disconnect();
-            initializePageModules();
-        }
-    });
+fadeIn(document, '.fade-static');
 
-    observer.observe(document.getElementById('app'), {
-        childList: true,
-        subtree: true,
-    });
+//    // Watch for Vue rendering
+//     const observer = new MutationObserver(() => {
+//         const appElement = document.getElementById('app');
+//         if (appElement && appElement.children.length > 0) {
+//             observer.disconnect();
+//             initializePageModules();
+//         }
+//     });
+
+//     observer.observe(document.getElementById('app'), {
+//         childList: true,
+//         subtree: true,
+//     });
 
     // Timeout fallback
-    setTimeout(() => {
-        observer.disconnect();
-        initializePageModules();
-    }, 500);
+    // setTimeout(() => {
+    //     observer.disconnect();
+    //     initializePageModules();
+    // }, 500);
 
 // } else if (page === 'about') {
 //     navMenu();
