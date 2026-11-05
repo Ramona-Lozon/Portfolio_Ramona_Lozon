@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export APP_PATH=/home/thede519_txtp126/repositories/Portfolio_Ramona_Lozon
+    - export APP_PATH=/home/thede519/repositories/Portfolio_Ramona_Lozon
     - export PHP=/opt/cpanel/ea-php83/root/usr/bin/php
     - export COMPOSER=/opt/cpanel/composer/bin/composer
     - /bin/mkdir -p $APP_PATH
