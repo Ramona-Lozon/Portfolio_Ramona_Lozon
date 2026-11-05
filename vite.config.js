@@ -3,10 +3,14 @@ import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-    server: {
-        host: '127.0.0.1',
-        port: 5173
+  server: {
+    host: '0.0.0.0',
+    cors: true,
+    hmr: {
+      //be sure this is set to your LAN's ip address when running a local server
+      host: '192.168.2.14',
     },
+  },
     resolve: {
         alias: {
             'vue': 'vue/dist/vue.esm-bundler.js',

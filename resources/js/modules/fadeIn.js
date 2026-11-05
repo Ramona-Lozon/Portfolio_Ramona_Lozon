@@ -29,7 +29,7 @@ export function fadeIn(scope) {
         scrollTrigger: {
           trigger: element,
           start: 'top 85%',
-          markers: true,
+          markers: false,
         },
       });
     });

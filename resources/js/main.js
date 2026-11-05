@@ -6,7 +6,7 @@ import github from './components/github.vue';
 import CaseFile from './components/case_file.vue';
 import CaseFileList from './components/case_file_list.vue';
 import { navMenu } from "./modules/nav.js"; 
-//import { contactForm } from "./modules/contactForm.js";
+import { contactForm } from "./modules/contactForm.js";
 import { indexAnimation } from "./modules/index-animation.js"; 
 import { fadeIn } from "./modules/fadeIn.js";
 import { videoPlayer } from "./modules/videoPlayer.js";
@@ -32,6 +32,7 @@ app.mount('#app');
 if (page === 'home') {
 window.addEventListener('load', () => ScrollTrigger.refresh());
     indexAnimation();
+    contactForm();
     const linkedInSVG = createApp(linkedIn);
     linkedInSVG.mount('#linked-in');
     const gitSVG = createApp(github);
