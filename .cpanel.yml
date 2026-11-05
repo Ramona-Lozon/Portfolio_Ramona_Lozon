@@ -1,5 +1,13 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/youruser/public_html/
-    - /bin/rsync -a --delete --exclude='.git' --exclude='.cpanel.yml' ./ $DEPLOYPATH
+    - export APP_PATH=/home/youruser/laravel_app
+    - export PHP=/opt/cpanel/ea-php83/root/usr/bin/php
+    - export COMPOSER=/opt/cpanel/composer/bin/composer
+    - /bin/mkdir -p $APP_PATH
+    - /bin/rsync -a --exclude='.git' --exclude='.cpanel.yml' --exclude='.env' --exclude='node_modules' ./ $APP_PATH/
+    - $PHP $COMPOSER install --no-dev --optimize-autoloader --no-interaction --working-dir=$APP_PATH
+    - $PHP $APP_PATH/artisan migrate --force
+    - $PHP $APP_PATH/artisan config:cache
+    - $PHP $APP_PATH/artisan route:cache
+    - $PHP $APP_PATH/artisan view:cache
