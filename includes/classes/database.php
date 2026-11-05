@@ -42,22 +42,22 @@ class database
     public function getConfig()
     {
         //web
-        // return [
-        //     'username' => 'thede519_txtp126',
-        //     'password' => 'b1lly-g0@t',
-        //     'host' => 'localhost',
-        //     'database' => 'thede519_portfolio_case_file',
-        //     'port' => '3306'
-        // ];
-
-        //local
         return [
-            'username' => 'root',
-            'password' => '',
+            'username' => 'thede519_txtp126',
+            'password' => 'b1lly-g0@t',
             'host' => 'localhost',
-            'database' => 'portfolio_case_file',
+            'database' => 'thede519_portfolio_case_file',
             'port' => '3306'
         ];
+
+        //local
+        // return [
+        //     'username' => 'root',
+        //     'password' => '',
+        //     'host' => 'localhost',
+        //     'database' => 'portfolio_case_file',
+        //     'port' => '3306'
+        // ];
     }
 
     public function getDsn()
