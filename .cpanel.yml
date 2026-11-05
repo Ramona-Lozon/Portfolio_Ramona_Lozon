@@ -2,10 +2,9 @@
 deployment:
   tasks:
     - export APP_PATH=/home/thede519/repositories/Portfolio_Ramona_Lozon
-    - export PHP=/opt/cpanel/ea-php83/root/usr/bin/php
+    - export PHP=/usr/local/bin/php
     - export COMPOSER=/opt/cpanel/composer/bin/composer
-    - /bin/mkdir -p $APP_PATH
-    - /bin/rsync -a --exclude='.git' --exclude='.cpanel.yml' --exclude='.env' --exclude='node_modules' ./ $APP_PATH/
+
     - $PHP $COMPOSER install --no-dev --optimize-autoloader --no-interaction --working-dir=$APP_PATH
     - $PHP $APP_PATH/artisan migrate --force
     - $PHP $APP_PATH/artisan config:cache
