@@ -3,9 +3,12 @@
 use App\Http\Controllers\CaseFileController;
 use Illuminate\Support\Facades\Route;
 
+
+
 // Single-page site: everything lives in the home view
 Route::get('/', [CaseFileController::class, 'list'])->name('home');
 Route::redirect('/home', '/');
+Route::get('/case-file/{id}', [CaseFileController::class, 'show'])->name('case-file.show');
 
 // JSON endpoints the Vue components fetch
 Route::get('/case-files', [CaseFileController::class, 'index']);
