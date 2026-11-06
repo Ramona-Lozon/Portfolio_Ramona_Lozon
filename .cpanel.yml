@@ -3,12 +3,13 @@ deployment:
   tasks:
     - export APP_PATH=/home/thede519/repositories/Portfolio_Ramona_Lozon
     - export PHP=/usr/local/bin/php
-    - export COMPOSER=/home/thede519/composer.phar
+    - export COMPOSER_PHAR=/home/thede519/composer.phar
     - export COMPOSER_HOME=/home/thede519/.composer
     - export COMPOSER_MEMORY_LIMIT=-1
 
     - $PHP -v
-    - $PHP $COMPOSER install --no-dev --optimize-autoloader --no-interaction --working-dir=$APP_PATH 2>&1
+    - $PHP $COMPOSER_PHAR --version 2>&1
+    - $PHP $COMPOSER_PHAR install --no-dev --optimize-autoloader --no-interaction --working-dir=$APP_PATH 2>&1
 
     - chmod -R ug+rwX $APP_PATH/storage $APP_PATH/bootstrap/cache
     - $PHP -d display_errors=1 -d error_reporting=-1 $APP_PATH/artisan migrate --force 2>&1
