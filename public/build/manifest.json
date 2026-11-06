@@ -1,0 +1,41 @@
+{
+  "public/images/RL Design logo-03.svg": {
+    "file": "assets/RL Design logo-03-Deo-qipH.svg",
+    "src": "public/images/RL Design logo-03.svg"
+  },
+  "public/images/placeholder-images-01.jpg": {
+    "file": "assets/placeholder-images-01-B3ZteW-9.jpg",
+    "src": "public/images/placeholder-images-01.jpg"
+  },
+  "resources/css/grid.css": {
+    "file": "assets/grid-B5F19cSp.css",
+    "name": "grid",
+    "names": [
+      "grid.css"
+    ],
+    "src": "resources/css/grid.css",
+    "isEntry": true
+  },
+  "resources/css/main.css": {
+    "file": "assets/main-CmsbjiED.css",
+    "name": "main",
+    "names": [
+      "main.css"
+    ],
+    "src": "resources/css/main.css",
+    "isEntry": true
+  },
+  "resources/js/main.js": {
+    "file": "assets/main-BpNFHOvw.js",
+    "name": "main",
+    "src": "resources/js/main.js",
+    "isEntry": true,
+    "css": [
+      "assets/main-DXFP4eIo.css"
+    ],
+    "assets": [
+      "assets/RL Design logo-03-Deo-qipH.svg",
+      "assets/placeholder-images-01-B3ZteW-9.jpg"
+    ]
+  }
+}

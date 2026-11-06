@@ -5,8 +5,17 @@ deployment:
     - export PHP=/usr/local/bin/php
     - export COMPOSER=/opt/cpanel/composer/bin/composer
 
+    # Dependencies (production only)
     - $PHP $COMPOSER install --no-dev --optimize-autoloader --no-interaction --working-dir=$APP_PATH
+
+    # Make sure Laravel can write logs, cache, sessions and compiled views
+    - chmod -R ug+rwX $APP_PATH/storage $APP_PATH/bootstrap/cache
+
+    # Database tables (add seeding by hand once, not on every deploy)
     - $PHP $APP_PATH/artisan migrate --force
+
+    # Rebuild caches
+    - $PHP $APP_PATH/artisan config:clear
     - $PHP $APP_PATH/artisan config:cache
     - $PHP $APP_PATH/artisan route:cache
     - $PHP $APP_PATH/artisan view:cache
