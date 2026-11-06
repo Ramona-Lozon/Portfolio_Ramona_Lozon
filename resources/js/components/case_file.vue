@@ -65,7 +65,7 @@
   class="video-player" 
   controls 
   preload="metadata" 
-  poster="../images/logo.svg" 
+  poster="../../../public/images/RL Design logo-03.svg"
   id="video"
 >
   <source :src="`/video/${media.product_ex}`" type="video/mp4">

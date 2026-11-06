@@ -37,7 +37,7 @@
           <img 
             v-else
             class="work-image" 
-            src="../public/images/placeholder-images-01.jpg"
+            src="../../../public/images/placeholder-images-01.jpg"
             alt="placeholder image"
           >
         </div>

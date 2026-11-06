@@ -83,7 +83,7 @@
             </div>
 
         </div class="breakpoint-item">
-            <img class="work-image" src="{{ asset('images\placeholder-images-01.jpg') }}">
+            <img class="work-image" src="{{ asset('images/placeholder-images-01.jpg') }}">
         </div>
         </article>
 
@@ -100,7 +100,7 @@
             </div>
 
         </div class="breakpoint-item">
-            <img class="work-image" src="{{ asset('images\placeholder-images-01.jpg') }}">
+            <img class="work-image" src="{{ asset('images/placeholder-images-01.jpg') }}">
         </div>
 
         </article>
@@ -118,7 +118,7 @@
             </div>
 
         </div class="breakpoint-item">
-            <img class="work-image" src="{{ asset('images\placeholder-images-01.jpg') }}">
+            <img class="work-image" src="{{ asset('images/placeholder-images-01.jpg') }}">
         </div>
 
         </article> -->
@@ -263,7 +263,7 @@
             <article id="contact-section">
                 <h3 class="text main-title fade-static" id="contactTitle">Contact</h3>
             <!--Buttons-->
-            <form class="input-form" id="contactForm" method="post" action="sendmail.php">
+            <form class="input-form" id="contactForm" method="post" action="../../includes/scripts/sendmail.php">
 
                 <label class="label text body-text" for="name">Name</label>
                 <input  class="form-box" 
