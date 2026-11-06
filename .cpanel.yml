@@ -13,6 +13,7 @@ deployment:
 
     - chmod -R ug+rwX $APP_PATH/storage $APP_PATH/bootstrap/cache
     - $PHP -d display_errors=1 -d error_reporting=-1 $APP_PATH/artisan migrate --force 2>&1
+    - $PHP $APP_PATH/artisan db:seed --force 2>&1
     - $PHP $APP_PATH/artisan config:clear
     - $PHP $APP_PATH/artisan config:cache
     - $PHP $APP_PATH/artisan route:cache
