@@ -31,9 +31,6 @@
             <div class="menu-con">
                 <ul class="hamburger-dropdown">
                     <li class="hover-item"><a class="button" href="{{ route('home') }}">Home</a></li>
-                    <!-- <li class="hover-item"><a class="button" href="{{ route('about') }}">About</a></li>
-                    <li class="hover-item"><a class="button" href="{{ route('work') }}">Work</a></li>
-                    <li class="hover-item"><a class="button" href="{{ route('contact') }}">Contact</a></li> -->
                 </ul>
             </div>
         </div>
