@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export APP_PATH=/home/thede519/repositories/Portfolio_Ramona_lozon
+    - export APP_PATH=/home/thede519/repositories/Portfolio_Ramona_Lozon
     - export PHP=/usr/local/bin/php
     - export COMPOSER_PHAR=/home/thede519/composer.phar
     - export COMPOSER_HOME=/home/thede519/.composer
