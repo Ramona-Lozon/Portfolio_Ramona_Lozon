@@ -4,16 +4,17 @@ deployment:
     - export APP_PATH=/home/thede519/repositories/Portfolio_Ramona_Lozon
     - export PHP=/usr/local/bin/php
 
-    # vendor/ is uploaded by hand, so Composer is skipped for now
+    # Diagnostics: shows CLI PHP version and loaded extensions in the deploy log
+    - $PHP -v
+    - $PHP -m 2>&1
 
     - chmod -R ug+rwX $APP_PATH/storage $APP_PATH/bootstrap/cache
-    - $PHP $APP_PATH/artisan migrate --force
+
+    # Force errors to print instead of exiting silently
+    - $PHP -d display_errors=1 -d error_reporting=-1 $APP_PATH/artisan migrate --force 2>&1
+
     - $PHP $APP_PATH/artisan config:clear
     - $PHP $APP_PATH/artisan config:cache
     - $PHP $APP_PATH/artisan route:cache
     - $PHP $APP_PATH/artisan view:cache
-
-    # Diagnostics: remove once the site works
-    - $PHP -v
-    - ls -la $APP_PATH/storage/logs $APP_PATH/bootstrap/cache
     - tail -n 40 $APP_PATH/storage/logs/laravel.log || true
