@@ -3,7 +3,7 @@
 use App\Http\Controllers\CaseFileController;
 use Illuminate\Support\Facades\Route;
 
-
+//example
 
 // Single-page site: everything lives in the home view
 Route::get('/', [CaseFileController::class, 'list'])->name('home');
