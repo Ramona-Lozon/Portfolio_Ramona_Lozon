@@ -28,17 +28,25 @@
         </div>
 
         <div class="breakpoint-item">
+          <!-- NEW: srcset/sizes let the browser pick mobile/tablet/desktop itself -->
           <img 
             v-if="caseFile.media && caseFile.media.Hero"
             class="work-image" 
-            :src="`/images/${caseFile.media.Hero}`"
+            :src="imgVariant(caseFile.media.Hero, 'desktop')"
+            :srcset="imgSrcset(caseFile.media.Hero)"
+            sizes="(min-width: 768px) 40vw, 80vw"
+            loading="lazy"
+            decoding="async"
             :alt="`${caseFile.project} hero image`"
+            @load="refreshTriggers"
+            @error="useOriginal($event, caseFile.media.Hero)"
           >
           <img 
             v-else
             class="work-image" 
             src="../../../public/images/placeholder-images-01.jpg"
             alt="placeholder image"
+            loading="lazy"
           >
         </div>
       </a>
@@ -51,6 +59,13 @@
 import { defineComponent } from 'vue';
 import { fadeIn } from '../modules/fadeIn'; // adjust the path
 
+// NEW: widths must match the actual pixel widths you export each version at
+const IMAGE_SIZES = {
+  mobile: 300,
+  tablet: 1000,
+  desktop: 1300,
+};
+
 export default defineComponent({
   name: 'CaseFileList',
   data() {
@@ -59,6 +74,7 @@ export default defineComponent({
       loading: true,
       error: null,
       gsapCtx: null,
+      refreshTimer: null, // NEW
     };
   },
 async mounted() {
@@ -69,8 +85,38 @@ async mounted() {
 },
   beforeUnmount() {
     this.gsapCtx?.revert(); // kills the triggers when the component goes away
+    clearTimeout(this.refreshTimer); // NEW
   },
   methods: {
+    // NEW: "earbuds-hero.jpg" + "mobile" -> "/images/earbuds-hero-mobile.jpg"
+    imgVariant(file, size) {
+      const dot = file.lastIndexOf('.');
+      return `/images/${file.slice(0, dot)}-${size}${file.slice(dot)}`;
+    },
+
+    // NEW: builds "…-mobile.jpg 640w, …-tablet.jpg 1024w, …-desktop.jpg 1600w"
+    imgSrcset(file) {
+      return Object.entries(IMAGE_SIZES)
+        .map(([size, width]) => `${this.imgVariant(file, size)} ${width}w`)
+        .join(', ');
+    },
+
+    // NEW: if a resized version doesn't exist yet, fall back to the original file
+    useOriginal(event, file) {
+      const img = event.target;
+      if (img.dataset.fallback) return; // only try once, avoids an error loop
+      img.dataset.fallback = 'true';
+      img.removeAttribute('srcset');
+      img.src = `/images/${file}`;
+    },
+
+    // NEW: lazy images change the page height as they load, which throws off
+    // ScrollTrigger's positions for everything below. Recalculate once they settle.
+    refreshTriggers() {
+      clearTimeout(this.refreshTimer);
+      this.refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 150);
+    },
+
 async fetchCaseFiles() {
   console.log('fetch starting');
   try {
@@ -92,43 +138,3 @@ async fetchCaseFiles() {
   },
 });
 </script>
-
-<!-- 
-<script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'CaseFileList',
-  data() {
-    return {
-      caseFiles: [],
-      loading: true,
-      error: null,
-    };
-  },
-  mounted() {
-    this.fetchCaseFiles();
-  },
-  methods: {
-    async fetchCaseFiles() {
-      try {
-        this.loading = true;
-        const response = await fetch('/case-files');
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        this.caseFiles = data.data;
-        this.error = null;
-      } catch (error) {
-        this.error = error.message;
-        console.error('Error fetching case files:', error);
-      } finally {
-        this.loading = false;
-      }
-    },
-  },
-});
-</script> -->
