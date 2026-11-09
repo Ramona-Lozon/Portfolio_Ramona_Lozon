@@ -177,6 +177,10 @@ body {
   animation: blink 1.2s steps(1) infinite;
 }
 
+.hover-item:hover .blink {
+  animation: none;
+}
+
 @keyframes blink {
   0%{opacity: 0;}
   50%{opacity: 1;}

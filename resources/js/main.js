@@ -10,6 +10,7 @@ import { contactForm } from "./modules/contactForm.js";
 import { indexAnimation } from "./modules/index-animation.js"; 
 import { fadeIn } from "./modules/fadeIn.js";
 import { videoPlayer } from "./modules/videoPlayer.js";
+import { typewriter } from "./modules/typewriter.js";
 
 
 const page = document.body.dataset.page;
@@ -27,8 +28,6 @@ app.mount('#app');
     //         gsap.ScrollTrigger.refresh();
     //     }
     // }
-
-
 if (page === 'home') {
 window.addEventListener('load', () => ScrollTrigger.refresh());
     indexAnimation();
@@ -39,6 +38,8 @@ window.addEventListener('load', () => ScrollTrigger.refresh());
     gitSVG.mount('#git');
     const instaSVG = createApp(insta);
     instaSVG.mount('#insta');
+    typewriter(document.querySelector('#hero-section'));
+    window.addEventListener('load', () => ScrollTrigger.refresh());
 
 } else if (page === 'case_file') {
     navMenu();

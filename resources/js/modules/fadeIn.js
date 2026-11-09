@@ -24,8 +24,8 @@ export function fadeIn(scope) {
     gsap.utils.toArray('.fade-item, .fade-static').forEach((element) => {
       gsap.fromTo(
         element, 
-        {opacity: 0, duration: 1, y: 10},
-        {opacity: 1, y:0,
+        {opacity: 0, duration: 1},
+        {opacity: 1,
         scrollTrigger: {
           trigger: element,
           start: 'top 85%',
