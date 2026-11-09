@@ -30,7 +30,7 @@
         
         <article id="index-name-box">
             <div class="text title-text" id="index-ramona" data-type>Ramona Lozon</div>
-            <h3 class="text subtitle-text" data-type>Junior Web Developer and Designer</h3>      
+            <h3 class="text subtitle-text" data-type>Web Developer and Designer</h3>      
 
             <article class="nav-box">
 
@@ -142,7 +142,12 @@
                         <p id="about-text" class="text info_text fade-static">
                                 Hi! I'm Ramona
                                 <br>I'm a Junior Front end develop and designer, I'm eager to make a splash in the industry and build connections.
-                                <br>I'm a creative and passionate individual who loves all things nerdy, from Dungeons & Dragons and tabletop role-playing games to sci-fi, fantasy, and post-apocalyptic fiction. My dedication to art and design drives me to explore creativity in every medium, whether it's graphic design or hands-on projects. I support LGBTQ rights and volunteer as a graphic designer for a local group, Queer Intersections. With years of professional experience across various roles, I bring punctuality, professionalism, and a strong work ethic to everything I do.
+                                
+                                <br>I'm a creative and passionate individual who loves all things nerdy, from Dungeons & Dragons and tabletop role-playing games to sci-fi, 
+                                fantasy, and post-apocalyptic fiction. My dedication 9to art and design drives me to explore creativity in every medium, 
+                                whether it's graphic design or hands-on projects. I support LGBTQ rights and volunteer as a graphic designer for a local group, 
+                                Queer Intersections. With years of professional experience across various roles, I bring punctuality, professionalism, 
+                                and a strong work ethic to everything I do.
                         </p>
                     </div>
                 </div>

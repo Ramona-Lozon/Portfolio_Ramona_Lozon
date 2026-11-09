@@ -8,7 +8,8 @@ export default defineConfig({
     cors: true,
     hmr: {
       //be sure this is set to your LAN's ip address when running a local server
-      host: '192.168.2.14',
+      //host: '192.168.2.14',
+      host: 'localhost',
     },
   },
     resolve: {

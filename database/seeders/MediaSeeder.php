@@ -16,7 +16,7 @@ class MediaSeeder extends Seeder
     {
         //earbuds site
         CaseFile::find(1)->media()->create([
-        'hero' => 'Earbuds-Retro-poster1.png',
+        'hero' => 'Earbuds-Retro-poster1.webp',
         'prop_ex' => 'earbuds-sketches.png',
         'prop_caption' => 'The first part of the design process was sketching out the earbuds and designing a logo and some branding options.',
         'work_ex' => 'Earbuds-Retro-poster2.png',
@@ -27,7 +27,7 @@ class MediaSeeder extends Seeder
 
         //seven makeup
         CaseFile::find(2)->media()->create([
-        'hero' => 'Seven_logo_full.png',
+        'hero' => 'Seven-logo.webp',
         'prop_ex' => 'Makeup_project_sketches.png',
         'prop_caption' => 'we started with sketches and idea concepts, and built out a style guide, logo and branding. we designed the logo in adobe illustrator, and modeled some products in Cimena4d.',
         'work_ex' => 'facebook-image-1.jpg',
@@ -38,7 +38,7 @@ class MediaSeeder extends Seeder
 
         //industry night website
         CaseFile::find(3)->media()->create([
-        'hero' => 'industry-night-banner.png',
+        'hero' => 'industry-night-banner.webp',
         'prop_ex' => 'hackathon-figma.png',
         'prop_caption' => 'we started by prototyping the site in Figma and getting it conceptualized and getting the content laid out before we began coding and styling. i took the reigns on this, and it was my first Figma project. i had never used the program before, as my course taught us how to use Adobe XD instead, so it was a learning experience. You can check out the Figma prototype here: <a class="button case-file-link" href="https://www.figma.com/design/hN2fQ1g184hCrGkpF2ifEs/Hackathon?m=dev&t=hfDEymV6eK3bItuF-1">Hackathon Prototype</a>',
         'work_ex' => 'trello-work.png',
@@ -49,7 +49,7 @@ class MediaSeeder extends Seeder
 
         //the devils advocate
         CaseFile::find(4)->media()->create([
-        'hero' => 'TDA About Silver MacBook Pro on Desk Mockup.jpg',
+        'hero' => 'TDA-Silver-Mac.webp',
         'prop_ex' => 'TDA-logo-03.png',
         'prop_caption' => 'The logo was made with a fair amount of their input, they had a specific vision and were very pleased with the result I created.',
         'work_ex' => 'TDA Business Card.png',
@@ -60,7 +60,7 @@ class MediaSeeder extends Seeder
 
         //LUHTFY
         CaseFile::find(5)->media()->create([
-        'hero' => 'LUHTFY Business Card PSD Mockup.png',
+        'hero' => 'LUHTFY.webp',
         'prop_ex' => 'LUHTFY rough-02.png',
         'prop_caption' => 'I started with some branding ideas and rough drafts, they werent entirely sure what they wanted and we went through several variations if the final logo, some are shown here.',
         'work_ex' => 'luhtfu-01.jpg',
