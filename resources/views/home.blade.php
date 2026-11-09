@@ -17,6 +17,7 @@
     <script src="https://unpkg.com/thpace"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script>document.documentElement.classList.add('js');</script>
     <script>gsap.registerPlugin(ScrollTrigger);</script>
 </head>
 
@@ -28,30 +29,30 @@
     <section id="hero-section">
         
         <article id="index-name-box">
-            <div class="text title-text fade-static" id="index-ramona">Ramona Lozon</div>
-            <h3 class="text subtitle-text fade-static">Junior Web Developer and Designer</h3>      
+            <div class="text title-text" id="index-ramona" data-type>Ramona Lozon</div>
+            <h3 class="text subtitle-text" data-type>Junior Web Developer and Designer</h3>      
 
             <article class="nav-box">
 
                 <div class="index-nav">
-                    <a class="text subtitle-text hover-item fade-static" href="#about-section">// Who am I?</a>
-                    <a class="text subtitle-text hover-item fade-static" href="#my-work">// My Work</a>
+                    <a class="text subtitle-text hover-item" href="#about-section" data-type>// Who am I?</a>
+                    <a class="text subtitle-text hover-item" href="#my-work" data-type>// My Work</a>
                 </div>
                 
                 <div id="socials-box">
-                    <div id="linkedin-box">
+                    <div id="linkedin-box" data-type="pop">
                         <a id="linked-in" href="https://www.linkedin.com/in/ramona-lozon-21536a321/"></a>
                     </div>
-                    <div id="github-box">
+                    <div id="github-box" data-type="pop">
                         <a id="git" href="https://github.com/Ramona-Lozon"></a>
                     </div>
-                    <div id="insta-box">
+                    <div id="insta-box" data-type="pop">
                         <a id="insta" href="https://www.instagram.com/lozonramona?igsh=eThzZTRoMnl4bzhn"></a>
                     </div>
                 </div>
 
                 <div class="index-nav">
-                    <a class="text subtitle-text hover-item fade-static" href="#contact-section">Work With Me <span class="blink">&#8658;</span></a>
+                    <a class="text subtitle-text hover-item" href="#contact-section" data-type>Work With Me <span class="blink">&#8658;</span></a>
                 </div>
 
             </article>

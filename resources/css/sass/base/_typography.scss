@@ -47,10 +47,13 @@ li {
     list-style: none;
 }
 
+.hover-item {
+    transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
 .hover-item:hover {
     color: white;
     transform: translateX(10px);
-    transition: all 0.1s ease-in-out;
 }
 
 .title-con {
