@@ -43,7 +43,7 @@ class CaseFileSeeder extends Seeder
         ]);
 
         CaseFile::create([
-        'project' => '\"Let Us Handle that For You\" Cleaning Service',
+        'project' => 'Let Us Handle that For You Cleaning Service',
         'proposition' => 'some friends of mine wanted help with the branding for their cleaning service, so i gladly helped.',
         'deliverables' => 'The scope of the project wasn\'t too large, they simply wanted a logo and business card.',
         'outcome' => 'they were very pleased with the results.'
